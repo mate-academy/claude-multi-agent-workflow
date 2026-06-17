@@ -1,7 +1,7 @@
 ---
 name: api-contract-reviewer
 description: Reviews API routes, request/response shapes, and validation logic for correctness and consistency. Use when someone adds a new endpoint, changes a route handler, touches validation middleware, or asks whether the API matches its documented contract.
-tools: Glob, Grep, LS, Read
+tools: Glob, Grep, Read
 model: haiku
 ---
 
