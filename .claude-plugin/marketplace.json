@@ -1,0 +1,11 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "owner": { "name": "Peter Sallay" },
+  "plugins": [
+    {
+      "name": "claude-multi-agent-workflow",
+      "source": "./",
+      "description": "Multi-agent workflow plugin with parallel API contract review, feature implementation, a /ship command, a pre-merge skill, and a route-change guard hook."
+    }
+  ]
+}
