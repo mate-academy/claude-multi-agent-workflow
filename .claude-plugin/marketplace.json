@@ -1,0 +1,13 @@
+{
+  "name": "mars-code-quality-marketplace",
+  "owner": {
+    "name": "Mars"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review changed code, map test gaps, and fill them — a two-phase multi-agent quality pass with a checklist skill and an auto-lint hook."
+    }
+  ]
+}

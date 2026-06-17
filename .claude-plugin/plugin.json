@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "A code-quality workflow: review changed code, find test gaps, and fill them — with a checklist skill and an auto-lint hook.",
+  "author": {
+    "name": "Mars"
+  }
+}
