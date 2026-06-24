@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Multi-agent code quality workflow: parallel route reviews then targeted test generation."
+    }
+  ]
+}
