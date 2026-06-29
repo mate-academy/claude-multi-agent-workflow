@@ -1,0 +1,5 @@
+{
+  "name": "multi-agent-dev-pipeline",
+  "version": "1.0.0",
+  "description": "Classic Planner → Coder → Code Review → Tester → Git Commit multi-agent workflow for Express APIs"
+}

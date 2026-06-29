@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "multi-agent-dev-pipeline",
+      "source": "./",
+      "description": "Five-stage multi-agent development pipeline: Planner → Coder → Code Reviewer → Tester → Git Commit. Automatically plans, implements, reviews, tests, and commits features with up to N self-healing fix rounds."
+    }
+  ]
+}
