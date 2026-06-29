@@ -6,6 +6,8 @@ const crypto = require('node:crypto');
 let users = [];
 let nextId = 1;
 let tokens = new Map();
+let bankAccounts = [];
+let nextBankAccountId = 1;
 
 function seed() {
   users = [
@@ -13,6 +15,8 @@ function seed() {
     { id: 2, name: 'Alan Turing', email: 'alan@example.com' },
   ];
   nextId = 3;
+  bankAccounts = [];
+  nextBankAccountId = 1;
 }
 seed();
 
@@ -66,8 +70,31 @@ function deleteToken(token) {
   return true;
 }
 
+function listBankAccounts(userId) {
+  return bankAccounts.filter((a) => a.userId === userId);
+}
+
+function getBankAccount(userId, id) {
+  return bankAccounts.find((a) => a.userId === userId && a.id === id);
+}
+
+function createBankAccount(userId, { accountNumber, bankName }) {
+  const account = { id: nextBankAccountId++, userId, accountNumber, bankName };
+  bankAccounts.push(account);
+  return account;
+}
+
+function deleteBankAccount(userId, id) {
+  const index = bankAccounts.findIndex((a) => a.userId === userId && a.id === id);
+  if (index === -1) return undefined;
+  bankAccounts.splice(index, 1);
+  return true;
+}
+
 // Reset to the seed data. Used by the tests so each one starts clean.
 function reset() {
+  bankAccounts = [];
+  nextBankAccountId = 1;
   seed();
   tokens.clear();
 }
@@ -83,4 +110,8 @@ module.exports = {
   validateToken,
   deleteToken,
   reset,
+  listBankAccounts,
+  getBankAccount,
+  createBankAccount,
+  deleteBankAccount,
 };
