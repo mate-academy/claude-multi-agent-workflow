@@ -1,0 +1,9 @@
+{
+    "plugins": [
+        {
+            "name": "lesson59-plugin",
+            "source": "./",
+            "description": "practice plugin for lesson 59"
+        }
+    ]
+}
