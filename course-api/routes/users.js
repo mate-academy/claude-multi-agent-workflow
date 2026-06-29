@@ -40,4 +40,13 @@ router.put('/:id', (req, res) => {
   return res.json(user);
 });
 
+// DELETE /users/:id — remove a user. Returns 204 on success, 404 if not found.
+router.delete('/:id', (req, res) => {
+  const deleted = store.deleteUser(Number(req.params.id));
+  if (!deleted) {
+    return res.status(404).json({ error: 'User not found' });
+  }
+  return res.status(204).send();
+});
+
 module.exports = router;
