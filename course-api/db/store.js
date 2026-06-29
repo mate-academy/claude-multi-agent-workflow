@@ -1,8 +1,11 @@
 // In-memory data store. Every route reads and writes through these helpers,
 // so swapping in a real database later only touches this one file.
 
+const crypto = require('node:crypto');
+
 let users = [];
 let nextId = 1;
+let tokens = new Map();
 
 function seed() {
   users = [
@@ -43,9 +46,41 @@ function deleteUser(id) {
   return true;
 }
 
+function getUserByEmail(email) {
+  return users.find((user) => user.email === email);
+}
+
+function createToken(userId) {
+  const token = crypto.randomBytes(32).toString('hex');
+  tokens.set(token, userId);
+  return token;
+}
+
+function validateToken(token) {
+  return tokens.get(token);
+}
+
+function deleteToken(token) {
+  if (!tokens.has(token)) return false;
+  tokens.delete(token);
+  return true;
+}
+
 // Reset to the seed data. Used by the tests so each one starts clean.
 function reset() {
   seed();
+  tokens.clear();
 }
 
-module.exports = { listUsers, getUser, createUser, updateUser, deleteUser, reset };
+module.exports = {
+  listUsers,
+  getUser,
+  createUser,
+  updateUser,
+  deleteUser,
+  getUserByEmail,
+  createToken,
+  validateToken,
+  deleteToken,
+  reset,
+};

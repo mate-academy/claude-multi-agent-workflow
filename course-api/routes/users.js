@@ -1,7 +1,9 @@
 const express = require('express');
 const store = require('../db/store');
+const requireAuth = require('../middleware/auth');
 
 const router = express.Router();
+router.use(requireAuth);
 
 // GET /users — list all users.
 router.get('/', (req, res) => {
