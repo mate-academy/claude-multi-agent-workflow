@@ -1,0 +1,9 @@
+{
+  "hooks": [
+    {
+      "name": "quality-check",
+      "event": "post-tool-use",
+      "command": "${CLAUDE_PLUGIN_ROOT}/scripts/quality-check.sh"
+    }
+  ]
+}
