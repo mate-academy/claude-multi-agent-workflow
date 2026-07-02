@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "code-quality-flow",
+      "source": "./",
+      "description": "A quality workflow plugin for reviewing and fixing the course API."
+    }
+  ]
+}
