@@ -1,0 +1,13 @@
+{
+  "name": "gqplug-marketplace",
+  "owner": {
+    "name": "Sagaj"
+  },
+  "plugins": [
+    {
+      "name": "gqplug",
+      "source": "./",
+      "description": "Code-quality workflow: a read-only API reviewer and a test-authoring agent, orchestrated by one /quality-gate command, with a conventions skill and a post-edit lint hook."
+    }
+  ]
+}

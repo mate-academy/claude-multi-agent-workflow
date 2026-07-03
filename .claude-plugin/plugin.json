@@ -1,0 +1,9 @@
+{
+  "name": "gqplug",
+  "version": "0.1.0",
+  "description": "GQPlug — a code-quality workflow for the course API: review changes, cover them with tests, and guard conventions.",
+  "author": {
+    "name": "Sagaj"
+  },
+  "keywords": ["code-quality", "review", "testing", "express", "workflow"]
+}
