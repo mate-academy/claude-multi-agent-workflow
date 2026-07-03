@@ -1,0 +1,15 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "description": "Course-project marketplace offering the code-quality multi-agent workflow plugin.",
+  "owner": {
+    "name": "Zarko Ajdukovic",
+    "email": "zarko.ajdukovic@lamante.com"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Multi-agent code quality workflow: two parallel reviewers, then a test writer for the gaps they find, plus a review-checklist skill and a lint-on-edit hook."
+    }
+  ]
+}

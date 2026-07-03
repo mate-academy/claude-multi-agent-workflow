@@ -1,0 +1,9 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zarko Ajdukovic",
+    "email": "zarko.ajdukovic@lamante.com"
+  },
+  "description": "Multi-agent code quality workflow: a read-only reviewer and a test writer, orchestrated by a single command."
+}
