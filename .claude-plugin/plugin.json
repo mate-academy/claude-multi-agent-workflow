@@ -1,0 +1,5 @@
+{
+  "name": "code-quality",
+  "version": "1.0.0",
+  "description": "Multi-agent code quality workflow: review routes, fix violations, and enforce conventions automatically."
+}

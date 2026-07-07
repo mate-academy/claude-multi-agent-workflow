@@ -1,0 +1,11 @@
+{
+  "name": "sophie-code-quality-catalog",
+  "owner": { "name": "Sophie Rouse" },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Multi-agent review and fix workflow for Express API codebases."
+    }
+  ]
+}
