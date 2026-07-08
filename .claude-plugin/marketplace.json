@@ -3,6 +3,7 @@
   "owner": {
     "name": "Huu Phong"
   },
+  "description": "Personal marketplace of Claude Code plugins, starting with code-quality.",
   "plugins": [
     {
       "name": "code-quality",
