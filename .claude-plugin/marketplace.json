@@ -1,0 +1,13 @@
+{
+  "name": "huuphong91-plugins",
+  "owner": {
+    "name": "Huu Phong"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review, fix, and verify code quality on an Express API with two scoped subagents, a /quality-check workflow, a route-conventions skill, and an auto-lint hook."
+    }
+  ]
+}
