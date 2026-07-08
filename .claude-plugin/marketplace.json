@@ -1,0 +1,13 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "owner": {
+    "name": "tuitioner"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review and fix course-api code with two scoped subagents orchestrated into one workflow command."
+    }
+  ]
+}
