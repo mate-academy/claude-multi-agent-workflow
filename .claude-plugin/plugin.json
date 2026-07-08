@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "A code quality workflow plugin: scoped subagents for reviewing and fixing code, orchestrated into a single command, backed by a skill and a hook.",
+  "author": {
+    "name": "tuitioner"
+  }
+}
