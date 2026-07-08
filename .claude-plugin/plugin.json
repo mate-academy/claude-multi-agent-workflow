@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Review, fix, and verify code quality on the course Express API: a read-only reviewer and a fixer subagent, orchestrated by /quality-check, plus a route-conventions skill and an auto-lint hook.",
+  "author": {
+    "name": "Huu Phong"
+  }
+}
