@@ -1,0 +1,14 @@
+{
+  "name": "release-toolkit-marketplace",
+  "description": "A one-plugin marketplace publishing release-toolkit.",
+  "owner": {
+    "name": "Chad Vincent"
+  },
+  "plugins": [
+    {
+      "name": "release-toolkit",
+      "source": "./",
+      "description": "Drafts changelogs, checks release readiness, and blocks untagged releases."
+    }
+  ]
+}

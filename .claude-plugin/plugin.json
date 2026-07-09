@@ -1,0 +1,8 @@
+{
+  "name": "release-toolkit",
+  "version": "0.1.0",
+  "description": "A release-management workflow: drafts changelogs, bumps versions, and checks release readiness.",
+  "author": {
+    "name": "Chad Vincent"
+  }
+}
