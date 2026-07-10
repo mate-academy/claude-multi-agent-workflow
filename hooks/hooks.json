@@ -1,0 +1,13 @@
+{
+  "hooks": [
+    {
+      "event": "file-written",
+      "description": "Run code quality check on modified files",
+      "enabled": true,
+      "filter": {
+        "fileExtensions": ["js", "ts", "jsx", "tsx"]
+      },
+      "command": "${CLAUDE_PLUGIN_ROOT}/hooks/check-code-quality.sh"
+    }
+  ]
+}

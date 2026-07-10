@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "code-quality-workflow",
+      "source": "./",
+      "description": "Multi-agent workflow for code review and test generation with unified quality insights"
+    }
+  ]
+}
