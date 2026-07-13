@@ -1,0 +1,5 @@
+{
+  "name": "code-quality-flow",
+  "version": "0.1.0",
+  "description": "A multi-agent Claude Code workflow for reviewing, testing, and improving JavaScript changes."
+}
