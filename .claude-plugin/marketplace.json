@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "JoelDiaz93"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-flow",
+      "source": "./",
+      "description": "Multi-agent workflow for reviewing, testing, and fixing JavaScript changes."
+    }
+  ]
+}
