@@ -1,0 +1,7 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "owner": { "name": "Frank Mamone" },
+  "plugins": [
+              { "name": "code-quality-kit", "source": "./", "description": "Code review, test-writing, and lint-fix tooling for course-api, orchestrated as one quality-check workflow." }
+             ]
+}
