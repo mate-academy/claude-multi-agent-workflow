@@ -1,0 +1,6 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "version": "0.1.0",
+  "description": "A multi-agent workflow plugin for Claude",
+  "author": { "name": "Peter Sallay" }
+}

@@ -1,0 +1,5 @@
+{
+  "enabledPlugins": {
+    "claude-multi-agent-workflow@claude-multi-agent-workflow": true
+  }
+}

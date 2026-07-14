@@ -1,0 +1,15 @@
+{
+  "description": "Blocks session stop when route or handler files were changed but a contract review has not been confirmed",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/route-change-guard.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}
