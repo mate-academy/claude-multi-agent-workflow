@@ -1,0 +1,14 @@
+{
+  "name": "course-quality-marketplace",
+  "owner": {
+    "name": "Yunchong Huang",
+    "email": "franzhuang027@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "course-quality",
+      "source": "./",
+      "description": "Multi-agent code-quality workflow: a read-only reviewer and lint run in parallel, then a fixer applies the changes."
+    }
+  ]
+}
