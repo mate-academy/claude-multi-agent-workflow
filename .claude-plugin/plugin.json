@@ -1,0 +1,10 @@
+{
+  "name": "course-quality",
+  "version": "0.1.0",
+  "description": "A multi-agent code-quality workflow for the course-api: parallel review + lint, then a dependent fix pass.",
+  "author": {
+    "name": "Yunchong Huang",
+    "email": "franzhuang027@gmail.com"
+  },
+  "keywords": ["code-quality", "review", "tests", "lint", "workflow"]
+}
