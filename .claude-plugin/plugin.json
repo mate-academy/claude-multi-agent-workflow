@@ -1,0 +1,8 @@
+{
+  "name": "toolbelt",
+  "description": "Reviews, tests, and repairs the bundled Express API through a scoped quality-gate workflow.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Tacio Medeiros"
+  }
+}

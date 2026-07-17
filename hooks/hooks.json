@@ -1,0 +1,17 @@
+{
+  "description": "Lint the bundled Course API after Claude edits files.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/lint-course-api.sh\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
