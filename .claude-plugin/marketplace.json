@@ -1,0 +1,14 @@
+{
+  "name": "toolbelt-marketplace",
+  "owner": {
+    "name": "Tacio Medeiros"
+  },
+  "description": "A marketplace for the Toolbelt Express API quality workflow.",
+  "plugins": [
+    {
+      "name": "toolbelt",
+      "source": "./",
+      "description": "Reviews, tests, and repairs the bundled Express API through a scoped quality-gate workflow."
+    }
+  ]
+}
