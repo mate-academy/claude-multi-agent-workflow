@@ -1,0 +1,8 @@
+{
+  "name": "code-reviewer",
+  "version": "0.1.0",
+  "description": "A code quality plugin: scoped review and test-writing subagents, an orchestrated workflow command, a skill, and a hook, built against the course-api Express app.",
+  "author": {
+    "name": "robertomumo"
+  }
+}
