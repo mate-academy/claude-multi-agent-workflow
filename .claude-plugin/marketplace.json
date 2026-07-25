@@ -1,0 +1,15 @@
+{
+  "name": "robertomumo-plugins",
+  "description": "Personal marketplace of Claude Code plugins.",
+  "owner": {
+    "name": "robertomumo",
+    "email": "robertomumo@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "code-reviewer",
+      "source": "./",
+      "description": "Code quality plugin: scoped review and test-writing subagents, an audit workflow, a route-conventions skill, and an auto-lint hook."
+    }
+  ]
+}
