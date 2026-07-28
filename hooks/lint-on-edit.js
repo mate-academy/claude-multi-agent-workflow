@@ -36,20 +36,32 @@ try {
   process.exit(0);
 }
 
-const filePath = payload.tool_input && payload.tool_input.file_path;
-if (!filePath || !filePath.endsWith('.js')) {
+const rawFilePath = payload.tool_input && payload.tool_input.file_path;
+if (!rawFilePath || !rawFilePath.endsWith('.js')) {
   process.exit(0);
 }
+const filePath = path.resolve(rawFilePath);
 
 const eslintRoot = findEslintRoot(path.dirname(filePath));
 if (!eslintRoot) {
   process.exit(0);
 }
 
-const npxCmd = process.platform === 'win32' ? 'npx.cmd' : 'npx';
-const result = spawnSync(npxCmd, ['--no-install', 'eslint', filePath], {
+let eslintBin;
+try {
+  const pkgJsonPath = require.resolve('eslint/package.json', { paths: [eslintRoot] });
+  const pkg = JSON.parse(fs.readFileSync(pkgJsonPath, 'utf8'));
+  const binRelative = typeof pkg.bin === 'string' ? pkg.bin : pkg.bin && pkg.bin.eslint;
+  if (!binRelative) throw new Error('eslint package has no bin entry');
+  eslintBin = path.join(path.dirname(pkgJsonPath), binRelative);
+} catch {
+  process.exit(0);
+}
+
+const result = spawnSync(process.execPath, [eslintBin, filePath], {
   cwd: eslintRoot,
   encoding: 'utf8',
+  shell: false,
 });
 
 if (result.status !== 0 && result.stdout) {
