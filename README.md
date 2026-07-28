@@ -1,3 +1,36 @@
+# code-quality plugin
+
+A Claude Code plugin that reviews and fixes code quality issues, built
+against the small Express API in `course-api/`.
+
+## Install
+
+From a Claude Code session:
+
+```
+/plugin marketplace add <this-repo-url-or-local-path>
+/plugin install code-quality@code-quality-marketplace
+```
+
+Or locally, from the repo root: `claude --plugin-dir .`
+
+## What's included
+
+- `agents/code-reviewer.md` — read-only subagent that audits `course-api/`
+  for bugs and convention violations.
+- `agents/code-fixer.md` — subagent that applies fixes and re-runs the
+  test suite.
+- `commands/quality-check.md` — `/code-quality:quality-check`, runs the
+  review and the test/lint suite in parallel, then the fixer.
+- `skills/code-conventions/SKILL.md` — the shared standard both agents
+  check against.
+- `hooks/hooks.json` — lints any `.js` file right after it's edited.
+
+See `NOTES.md` for the scoping and orchestration decisions behind this
+setup.
+
+---
+
 ## Project — Ship your workflow as a plugin
  
 Across the course you've built scoped subagents, orchestrated them into workflows, written skills, commands, and hooks, and learned how a plugin packages all of it. Now you'll put it together into one real, shareable thing: a plugin that carries a multi-agent workflow, tested against a live codebase and published so anyone can install it with a single command.

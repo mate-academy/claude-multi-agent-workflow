@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Two-agent code review and fix workflow, tested against a small Express API.",
+  "author": {
+    "name": "Stefano"
+  }
+}
