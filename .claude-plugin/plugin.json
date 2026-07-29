@@ -1,0 +1,8 @@
+{
+  "name": "code-quality-kit",
+  "version": "0.1.0",
+  "description": "Two subagents, a /quality-check workflow, a skill, and a hook that keep code review and test coverage in sync for Node/Express projects.",
+  "author": {
+    "name": "Denys Shlemko"
+  }
+}

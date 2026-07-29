@@ -1,0 +1,13 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "owner": {
+    "name": "Denys Shlemko"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-kit",
+      "source": "./",
+      "description": "Review + regression-test workflow for Node/Express projects: two subagents, a /quality-check command, a checklist skill, and an auto-lint hook."
+    }
+  ]
+}
