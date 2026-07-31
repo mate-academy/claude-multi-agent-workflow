@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "fkappe"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review + test-writing subagents orchestrated by /quality-check, with a checklist skill and an auto-lint-fix hook."
+    }
+  ]
+}
