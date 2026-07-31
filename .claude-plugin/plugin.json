@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "A code-quality workflow: a read-only reviewer and a test-writer subagent, orchestrated by /quality-check, backed by a review checklist skill and an auto-lint-fix hook.",
+  "author": {
+    "name": "fkappe"
+  }
+}
