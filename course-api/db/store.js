@@ -9,12 +9,12 @@ function seed() {
     { id: 1, name: 'Ada Lovelace', email: 'ada@example.com' },
     { id: 2, name: 'Alan Turing', email: 'alan@example.com' },
   ];
-  nextId = 3;
+  nextId = Math.max(...users.map((user) => user.id)) + 1;
 }
 seed();
 
 function listUsers() {
-  return users;
+  return [...users];
 }
 
 function getUser(id) {
