@@ -1,0 +1,13 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "owner": {
+    "name": "zemoon"
+  },
+  "plugins": [
+    {
+      "name": "myplug",
+      "source": "./",
+      "description": "Code-quality plugin: a parallel-then-sequential /audit workflow over two scoped subagents, a shared review-severity skill, and an on-save lint hook."
+    }
+  ]
+}
