@@ -28,17 +28,13 @@ function createUser({ name, email }) {
   return user;
 }
 
-function updateUser(id, fields) {
+function updateUser(id, updates) {
   const user = getUser(id);
   if (!user) return undefined;
-  if (fields.name !== undefined) user.name = fields.name;
-  if (fields.email !== undefined) user.email = fields.email;
+  if (updates.name !== undefined) user.name = updates.name;
+  if (updates.email !== undefined) user.email = updates.email;
   return user;
 }
 
-// Reset to the seed data. Used by the tests so each one starts clean.
-function reset() {
-  seed();
-}
-
-module.exports = { listUsers, getUser, createUser, updateUser, reset };
+// seed() also serves as the public reset — tests call it between each test.
+module.exports = { listUsers, getUser, createUser, updateUser, reset: seed };

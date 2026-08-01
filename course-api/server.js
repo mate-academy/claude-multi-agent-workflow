@@ -8,6 +8,12 @@ app.use(express.json());
 app.use('/health', healthRouter);
 app.use('/users', usersRouter);
 
+// Catch-all for unmatched routes, so clients get the documented JSON error
+// shape instead of Express's default HTML 404 page.
+app.use((req, res) => {
+  res.status(404).json({ error: 'Not found' });
+});
+
 // Malformed JSON bodies make express.json() throw before reaching any route;
 // catch it here so the response stays a JSON { error } instead of Express's
 // default HTML error page.
