@@ -9,36 +9,40 @@ function seed() {
     { id: 1, name: 'Ada Lovelace', email: 'ada@example.com' },
     { id: 2, name: 'Alan Turing', email: 'alan@example.com' },
   ];
-  nextId = 3;
+  nextId = users.length ? Math.max(...users.map((user) => user.id)) + 1 : 1;
 }
 seed();
 
+// Internal lookup that returns the live record, for functions in this file
+// that need to mutate it. Every function exported below returns a copy
+// instead, so callers can't reach back in and mutate the store directly.
+function findUser(id) {
+  return users.find((user) => user.id === id);
+}
+
 function listUsers() {
-  return users;
+  return users.map((user) => ({ ...user }));
 }
 
 function getUser(id) {
-  return users.find((user) => user.id === id);
+  const user = findUser(id);
+  return user ? { ...user } : undefined;
 }
 
 function createUser({ name, email }) {
   const user = { id: nextId, name, email };
   nextId += 1;
   users.push(user);
-  return user;
+  return { ...user };
 }
 
-function updateUser(id, fields) {
-  const user = getUser(id);
+function updateUser(id, updates) {
+  const user = findUser(id);
   if (!user) return undefined;
-  if (fields.name !== undefined) user.name = fields.name;
-  if (fields.email !== undefined) user.email = fields.email;
-  return user;
+  if (updates.name !== undefined) user.name = updates.name;
+  if (updates.email !== undefined) user.email = updates.email;
+  return { ...user };
 }
 
-// Reset to the seed data. Used by the tests so each one starts clean.
-function reset() {
-  seed();
-}
-
-module.exports = { listUsers, getUser, createUser, updateUser, reset };
+// seed() also serves as the public reset — tests call it between each test.
+module.exports = { listUsers, getUser, createUser, updateUser, reset: seed };
