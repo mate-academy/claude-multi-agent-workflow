@@ -39,16 +39,22 @@ router.get('/:id', (req, res) => {
   return res.json(user);
 });
 
+function isDuplicateEmail(email, excludeId) {
+  return store
+    .listUsers()
+    .some((user) => user.id !== excludeId && user.email.toLowerCase() === email.toLowerCase());
+}
+
 // POST /users — create a user. Requires name and email.
 router.post('/', (req, res) => {
   const { name, email } = req.body;
   if (!isValidName(name) || !isValidEmail(email)) {
     return res.status(400).json({ error: 'name and a valid email are required' });
   }
-  if (store.listUsers().some((user) => user.email === email)) {
+  if (isDuplicateEmail(email, null)) {
     return res.status(400).json({ error: 'email is already in use' });
   }
-  const user = store.createUser({ name, email });
+  const user = store.createUser({ name: name.trim(), email });
   return res.status(201).json(user);
 });
 
@@ -65,10 +71,18 @@ router.put('/:id', (req, res) => {
   if (name !== undefined && !isValidName(name)) {
     return res.status(400).json({ error: 'name must be a non-empty string' });
   }
-  if (email !== undefined && !isValidEmail(email)) {
-    return res.status(400).json({ error: 'email must be a valid email address' });
+  if (email !== undefined) {
+    if (!isValidEmail(email)) {
+      return res.status(400).json({ error: 'email must be a valid email address' });
+    }
+    if (isDuplicateEmail(email, id)) {
+      return res.status(400).json({ error: 'email is already in use' });
+    }
   }
-  const user = store.updateUser(id, { name, email });
+  const updates = {};
+  if (name !== undefined) updates.name = name.trim();
+  if (email !== undefined) updates.email = email;
+  const user = store.updateUser(id, updates);
   if (!user) {
     return res.status(404).json({ error: 'User not found' });
   }
