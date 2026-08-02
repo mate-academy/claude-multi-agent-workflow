@@ -1,0 +1,9 @@
+{
+  "hooks": [
+    {
+      "event": "PostToolUse",
+      "matcher": "Edit|Write",
+      "command": "cd course-api && npm run lint --silent 2>&1 | head -20"
+    }
+  ]
+}
