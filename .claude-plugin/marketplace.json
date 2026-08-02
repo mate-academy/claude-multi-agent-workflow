@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "qa-kit",
+      "source": "./",
+      "description": "Code quality plugin: automated review, fix, and test suggestions for Node.js projects."
+    }
+  ]
+}
