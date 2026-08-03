@@ -1,0 +1,13 @@
+{
+  "name": "lboetzle-plugins",
+  "owner": {
+    "name": "Laurent Boetzle"
+  },
+  "plugins": [
+    {
+      "name": "api-qa",
+      "source": "./",
+      "description": "Multi-agent QA workflow for Express APIs: parallel route audits, then targeted test writing, with a conventions skill and a lint-fix hook."
+    }
+  ]
+}
