@@ -1,0 +1,18 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "A multi-agent code-quality workflow: scoped review and test-writing subagents, orchestrated by a single command, plus a review skill and a lint hook.",
+  "author": {
+    "name": "Christian Salafia"
+  },
+  "homepage": "https://github.com/christian-salafia/claude-multi-agent-workflow",
+  "repository": "https://github.com/christian-salafia/claude-multi-agent-workflow",
+  "license": "MIT",
+  "keywords": [
+    "code-quality",
+    "code-review",
+    "testing",
+    "multi-agent",
+    "workflow"
+  ]
+}
