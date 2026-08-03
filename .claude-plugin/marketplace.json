@@ -1,0 +1,14 @@
+{
+  "name": "code-quality-kit-marketplace",
+  "owner": {
+    "name": "Bohdan Diatliuk",
+    "email": "oficialdatluk@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-kit",
+      "source": "./",
+      "description": "Multi-agent code quality workflow — review, then fix/test — for Express-style APIs."
+    }
+  ]
+}

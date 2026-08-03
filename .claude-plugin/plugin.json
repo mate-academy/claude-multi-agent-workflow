@@ -1,0 +1,12 @@
+{
+  "name": "code-quality-kit",
+  "version": "0.1.0",
+  "description": "A multi-agent code quality workflow: reviews an Express API for bugs and convention drift, then writes or fixes the tests to match — with a lint hook and a conventions skill baked in.",
+  "author": {
+    "name": "Bohdan Diatliuk",
+    "email": "oficialdatluk@gmail.com"
+  },
+  "homepage": "https://github.com/",
+  "license": "MIT",
+  "keywords": ["code-quality", "code-review", "testing", "workflow"]
+}
