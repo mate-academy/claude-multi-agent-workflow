@@ -1,0 +1,10 @@
+{
+  "name": "code-quality-marketplace",
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Code review + test-fix workflow with a lint-on-save hook."
+    }
+  ]
+}

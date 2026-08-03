@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Code quality workflow: scoped review and test-fix subagents, orchestrated into one command, with a lint-on-save hook.",
+  "author": {
+    "name": "Raikon01"
+  }
+}
