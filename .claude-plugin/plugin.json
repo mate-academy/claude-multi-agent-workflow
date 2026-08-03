@@ -1,0 +1,5 @@
+{
+  "name": "api-qa",
+  "version": "0.1.0",
+  "description": "Multi-agent QA workflow for the course Express API: parallel route audits, then targeted test writing."
+}
