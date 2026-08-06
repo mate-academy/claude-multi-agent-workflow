@@ -6,7 +6,13 @@ const path = require('path');
 
 function isGitPush(command) {
   if (typeof command !== 'string') return false;
-  return /(^|\s|;|&&|\|\|)git\s+push\b/.test(command);
+  const segments = command.split(/;|&&|\|\|/);
+  return segments.some((segment) => {
+    const trimmed = segment.trim();
+    return /^git\s+(?:(?:-C\s+\S+|--git-dir=\S+|--work-tree=\S+|--no-pager|-c\s+\S+)\s+)*push\b/.test(
+      trimmed
+    );
+  });
 }
 
 function hasUnreleasedContent(changelogText) {

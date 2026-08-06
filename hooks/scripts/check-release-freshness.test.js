@@ -22,6 +22,22 @@ test('isGitPush does not match non-string input', () => {
   assert.equal(isGitPush(undefined), false);
 });
 
+test('isGitPush does not match a commit message that mentions "git push"', () => {
+  assert.equal(isGitPush('git commit -m "remember to git push after this"'), false);
+});
+
+test('isGitPush matches git push with a -C flag before it', () => {
+  assert.equal(isGitPush('git -C /some/path push origin main'), true);
+});
+
+test('isGitPush matches git push with --no-pager before it', () => {
+  assert.equal(isGitPush('git --no-pager push'), true);
+});
+
+test('isGitPush still matches git push chained after another command', () => {
+  assert.equal(isGitPush('npm test && git push'), true);
+});
+
 test('hasUnreleasedContent is false for an empty Unreleased section', () => {
   const text = '# Changelog\n\n## [Unreleased]\n\n## [1.0.0] - 2026-01-01\n- Initial release\n';
   assert.equal(hasUnreleasedContent(text), false);
