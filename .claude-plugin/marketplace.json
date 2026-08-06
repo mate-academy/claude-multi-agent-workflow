@@ -1,0 +1,13 @@
+{
+  "name": "ericmsebastian-plugins",
+  "owner": {
+    "name": "Eric Sebastian"
+  },
+  "plugins": [
+    {
+      "name": "release-changelog",
+      "source": "./",
+      "description": "Reviews a diff, runs tests, and posts a changelog entry to Notion when both succeed."
+    }
+  ]
+}
