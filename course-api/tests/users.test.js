@@ -37,3 +37,18 @@ test('PUT /users/:id returns 404 for a missing user', async () => {
   const res = await request(app).put('/users/999').send({ name: 'Nobody' });
   assert.equal(res.status, 404);
 });
+
+test('PUT /users/:id rejects an empty-string name', async () => {
+  // POST /users rejects falsy/empty values via `!name || !email`, but PUT
+  // only checks `name === undefined && email === undefined`, so an empty
+  // string currently passes validation and silently blanks the name.
+  // This test documents the expected (not current) behavior and is
+  // expected to fail until PUT validation matches POST.
+  const res = await request(app).put('/users/1').send({ name: '' });
+  assert.equal(res.status, 400);
+});
+
+test('GET /users/:id returns 404 for a non-numeric id', async () => {
+  const res = await request(app).get('/users/abc');
+  assert.equal(res.status, 404);
+});

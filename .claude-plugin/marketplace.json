@@ -1,0 +1,14 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "Peter Selberg",
+    "email": "selberg84@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-workflow",
+      "source": "./",
+      "description": "Reviews Express API routes for convention adherence and keeps their tests in sync — two scoped subagents run as a workflow."
+    }
+  ]
+}

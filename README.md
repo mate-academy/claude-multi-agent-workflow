@@ -1,3 +1,18 @@
+## Plugin: code-quality-workflow
+
+This repo doubles as the `code-quality-workflow` plugin and the marketplace that lists it.
+
+**Install:**
+```
+claude --plugin-dir .
+/plugin marketplace add <this-repo>
+/plugin install code-quality-workflow@code-quality-marketplace
+```
+
+**What it does:** reviews `course-api/` routes against the project's conventions with a read-only `api-reviewer` subagent, then hands the findings to a `test-writer` subagent that brings `course-api/tests/` up to date — orchestrated by the `/quality-check` command. See `NOTES.md` for the scoping and orchestration decisions behind it.
+
+---
+
 ## Project — Ship your workflow as a plugin
  
 Across the course you've built scoped subagents, orchestrated them into workflows, written skills, commands, and hooks, and learned how a plugin packages all of it. Now you'll put it together into one real, shareable thing: a plugin that carries a multi-agent workflow, tested against a live codebase and published so anyone can install it with a single command.

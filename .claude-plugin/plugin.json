@@ -1,0 +1,9 @@
+{
+  "name": "code-quality-workflow",
+  "version": "0.1.0",
+  "description": "A multi-agent code-quality workflow: reviews Express API routes against project conventions and keeps their tests in sync.",
+  "author": {
+    "name": "Peter Selberg",
+    "email": "selberg84@gmail.com"
+  }
+}
