@@ -38,6 +38,21 @@ test('isGitPush still matches git push chained after another command', () => {
   assert.equal(isGitPush('npm test && git push'), true);
 });
 
+test('isGitPush matches git push on its own line in a multi-line command', () => {
+  assert.equal(isGitPush('git add -A\ngit commit -m "fix"\ngit push'), true);
+});
+
+test('isGitPush matches git push piped into with a single pipe', () => {
+  assert.equal(isGitPush('echo foo | git push'), true);
+});
+
+test('isGitPush does not match "git push" appearing only inside multi-line quoted commit message text', () => {
+  assert.equal(
+    isGitPush('git commit -m "summary line\nbody text mentions git push in prose"'),
+    false
+  );
+});
+
 test('hasUnreleasedContent is false for an empty Unreleased section', () => {
   const text = '# Changelog\n\n## [Unreleased]\n\n## [1.0.0] - 2026-01-01\n- Initial release\n';
   assert.equal(hasUnreleasedContent(text), false);
