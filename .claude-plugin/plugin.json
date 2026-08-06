@@ -1,0 +1,8 @@
+{
+  "name": "release-changelog",
+  "version": "0.1.0",
+  "description": "Reviews a diff, runs tests, and posts a changelog entry to Notion when both succeed.",
+  "author": {
+    "name": "Eric Sebastian"
+  }
+}
