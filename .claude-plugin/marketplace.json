@@ -1,0 +1,13 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "owner": {
+    "name": "Wojciech Kowalik"
+  },
+  "plugins": [
+    {
+      "name": "api-quality-guard",
+      "source": "./",
+      "description": "Code review and test coverage workflow for Express APIs."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "api-quality-guard",
+  "version": "0.1.0",
+  "description": "Code review and test coverage workflow for Express APIs.",
+  "author": {
+    "name": "Wojciech Kowalik"
+  }
+}

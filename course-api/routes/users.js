@@ -33,6 +33,9 @@ router.put('/:id', (req, res) => {
   if (name === undefined && email === undefined) {
     return res.status(400).json({ error: 'name or email is required' });
   }
+  if ((name !== undefined && !name) || (email !== undefined && !email)) {
+    return res.status(400).json({ error: 'name or email is required' });
+  }
   const user = store.updateUser(Number(req.params.id), { name, email });
   if (!user) {
     return res.status(404).json({ error: 'User not found' });
