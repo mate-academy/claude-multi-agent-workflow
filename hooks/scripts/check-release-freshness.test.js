@@ -53,6 +53,20 @@ test('isGitPush does not match "git push" appearing only inside multi-line quote
   );
 });
 
+test('isGitPush does not match "git push" starting an embedded line inside quoted text', () => {
+  assert.equal(
+    isGitPush('git commit -m "notes:\ngit push must be done manually after this"'),
+    false
+  );
+});
+
+test('isGitPush does not match "git push" as its own embedded line inside quoted text', () => {
+  assert.equal(
+    isGitPush('git commit -m "line one\ngit push\nline three"'),
+    false
+  );
+});
+
 test('hasUnreleasedContent is false for an empty Unreleased section', () => {
   const text = '# Changelog\n\n## [Unreleased]\n\n## [1.0.0] - 2026-01-01\n- Initial release\n';
   assert.equal(hasUnreleasedContent(text), false);

@@ -4,9 +4,14 @@
 const fs = require('fs');
 const path = require('path');
 
+function stripQuoted(command) {
+  return command.replace(/'[^']*'|"(?:[^"\\]|\\.)*"/g, '');
+}
+
 function isGitPush(command) {
   if (typeof command !== 'string') return false;
-  const segments = command.split(/;|&&|\|\||\r?\n|\|/);
+  const stripped = stripQuoted(command);
+  const segments = stripped.split(/;|&&|\|\||\r?\n|\|/);
   return segments.some((segment) => {
     const trimmed = segment.trim();
     return /^git\s+(?:(?:-C\s+\S+|--git-dir=\S+|--work-tree=\S+|--no-pager|-c\s+\S+)\s+)*push\b/.test(
