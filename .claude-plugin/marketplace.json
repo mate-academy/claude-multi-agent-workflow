@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    {
+      "name": "code-quality-guard",
+      "version": "0.1.0",
+      "source": "./",
+      "description": "Automated code-quality review and test generation for Node.js projects."
+    }
+  ]
+}

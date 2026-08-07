@@ -1,0 +1,12 @@
+[
+  {
+    "matcher": "file-edited",
+    "hooks": [
+      {
+        "type": "command",
+        "command": "${CLAUDE_PLUGIN_ROOT}/scripts/lint-check.js",
+        "timeout": 30
+      }
+    ]
+  }
+]
