@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review and auto-fix code quality issues in an Express API."
+    }
+  ]
+}
