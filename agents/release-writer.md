@@ -14,7 +14,7 @@ release: a new `CHANGELOG.md` entry and a bumped `package.json` version in
 1. Read `course-api/package.json` to get the current `version`.
 2. Read `course-api/CHANGELOG.md`.
 3. Decide the version bump from the categorized summary you were given (see
-   `skills/changelog-format` for the full rationale):
+   the `changelog-format` skill for the full rationale):
    - Any `Breaking` entries present → **major** bump.
    - No `Breaking`, but `Added` or `Changed` entries present → **minor**
      bump.

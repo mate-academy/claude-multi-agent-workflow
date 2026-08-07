@@ -12,7 +12,8 @@ first.
 
 ## Categories
 
-Use exactly these four headings, in this order, only including ones that
+Use exactly these four headings, at `###` level (nested under `## [Unreleased]`
+or a `## [x.y.z]` version heading), in this order, only including ones that
 have entries:
 
 - **Added** — new, backward-compatible functionality (a new route, a new
@@ -28,7 +29,7 @@ have entries:
 One line per bullet, written for someone *calling* the API — not for
 someone reading the diff:
 
-- Good: `Added a \`GET /users/:id\` endpoint.`
+- Good: ``Added a `GET /users/:id` endpoint.``
 - Bad: `Added getUserById handler and wired it into the router.`
 
 ## Version bump mapping

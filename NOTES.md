@@ -33,3 +33,20 @@ needs the other's output — so `/release` runs them in parallel to avoid
 waiting twice. `release-writer` is different: it needs `release-scout`'s
 categorized summary as input, and it should never run if the tests failed,
 so it's a dependent step that waits on both parallel tasks finishing first.
+
+## Known limitations
+
+The `git push` hook (`hooks/scripts/check-release-freshness.js`) detects a
+push by matching the literal Bash command string against a regex heuristic
+— it does not parse the shell. Commands that hide a push behind another
+layer of indirection won't be recognized and will bypass the check, for
+example:
+
+- `sh -c "git push"` or `bash -c "git push"`
+- `eval "git push"`
+- a subshell: `(git push)`
+- a backgrounded push: `git push &`
+
+This is an advisory guardrail meant to catch the common case, not a
+security boundary — it shouldn't be relied on to prevent a determined or
+adversarial attempt to push around it.

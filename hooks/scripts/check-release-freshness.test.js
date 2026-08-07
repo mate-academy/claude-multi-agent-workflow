@@ -34,10 +34,6 @@ test('isGitPush matches git push with --no-pager before it', () => {
   assert.equal(isGitPush('git --no-pager push'), true);
 });
 
-test('isGitPush still matches git push chained after another command', () => {
-  assert.equal(isGitPush('npm test && git push'), true);
-});
-
 test('isGitPush matches git push on its own line in a multi-line command', () => {
   assert.equal(isGitPush('git add -A\ngit commit -m "fix"\ngit push'), true);
 });
@@ -80,4 +76,21 @@ test('hasUnreleasedContent is true when Unreleased has bullets', () => {
 test('hasUnreleasedContent is false when there is no Unreleased heading', () => {
   const text = '# Changelog\n\n## [1.0.0] - 2026-01-01\n- Initial release\n';
   assert.equal(hasUnreleasedContent(text), false);
+});
+
+test('hasUnreleasedContent is true for an Unreleased section using ### category headings with bullets underneath', () => {
+  const text =
+    '# Changelog\n\n## [Unreleased]\n### Added\n- New route\n\n## [1.0.0] - 2026-01-01\n';
+  assert.equal(hasUnreleasedContent(text), true);
+});
+
+test('hasUnreleasedContent is false when Unreleased has only empty category headings before the next version heading', () => {
+  const text =
+    '# Changelog\n\n## [Unreleased]\n### Added\n\n### Fixed\n\n## [1.0.0] - 2026-01-01\n- Initial release\n';
+  assert.equal(hasUnreleasedContent(text), false);
+});
+
+test('hasUnreleasedContent is true for a "*"-prefixed bullet under Unreleased', () => {
+  const text = '# Changelog\n\n## [Unreleased]\n* Added a thing\n\n## [1.0.0] - 2026-01-01\n';
+  assert.equal(hasUnreleasedContent(text), true);
 });

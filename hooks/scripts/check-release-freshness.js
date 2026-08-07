@@ -27,8 +27,8 @@ function hasUnreleasedContent(changelogText) {
 
   for (let i = startIndex + 1; i < lines.length; i++) {
     const line = lines[i];
-    if (/^##\s/.test(line)) break;
-    if (line.trim().startsWith('-')) return true;
+    if (/^##\s+\[/.test(line)) break;
+    if (/^[-*+]\s/.test(line.trim())) return true;
   }
   return false;
 }
