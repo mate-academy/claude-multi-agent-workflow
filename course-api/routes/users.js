@@ -30,7 +30,11 @@ router.post('/', (req, res) => {
 // PUT /users/:id — update an existing user (added in Project 2).
 router.put('/:id', (req, res) => {
   const { name, email } = req.body;
-  if (name === undefined && email === undefined) {
+  if (
+    (name === undefined && email === undefined) ||
+    (name !== undefined && !name) ||
+    (email !== undefined && !email)
+  ) {
     return res.status(400).json({ error: 'name or email is required' });
   }
   const user = store.updateUser(Number(req.params.id), { name, email });

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "code-quality-marketplace",
+  "description": "Marketplace for the code-quality-workflow plugin.",
+  "owner": {
+    "name": "Peter Selberg",
+    "email": "selberg84@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-workflow",
+      "source": "./",
+      "description": "Reviews Express API routes for convention adherence and keeps their tests in sync — two scoped subagents run as a workflow."
+    }
+  ]
+}
