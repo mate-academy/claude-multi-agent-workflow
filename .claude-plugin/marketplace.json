@@ -1,5 +1,7 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "code-quality-marketplace",
+  "description": "Marketplace for the code-quality-workflow plugin.",
   "owner": {
     "name": "Peter Selberg",
     "email": "selberg84@gmail.com"
