@@ -1,0 +1,5 @@
+{
+  "name": "shipwright",
+  "version": "0.1.0",
+  "description": "Ship releases from Claude Code: summarize unreleased changes, write the changelog, bump the version, and block pushes that leave a release behind."
+}
