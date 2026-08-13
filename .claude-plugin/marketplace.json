@@ -1,0 +1,14 @@
+{
+  "name": "anna-dev-tools",
+  "description": "Marketplace providing the api-quality-flow plugin for reviewing, testing, and safely fixing Express API changes.",
+  "owner": {
+    "name": "Anna"
+  },
+  "plugins": [
+    {
+      "name": "api-quality-flow",
+      "source": "./",
+      "description": "A multi-agent workflow for reviewing, testing, and safely fixing Express API changes."
+    }
+  ]
+}
