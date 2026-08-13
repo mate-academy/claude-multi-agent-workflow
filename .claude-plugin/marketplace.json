@@ -1,0 +1,14 @@
+{
+  "name": "dimadiyarov-marketplace",
+  "description": "Marketplace for the code-quality plugin — a two-agent review/fix workflow for Express APIs.",
+  "owner": {
+    "name": "dimadiyarov"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Two-agent code-quality workflow (parallel review + dependent fix/test pass) for Express APIs."
+    }
+  ]
+}

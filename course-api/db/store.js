@@ -13,27 +13,35 @@ function seed() {
 }
 seed();
 
+// Internal lookup that returns the live object so in-place mutation works.
+// Never expose this return value outside this module — external callers
+// must only ever see copies (see getUser/listUsers below).
+function findUser(id) {
+  return users.find((user) => user.id === id);
+}
+
 function listUsers() {
-  return users;
+  return users.map((user) => ({ ...user }));
 }
 
 function getUser(id) {
-  return users.find((user) => user.id === id);
+  const user = findUser(id);
+  return user ? { ...user } : undefined;
 }
 
 function createUser({ name, email }) {
   const user = { id: nextId, name, email };
   nextId += 1;
   users.push(user);
-  return user;
+  return { ...user };
 }
 
 function updateUser(id, fields) {
-  const user = getUser(id);
+  const user = findUser(id);
   if (!user) return undefined;
   if (fields.name !== undefined) user.name = fields.name;
   if (fields.email !== undefined) user.email = fields.email;
-  return user;
+  return { ...user };
 }
 
 // Reset to the seed data. Used by the tests so each one starts clean.
