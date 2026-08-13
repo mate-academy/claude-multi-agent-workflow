@@ -1,0 +1,10 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Two-agent code-quality workflow for Express APIs: a read-only reviewer and a fix/test agent, orchestrated by a single command.",
+  "author": {
+    "name": "dimadiyarov"
+  },
+  "license": "MIT",
+  "keywords": ["code-review", "testing", "workflow", "express"]
+}
