@@ -41,13 +41,18 @@ test('PUT /users/:id returns 404 for a missing user', async () => {
 test('GET /users/:id returns 400 for a malformed id', async () => {
   const res = await request(app).get('/users/abc');
   assert.equal(res.status, 400);
-  assert.ok(res.body.error);
+  assert.equal(res.body.error, 'id must be a non-negative integer');
 });
 
 test('PUT /users/:id returns 400 for a malformed id', async () => {
   const res = await request(app).put('/users/abc').send({ name: 'Nobody' });
   assert.equal(res.status, 400);
-  assert.ok(res.body.error);
+  assert.equal(res.body.error, 'id must be a non-negative integer');
+});
+
+test('GET /users/0 is treated as a valid id (not a 400)', async () => {
+  const res = await request(app).get('/users/0');
+  assert.equal(res.status, 404);
 });
 
 test('POST /users rejects an empty-string name', async () => {

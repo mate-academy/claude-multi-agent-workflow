@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   const id = parseId(req.params.id);
   if (id === null) {
-    return res.status(400).json({ error: 'id must be a positive integer' });
+    return res.status(400).json({ error: 'id must be a non-negative integer' });
   }
   const user = store.getUser(id);
   if (!user) {
@@ -47,7 +47,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   const id = parseId(req.params.id);
   if (id === null) {
-    return res.status(400).json({ error: 'id must be a positive integer' });
+    return res.status(400).json({ error: 'id must be a non-negative integer' });
   }
   const { name, email } = req.body;
   if (name === undefined && email === undefined) {
