@@ -1,5 +1,6 @@
 {
   "name": "dimadiyarov-marketplace",
+  "description": "Marketplace for the code-quality plugin — a two-agent review/fix workflow for Express APIs.",
   "owner": {
     "name": "dimadiyarov"
   },
