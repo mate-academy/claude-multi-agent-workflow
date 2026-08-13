@@ -1,0 +1,8 @@
+{
+  "name": "api-quality-flow",
+  "version": "0.1.0",
+  "description": "A multi-agent workflow for reviewing, testing, and safely fixing Express API changes.",
+  "author": {
+    "name": "Anna"
+  }
+}
