@@ -1,0 +1,15 @@
+{
+  "name": "code-quality-marketplace",
+  "description": "Marketplace for the code-quality multi-agent review and fix plugin",
+  "owner": {
+    "name": "PichurinR"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "version": "1.0.0",
+      "description": "Multi-agent code review and quality improvement workflow with parallel analysis and sequential fixing",
+      "source": "./"
+    }
+  ]
+}
