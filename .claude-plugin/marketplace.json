@@ -1,0 +1,14 @@
+{
+  "name": "roman-plugins",
+  "description": "A small marketplace serving quality-guard, a code-review + test-writing workflow plugin for Express APIs.",
+  "owner": {
+    "name": "Roman Azhniuk"
+  },
+  "plugins": [
+    {
+      "name": "quality-guard",
+      "source": "./",
+      "description": "Review + test-writing workflow for Express APIs: parallel code review, dependent test generation, a lint hook, and a test-style skill."
+    }
+  ]
+}
