@@ -1,0 +1,8 @@
+[
+  {
+    "event": "before_commit",
+    "name": "quality-check",
+    "description": "Runs code quality checks before allowing a commit",
+    "script": "${CLAUDE_PLUGIN_ROOT}/hooks/pre-commit.sh"
+  }
+]
