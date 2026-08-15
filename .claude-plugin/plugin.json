@@ -1,0 +1,6 @@
+{
+  "name": "course-quality-guard",
+  "version": "0.1.0",
+  "description": "Multi-agent code-quality workflow for course-api: reviews convention compliance, runs tests, and fixes/writes tests for scoped gaps.",
+  "author": { "name": "Anastasia Grossman" }
+}

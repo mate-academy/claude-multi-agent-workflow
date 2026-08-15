@@ -1,0 +1,12 @@
+{
+  "name": "course-quality-guard-marketplace",
+  "description": "Marketplace for the course-quality-guard plugin.",
+  "owner": { "name": "Anastasia Grossman" },
+  "plugins": [
+    {
+      "name": "course-quality-guard",
+      "description": "Multi-agent code-quality workflow for course-api.",
+      "source": "./"
+    }
+  ]
+}
