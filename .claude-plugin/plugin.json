@@ -1,0 +1,8 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "Code-quality workflow for Express APIs: a read-only reviewer and a test-writing agent orchestrated by /quality, backed by a conventions skill and an auto-lint hook.",
+  "author": {
+    "name": "Illia Krupko"
+  }
+}

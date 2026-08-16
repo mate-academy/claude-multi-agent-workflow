@@ -1,0 +1,13 @@
+{
+  "name": "krupkolllia-marketplace",
+  "owner": {
+    "name": "Illia Krupko"
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Code-quality workflow for Express APIs: a read-only reviewer and a test-writing agent orchestrated by /quality."
+    }
+  ]
+}
