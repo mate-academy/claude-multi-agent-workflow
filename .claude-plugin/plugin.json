@@ -1,0 +1,5 @@
+{
+  "name": "code-quality-kit",
+  "version": "0.1.0",
+  "description": "Multi-agent code review and test workflow for Express projects"
+}
