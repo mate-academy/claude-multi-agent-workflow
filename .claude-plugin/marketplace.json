@@ -1,0 +1,7 @@
+{
+  "name": "my-tools",
+  "owner": { "name": "Your Name" },
+  "plugins": [
+              { "name": "assignment-kit", "source": "./", "description": "Commands and agents for cutting a release." }
+             ]
+}
