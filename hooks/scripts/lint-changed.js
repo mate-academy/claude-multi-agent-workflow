@@ -22,8 +22,16 @@ process.stdin.on('end', () => {
   const pluginRoot = process.env.CLAUDE_PLUGIN_ROOT || path.join(__dirname, '..', '..');
   const apiRoot = path.join(pluginRoot, 'course-api');
   const resolved = path.resolve(filePath);
+  const resolvedApiRoot = path.resolve(apiRoot) + path.sep;
 
-  if (!resolved.startsWith(path.resolve(apiRoot) + path.sep)) process.exit(0); // outside course-api/
+  // Windows paths are case-insensitive, so compare case-insensitively there
+  // to avoid drive-letter/case mismatches (e.g. `c:\...` vs `C:\...`) making
+  // an in-scope file look like it's outside course-api/.
+  const inScope = process.platform === 'win32'
+    ? resolved.toLowerCase().startsWith(resolvedApiRoot.toLowerCase())
+    : resolved.startsWith(resolvedApiRoot);
+
+  if (!inScope) process.exit(0); // outside course-api/
 
   // Invoke eslint's JS entrypoint directly with `node` rather than the .bin shim —
   // spawning a .cmd shim without a shell fails on Windows (EINVAL).

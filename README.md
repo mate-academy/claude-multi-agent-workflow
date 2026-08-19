@@ -7,7 +7,7 @@ A Claude Code plugin that bundles a multi-agent code quality workflow: subagents
 ```
 .claude-plugin/
   plugin.json        # manifest — name + version
-  marketplace.json    # marketplace catalog listing this plugin (added in a later task)
+  marketplace.json    # marketplace catalog listing this plugin
 agents/                # scoped subagents (a read-only reviewer, a writer/fixer)
 commands/              # the workflow command that orchestrates the subagents
 skills/                # a skill supporting the workflow
@@ -35,4 +35,4 @@ Once published as a marketplace:
 
 ## Status
 
-Scaffolding in place (`plugin.json`, component folders). Subagents, the workflow command, the skill, and the hook are being filled in next.
+Subagents, the workflow command, the skill, and the hook are all in place, tested against `course-api/`.
