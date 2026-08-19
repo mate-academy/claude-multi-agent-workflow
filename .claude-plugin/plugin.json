@@ -1,0 +1,9 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "A multi-agent code quality workflow: review, fix, and keep formatting consistent.",
+  "author": {
+    "name": "Adi Gilat",
+    "email": "adi1651@gmail.com"
+  }
+}
