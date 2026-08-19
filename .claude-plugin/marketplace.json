@@ -1,0 +1,13 @@
+{
+  "name": "tvairakt-marketplace",
+  "owner": {
+    "name": "tvairakt"
+  },
+  "plugins": [
+    {
+      "name": "api-quality-kit",
+      "source": "./",
+      "description": "Code-quality workflow for Express APIs: parallel review + test run, then a dependent fix pass."
+    }
+  ]
+}

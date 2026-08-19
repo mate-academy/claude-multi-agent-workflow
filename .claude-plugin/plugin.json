@@ -1,0 +1,8 @@
+{
+  "name": "api-quality-kit",
+  "description": "Code-quality workflow for Express APIs: parallel review + test run, then a dependent fix pass — plus a skill and a lint-on-save hook.",
+  "version": "0.1.0",
+  "author": {
+    "name": "tvairakt"
+  }
+}
