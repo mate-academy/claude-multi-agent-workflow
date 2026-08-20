@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-kit-marketplace",
+  "owner": {
+    "name": "Leonid Epstein"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-kit",
+      "source": "./",
+      "description": "Multi-agent code-quality workflow: review, test coverage, and lint enforcement for the course-api Express service."
+    }
+  ]
+}

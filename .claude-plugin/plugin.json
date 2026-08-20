@@ -1,0 +1,8 @@
+{
+  "name": "code-quality-kit",
+  "version": "0.1.0",
+  "description": "Multi-agent code-quality workflow: review, test coverage, and lint enforcement for the course-api Express service.",
+  "author": {
+    "name": "Leonid Epstein"
+  }
+}
