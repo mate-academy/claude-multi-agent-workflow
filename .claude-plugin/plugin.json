@@ -1,0 +1,9 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Multi-agent code quality workflow for Express APIs: reviews changes, fixes issues, adds test coverage, and lint-checks on every edit.",
+  "author": {
+    "name": "Marina Kramarchuk",
+    "email": "kramarchukmm20182018@gmail.com"
+  }
+}
