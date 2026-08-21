@@ -12,4 +12,4 @@ As a marketplace: `/plugin marketplace add lehmoja/claude-multi-agent-workflow`,
 
 ## Orchestration decision
 
-The `/review` command runs the Explore agent first to gather the files changed on the current branch, then hands that file list to the code-reviewer subagent. This is a dependent (sequential) step by necessity — code-reviewer can't review files it doesn't know about yet, so it has to wait on Explore's output before it can start.
+The `/review` command first runs `image-reviewer` over `images/` and `course-api/images/` in parallel — the two scans don't depend on each other, so there's no reason to make one wait on the other. Once both finish, `droneimage-handler` moves every car photo they found into `cars/`; this step is dependent because it needs the scan results before it knows what to move. Finally `licenseplate-reviewer` reads plates out of `cars/` and writes them to metadata — also dependent, since it can't read plates from images that haven't been moved there yet.
