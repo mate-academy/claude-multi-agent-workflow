@@ -1,0 +1,13 @@
+{
+  "name": "fanca123-marketplace",
+  "owner": {
+    "name": "Fanca123"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-guard",
+      "source": "./",
+      "description": "Parallel review of routes/store + dependent test authoring for Express APIs."
+    }
+  ]
+}

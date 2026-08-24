@@ -1,0 +1,10 @@
+{
+  "name": "code-quality-guard",
+  "version": "0.1.0",
+  "description": "Multi-agent code quality workflow for Express APIs: reviews route and store code in parallel, then writes or updates tests to close the gaps the review finds.",
+  "author": {
+    "name": "Fanca123"
+  },
+  "keywords": ["code-quality", "review", "testing", "express"],
+  "license": "MIT"
+}
