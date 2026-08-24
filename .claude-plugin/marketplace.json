@@ -1,0 +1,29 @@
+{
+  "name": "evhenii-tools",
+  "owner": {
+    "name": "evhenii",
+    "url": "https://github.com/EvheniiChuhai"
+  },
+  "metadata": {
+    "description": "Plugins built while working through the Claude Code course.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "A multi-agent quality gate for Express APIs: review the routes, audit the docs contract, then write the regression tests that prove the bugs.",
+      "version": "0.1.0",
+      "author": {
+        "name": "evhenii"
+      },
+      "keywords": [
+        "code-quality",
+        "express",
+        "api",
+        "code-review",
+        "testing"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "A multi-agent quality gate for Express APIs: review routes, audit the docs contract, then write the regression tests that close the gaps.",
+  "author": {
+    "name": "evhenii"
+  },
+  "homepage": "https://github.com/EvheniiChuhai/claude-multi-agent-workflow",
+  "repository": "https://github.com/EvheniiChuhai/claude-multi-agent-workflow",
+  "license": "MIT",
+  "keywords": [
+    "code-quality",
+    "express",
+    "api",
+    "code-review",
+    "testing",
+    "multi-agent"
+  ]
+}
