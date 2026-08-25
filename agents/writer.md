@@ -1,7 +1,8 @@
-description: When to use (e.g., “Fixing errors or generating tests”).
+---
+name: writer
+description: Виправляє знайдені помилки та генерує нові файли тестів у коді.
+tools: Read, Write, Edit, Grep, Glob
+model: claude-3-5-sonnet
+---
 
-tools: Add tools for writing/editing (Read, Write, Edit, Bash).
-
-model: A powerful model (e.g., claude-3-5-sonnet).
-
-body: Instructions for making changes or creating new files.
+На основі отриманого звіту або завдання внеси необхідні виправлення у файли або створи нові файли тестів.

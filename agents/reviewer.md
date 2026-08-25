@@ -1,7 +1,8 @@
-description: A description of situations when an agent should be called (for example, “Analyzing code for errors and vulnerabilities”).
+---
+name: reviewer
+description: Аналізує код на наявність помилок та порушень багатьох стандартів без внесення змін.
+tools: Read, Grep, Glob
+model: claude-3-5-haiku
+---
 
-tools: Allow only reading and searching tools (Read, Grep, Glob, LS).
-
-model: A fast/low-cost model (e.g., claude-3-5-haiku or claude-3-haiku).
-
-body: Clear instructions on what to analyze and what specific report format to return.
+Проаналізуй надані файли коду. Збери всі потенційні помилки, вразливості та порушення стилю та поверни детальний звіт.
