@@ -1,0 +1,11 @@
+{
+  "hooks": [
+    {
+      "event": "PreToolUse",
+      "matcher": {
+        "tool_name": "Edit"
+      },
+      "command": "${CLAUDE_PLUGIN_ROOT}/scripts/check-format.sh"
+    }
+  ]
+}
