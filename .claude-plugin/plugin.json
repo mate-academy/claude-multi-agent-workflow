@@ -1,0 +1,8 @@
+{
+  "name": "code-quality-workflow",
+  "version": "0.1.0",
+  "description": "A multi-agent workflow plugin for reviewing and fixing code issues.",
+  "author": {
+    "name": "gmsha"
+  }
+}
