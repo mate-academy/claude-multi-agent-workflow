@@ -1,0 +1,10 @@
+{
+  "name": "code-quality-marketplace",
+  "plugins": [
+    {
+      "name": "code-quality-plugin",
+      "source": "./",
+      "description": "Code review + test generation + formatting"
+    }
+  ]
+}
