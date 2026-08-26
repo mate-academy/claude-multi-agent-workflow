@@ -1,0 +1,10 @@
+{
+  "name": "fredrik-claude-marketplace",
+  "plugins": [
+    {
+      "name": "code-quality-workflow",
+      "source": "./",
+      "description": "Multi-agent code review, test fixing, and validation workflow for the course Express API."
+    }
+  ]
+}
