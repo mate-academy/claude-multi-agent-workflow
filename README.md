@@ -28,6 +28,16 @@ Inside Claude Code, reload plugins after edits if needed:
 
 Run the namespaced `/code-quality` workflow against `course-api/`.
 
+## Marketplace installation
+
+Add `fredrik-claude-marketplace` as a Claude Code marketplace and install
+`code-quality-workflow`.
+
+The plugin can also be tested directly from a checkout with:
+
+```bash
+claude --plugin-dir .
+
 ## Plugin purpose
 
 This plugin is intentionally scoped to the supplied Express API so the workflow demonstrates a real multi-agent quality loop: independent analysis plus test execution first, then dependent validation.
