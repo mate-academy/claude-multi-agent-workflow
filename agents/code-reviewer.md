@@ -1,4 +1,5 @@
 ---
+name: code-reviewer
 description: Use when you need a read-only review of the Express API for correctness, maintainability, security, and likely regressions before changes are made.
 tools: Read, Glob, Grep
 model: sonnet
