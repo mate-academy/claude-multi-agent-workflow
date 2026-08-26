@@ -1,0 +1,11 @@
+{
+  "name": "code-quality-workflow",
+  "description": "A code-quality review and fixing workflow for Express APIs.",
+  "plugins": [
+    {
+      "name": "code-quality-workflow",
+      "source": "./",
+      "description": "A code-quality review and fixing workflow for Express APIs."
+    }
+  ]
+}
