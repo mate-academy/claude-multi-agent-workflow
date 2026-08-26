@@ -1,4 +1,5 @@
 ---
+name: test-fixer
 description: Use when you need to run the Express API test suite, fix safe test or formatting issues, and leave the codebase in a cleaner validated state.
 tools: Read, Write, Edit, Glob, Grep, Bash
 model: sonnet
