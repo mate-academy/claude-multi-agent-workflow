@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"${CLAUDE_PLUGIN_ROOT}/course-api\" && npm test"
+          }
+        ]
+      }
+    ]
+  }
+}
