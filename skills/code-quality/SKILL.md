@@ -1,3 +1,8 @@
+---
+name: code-quality
+description: Review and improve the quality of the Express API by inspecting code, running tests, applying safe fixes, and validating the result.
+---
+
 # Code Quality Skill
 
 Use this skill when working on the Express API in `course-api/` and the goal is safer, cleaner, better-tested code.

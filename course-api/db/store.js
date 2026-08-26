@@ -14,7 +14,7 @@ function seed() {
 seed();
 
 function listUsers() {
-  return users;
+  return [...users];
 }
 
 function getUser(id) {
