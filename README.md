@@ -92,3 +92,44 @@ The check confirms everything that can be read from your files:
 - a skill at `skills/<name>/SKILL.md` and a hook at `hooks/hooks.json`, with no hardcoded absolute paths (use `${CLAUDE_PLUGIN_ROOT}`);
 - `marketplace.json` is valid and lists your plugin under the same `name` as `plugin.json`;
 - `README.md` and a real `NOTES.md` are present.
+
+---
+
+## release-toolkit Plugin
+
+The **release-toolkit** plugin automates the release workflow for the course-api codebase. It bundles two scoped subagents (release-readiness-auditor and changelog-version-bumper), a skill for changelog conventions, a hook for version/changelog sync validation, and an orchestrated workflow command.
+
+### What it does
+
+- **Release readiness audit**: Checks for version/changelog mismatches, leftover debug code (console.log, debugger, TODO, FIXME), and missing test coverage before releasing.
+- **Changelog & version management**: Drafts a structured CHANGELOG.md entry from recent commits, applies semver rules to decide the version bump (major/minor/patch), and updates course-api/package.json automatically.
+- **Hook validation**: After editing package.json, warns if the version doesn't have a corresponding changelog entry (non-blocking, so the workflow continues).
+
+### Installation
+
+Clone this repository, then:
+
+```bash
+claude --plugin-dir .
+```
+
+Then install the plugin in a fresh Claude session:
+
+```bash
+/plugin marketplace add <path-to-this-repo>
+/plugin install release-toolkit@<marketplace-name>
+```
+
+### Usage
+
+From the root of this repo, run:
+
+```bash
+/release-toolkit:release
+```
+
+This executes:
+1. **Parallel step** (independent, run together): audits course-api and runs `npm run lint` + `npm test` simultaneously.
+2. **Dependent step** (waits for step 1): if both checks pass, drafts a changelog entry, bumps the version, and guides you to tag and commit.
+
+If any check fails, the workflow stops and reports the failures instead of proceeding to the version bump.

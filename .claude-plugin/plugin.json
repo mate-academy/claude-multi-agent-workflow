@@ -1,0 +1,8 @@
+{
+  "name": "release-toolkit",
+  "version": "0.1.0",
+  "description": "Automates release readiness checks, changelog drafting, and semver version bumps.",
+  "author": {
+    "email": "berezhna.o.v@gmail.com"
+  }
+}
