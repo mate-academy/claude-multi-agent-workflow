@@ -1,0 +1,12 @@
+{
+  "name": "code-quality-workflow",
+  "version": "0.1.0",
+  "description": "A multi-agent code quality workflow: review, test, and document changes with scoped subagents.",
+  "author": {
+    "name": "Denys Shy"
+  },
+  "agents": "./agents/",
+  "commands": "./commands/",
+  "hooks": "./hooks/hooks.json",
+  "skills": "./skills/"
+}

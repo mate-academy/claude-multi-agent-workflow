@@ -1,0 +1,14 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "Denys Shy"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-workflow",
+      "source": ".",
+      "description": "A multi-agent code quality workflow: review, test, and document changes with scoped subagents.",
+      "version": "0.1.0"
+    }
+  ]
+}
