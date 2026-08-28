@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    {
+      "name": "release-toolkit",
+      "version": "0.1.0",
+      "source": "./",
+      "description": "Automates release readiness checks, changelog drafting, and semver version bumps"
+    }
+  ]
+}
