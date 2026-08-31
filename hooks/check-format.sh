@@ -1,8 +1,5 @@
 #!/bin/bash
-
-# Pre-commit format checker
-
-PLUGIN_ROOT="${CLAUDE_PLUGIN_ROOT:-.}"
+# Format checker hook
 
 echo "Checking for trailing whitespace..."
 trailing_ws=$(find . -type f \( -name "*.js" -o -name "*.py" -o -name "*.md" \) -exec grep -l '[[:space:]]$' {} \;)
@@ -22,5 +19,4 @@ if [ -n "$missing_newline" ]; then
   exit 1
 fi
 
-echo "Format check passed"
 exit 0
