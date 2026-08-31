@@ -19,3 +19,4 @@ if [ -n "$missing_newline" ]; then
 fi
 
 exit 0
+
