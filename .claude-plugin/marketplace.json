@@ -1,0 +1,11 @@
+{
+  "name": "qa-kit-marketplace",
+  "owner": { "name": "habinap", "email": "habesz@gmail.com" },
+  "plugins": [
+    {
+      "name": "qa-kit",
+      "source": "./",
+      "description": "Review-and-test workflow: subagents, a /verify command, a coverage-gap skill, and a test-coverage reminder hook."
+    }
+  ]
+}
