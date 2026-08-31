@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    {
+      "name": "code-quality",
+      "description": "Multi-agent code quality workflow: parallel code review and test generation with formatting checks",
+      "source": "./",
+      "version": "1.0.0"
+    }
+  ]
+}

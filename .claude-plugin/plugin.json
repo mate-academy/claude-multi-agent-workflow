@@ -1,0 +1,5 @@
+{
+  "name": "code-quality",
+  "version": "1.0.0",
+  "description": "Multi-agent code quality workflow with review and testing"
+}
