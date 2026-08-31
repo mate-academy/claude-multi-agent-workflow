@@ -1,5 +1,4 @@
 #!/bin/bash
-# Format checker hook
 
 echo "Checking for trailing whitespace..."
 trailing_ws=$(find . -type f \( -name "*.js" -o -name "*.py" -o -name "*.md" \) -exec grep -l '[[:space:]]$' {} \;)
