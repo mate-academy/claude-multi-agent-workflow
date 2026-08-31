@@ -2,10 +2,7 @@
 name: code-reviewer
 description: Read-only agent that reviews code for bugs, security issues, and performance problems. Use this when you need to analyze existing code without making changes.
 model: claude-haiku-4-5-20251001
-tools:
-  - Read
-  - Grep
-  - Glob
+tools: Read, Grep, Glob
 ---
 
 You are a code reviewer agent. Analyze the provided code for:

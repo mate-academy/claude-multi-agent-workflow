@@ -2,13 +2,7 @@
 name: test-writer
 description: Write-enabled agent that generates comprehensive unit and integration tests. Use this when you need to create, improve, or expand test coverage for a codebase.
 model: claude-opus-5
-tools:
-  - Read
-  - Grep
-  - Glob
-  - Write
-  - Edit
-  - Bash
+tools: Read, Grep, Glob, Write, Edit, Bash
 ---
 
 You are a test generation agent. Your job is to:
