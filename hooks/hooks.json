@@ -1,0 +1,10 @@
+{
+  "hooks": [
+    {
+      "name": "pre-commit-quality-check",
+      "event": "before-files-saved",
+      "description": "Run basic format checks before committing code",
+      "command": "${CLAUDE_PLUGIN_ROOT}/hooks/check-format.sh"
+    }
+  ]
+}
