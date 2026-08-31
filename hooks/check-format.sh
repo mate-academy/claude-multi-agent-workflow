@@ -3,6 +3,7 @@
 echo "Checking for trailing whitespace..."
 trailing_ws=$(find . -type f \( -name "*.js" -o -name "*.py" -o -name "*.md" \) -exec grep -l '[[:space:]]$' {} \;)
 
+
 if [ -n "$trailing_ws" ]; then
   echo "Files with trailing whitespace found:"
   echo "$trailing_ws"
