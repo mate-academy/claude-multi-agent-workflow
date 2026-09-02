@@ -1,0 +1,8 @@
+{
+  "name": "code-review",
+  "version": "0.1.0",
+  "description": "Review Express API routes for correctness and convention issues, then write the tests to close the gaps found.",
+  "author": {
+    "name": "Felipe De Ycaza"
+  }
+}

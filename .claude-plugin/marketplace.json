@@ -1,0 +1,14 @@
+{
+  "name": "code-review",
+  "description": "A single-plugin marketplace offering code-review: an Express route reviewer and test-writer workflow.",
+  "owner": {
+    "name": "Felipe De Ycaza"
+  },
+  "plugins": [
+    {
+      "name": "code-review",
+      "source": "./",
+      "description": "Review Express API routes for correctness and convention issues, then write the tests that close whatever the review finds."
+    }
+  ]
+}
