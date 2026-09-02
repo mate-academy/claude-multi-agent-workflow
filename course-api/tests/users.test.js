@@ -18,6 +18,17 @@ test('GET /users/:id returns 404 for a missing user', async () => {
   assert.equal(res.status, 404);
 });
 
+test('GET /users/email/:email returns the matching user', async () => {
+  const res = await request(app).get('/users/email/ada@example.com');
+  assert.equal(res.status, 200);
+  assert.equal(res.body.id, 1);
+});
+
+test('GET /users/email/:email returns 404 for an unknown email', async () => {
+  const res = await request(app).get('/users/email/nobody@example.com');
+  assert.equal(res.status, 404);
+});
+
 test('POST /users creates a user', async () => {
   const res = await request(app)
     .post('/users')
@@ -36,4 +47,34 @@ test('PUT /users/:id updates an existing user', async () => {
 test('PUT /users/:id returns 404 for a missing user', async () => {
   const res = await request(app).put('/users/999').send({ name: 'Nobody' });
   assert.equal(res.status, 404);
+});
+
+test('POST /users returns 400 when name is missing', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ email: 'test@example.com' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('POST /users returns 400 when email is missing', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ name: 'Test User' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('PUT /users/:id returns 400 when no fields are given', async () => {
+  const res = await request(app).put('/users/1').send({});
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('GET /health returns 200 with status and uptime', async () => {
+  const res = await request(app).get('/health');
+  assert.equal(res.status, 200);
+  assert.equal(res.body.status, 'ok');
+  assert.equal(typeof res.body.uptime, 'number');
+  assert.ok(res.body.uptime >= 0);
 });

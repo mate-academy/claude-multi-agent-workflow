@@ -21,6 +21,10 @@ function getUser(id) {
   return users.find((user) => user.id === id);
 }
 
+function getUserByEmail(email) {
+  return users.find((user) => user.email === email);
+}
+
 function createUser({ name, email }) {
   const user = { id: nextId, name, email };
   nextId += 1;
@@ -41,4 +45,4 @@ function reset() {
   seed();
 }
 
-module.exports = { listUsers, getUser, createUser, updateUser, reset };
+module.exports = { listUsers, getUser, getUserByEmail, createUser, updateUser, reset };

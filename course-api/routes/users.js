@@ -8,6 +8,15 @@ router.get('/', (req, res) => {
   res.json(store.listUsers());
 });
 
+// GET /users/email/:email — fetch one user by email, or 404 if it doesn't exist.
+router.get('/email/:email', (req, res) => {
+  const user = store.getUserByEmail(req.params.email);
+  if (!user) {
+    return res.status(404).json({ error: 'User not found' });
+  }
+  return res.json(user);
+});
+
 // GET /users/:id — fetch one user, or 404 if it doesn't exist.
 router.get('/:id', (req, res) => {
   const user = store.getUser(Number(req.params.id));

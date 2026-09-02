@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "A multi-agent code quality workflow: review, tests, and formatting for the course API.",
+  "author": {
+    "name": "Bohdan Maksymiuk"
+  }
+}
