@@ -1,0 +1,17 @@
+{
+  "name": "code-quality",
+  "owner": {
+    "name": "Korshun"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "A multi-agent code-quality workflow: review the diff and close its test gaps, then keep the tree linted on every edit.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Korshun"
+      }
+    }
+  ]
+}
