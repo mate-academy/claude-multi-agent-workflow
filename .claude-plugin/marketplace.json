@@ -1,0 +1,13 @@
+{
+  "name": "course-tools",
+  "owner": {
+    "name": "Gidr0Gen"
+  },
+  "plugins": [
+    {
+      "name": "course-quality",
+      "source": "./",
+      "description": "Review changes, find test gaps, add focused tests, and verify the course API."
+    }
+  ]
+}
