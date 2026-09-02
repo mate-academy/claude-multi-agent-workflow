@@ -35,3 +35,4 @@ cd course-api && npm install
 ```
 
 Then, from the repo root, run `/code-quality:quality` against `course-api/`.
+
