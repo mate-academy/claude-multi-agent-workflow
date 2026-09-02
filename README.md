@@ -1,4 +1,27 @@
-## Project — Ship your workflow as a plugin
+## Course Quality plugin
+
+Course Quality is a shareable Claude Code plugin for reviewing and testing the Express API in `course-api/`. It combines parallel read-only analysis with a dependent test-writing and verification step.
+
+### Included components
+
+- `/course-quality:quality-check` runs the full multi-agent workflow.
+- `code-reviewer` reviews changed API code without editing it.
+- `test-gap-finder` identifies missing coverage without editing files.
+- `test-writer` adds focused tests after both read-only reports finish.
+- `error-response` teaches the API's status-code and JSON error conventions.
+- A `PostToolUse` hook lints `course-api/` after `Write` or `Edit`.
+
+### Local use
+
+From the repository root, run `claude --plugin-dir .`, then invoke `/course-quality:quality-check`. Use `/reload-plugins` after changing plugin files.
+
+### Marketplace installation
+
+Add this repository as a marketplace, then install `course-quality@course-tools` through `/plugin`. The catalog is stored in `.claude-plugin/marketplace.json` and points to the plugin at `./`.
+
+---
+
+## Project brief
  
 Across the course you've built scoped subagents, orchestrated them into workflows, written skills, commands, and hooks, and learned how a plugin packages all of it. Now you'll put it together into one real, shareable thing: a plugin that carries a multi-agent workflow, tested against a live codebase and published so anyone can install it with a single command.
  

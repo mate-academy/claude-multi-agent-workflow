@@ -1,0 +1,5 @@
+{
+  "name": "course-quality",
+  "version": "1.0.0",
+  "description": "A multi-agent quality workflow for the course Express API."
+}
