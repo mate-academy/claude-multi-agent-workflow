@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm run lint --prefix ${CLAUDE_PLUGIN_ROOT}/course-api"
+          }
+        ]
+      }
+    ]
+  }
+}
