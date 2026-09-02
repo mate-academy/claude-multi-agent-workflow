@@ -27,6 +27,9 @@ Returns an array of all users.
 ### GET /users/:id
 Returns a single user, or `404` if no user has that id.
 
+### GET /users/email/:email
+Returns a single user matching that email, or `404` if no user has that email.
+
 ### POST /users
 Creates a user. Body requires `name` and `email`; returns `201` with the created user, or `400` if either field is missing.
 

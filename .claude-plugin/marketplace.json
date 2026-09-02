@@ -1,0 +1,13 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "owner": {
+    "name": "Bohdan Maksymiuk"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "A multi-agent code quality workflow: review, tests, and formatting for the course API."
+    }
+  ]
+}
