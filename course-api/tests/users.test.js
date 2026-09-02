@@ -37,3 +37,62 @@ test('PUT /users/:id returns 404 for a missing user', async () => {
   const res = await request(app).put('/users/999').send({ name: 'Nobody' });
   assert.equal(res.status, 404);
 });
+
+// Finding 1: Malformed ID coercion should return 400, not 404
+test('GET /users/:id returns 400 for a malformed (non-numeric) ID', async () => {
+  const res = await request(app).get('/users/abc');
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('PUT /users/:id returns 400 for a malformed (non-numeric) ID', async () => {
+  const res = await request(app).put('/users/abc').send({ name: 'New Name' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+// Finding 2: Empty-string values should be rejected (inconsistent with POST)
+test('PUT /users/:id returns 400 when name is an empty string', async () => {
+  const res = await request(app).put('/users/1').send({ name: '' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('PUT /users/:id returns 400 when email is an empty string', async () => {
+  const res = await request(app).put('/users/1').send({ email: '' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+// Finding 3: Non-string values for name/email should be rejected
+test('POST /users returns 400 when name is not a string', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ name: 42, email: 'test@example.com' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('POST /users returns 400 when email is not a string', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ name: 'Test User', email: 123 });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('PUT /users/:id returns 400 when name is not a string', async () => {
+  const res = await request(app)
+    .put('/users/1')
+    .send({ name: 42 });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('PUT /users/:id returns 400 when email is not a string', async () => {
+  const res = await request(app)
+    .put('/users/1')
+    .send({ email: 123 });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
