@@ -1,0 +1,13 @@
+{
+  "name": "kl1874-plugins",
+  "owner": {
+    "name": "kl1874"
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Parallel API review + test-gap scan, followed by an agent that closes the gaps and runs the suite."
+    }
+  ]
+}

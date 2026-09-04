@@ -1,0 +1,10 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "A parallel review + test-gap scan of an Express API, fed into an agent that closes the gaps and runs the suite.",
+  "author": {
+    "name": "kl1874"
+  },
+  "keywords": ["api", "express", "code-review", "testing", "quality"],
+  "license": "MIT"
+}
