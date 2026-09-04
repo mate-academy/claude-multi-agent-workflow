@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "A code quality plugin: subagents, a workflow command, a skill, and a hook for reviewing and improving code.",
+  "author": {
+    "name": "Rodrigo Frams"
+  }
+}

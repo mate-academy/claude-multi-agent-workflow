@@ -1,0 +1,14 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "description": "Rodrigo's marketplace for the Claude Code multi-agent workflow course project.",
+  "owner": {
+    "name": "Rodrigo Frams"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Reviews and fixes course-api code quality: two subagents, a parallel-then-dependent workflow command, a conventions skill, and an auto-lint hook."
+    }
+  ]
+}
