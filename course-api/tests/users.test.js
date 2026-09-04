@@ -18,6 +18,18 @@ test('GET /users/:id returns 404 for a missing user', async () => {
   assert.equal(res.status, 404);
 });
 
+test('GET /users/:id returns 200 with the user for an existing id', async () => {
+  const res = await request(app).get('/users/1');
+  assert.equal(res.status, 200);
+  assert.deepEqual(res.body, { id: 1, name: 'Ada Lovelace', email: 'ada@example.com' });
+});
+
+test('GET /users/:id returns 400 for a non-numeric id', async () => {
+  const res = await request(app).get('/users/abc');
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
 test('POST /users creates a user', async () => {
   const res = await request(app)
     .post('/users')
@@ -27,13 +39,59 @@ test('POST /users creates a user', async () => {
   assert.ok(res.body.id);
 });
 
+test('POST /users returns 400 when name is missing', async () => {
+  const res = await request(app).post('/users').send({ email: 'grace@example.com' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('POST /users returns 400 when email is missing', async () => {
+  const res = await request(app).post('/users').send({ name: 'Grace Hopper' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('POST /users returns 400 when both name and email are missing', async () => {
+  const res = await request(app).post('/users').send({});
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
 test('PUT /users/:id updates an existing user', async () => {
   const res = await request(app).put('/users/1').send({ name: 'Ada L.' });
   assert.equal(res.status, 200);
   assert.equal(res.body.name, 'Ada L.');
 });
 
+test('PUT /users/:id updating only email returns the updated user', async () => {
+  const res = await request(app).put('/users/1').send({ email: 'ada.l@example.com' });
+  assert.equal(res.status, 200);
+  assert.equal(res.body.email, 'ada.l@example.com');
+  assert.equal(res.body.name, 'Ada Lovelace');
+});
+
+test('PUT /users/:id updating both name and email returns both updated', async () => {
+  const res = await request(app)
+    .put('/users/1')
+    .send({ name: 'Ada L.', email: 'ada.l@example.com' });
+  assert.equal(res.status, 200);
+  assert.equal(res.body.name, 'Ada L.');
+  assert.equal(res.body.email, 'ada.l@example.com');
+});
+
+test('PUT /users/:id returns 400 when neither name nor email is given', async () => {
+  const res = await request(app).put('/users/1').send({});
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
 test('PUT /users/:id returns 404 for a missing user', async () => {
   const res = await request(app).put('/users/999').send({ name: 'Nobody' });
   assert.equal(res.status, 404);
+});
+
+test('PUT /users/:id returns 400 for a non-numeric id', async () => {
+  const res = await request(app).put('/users/abc').send({ name: 'Nobody' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
 });
