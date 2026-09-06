@@ -1,0 +1,13 @@
+{
+  "name": "ship-check-marketplace",
+  "owner": {
+    "name": "sinkobela"
+  },
+  "plugins": [
+    {
+      "name": "ship-check",
+      "source": "./",
+      "description": "Reviews a change and closes any test-coverage gaps it exposes, via a two-agent /ship-check workflow."
+    }
+  ]
+}

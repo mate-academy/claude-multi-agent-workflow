@@ -37,3 +37,38 @@ test('PUT /users/:id returns 404 for a missing user', async () => {
   const res = await request(app).put('/users/999').send({ name: 'Nobody' });
   assert.equal(res.status, 404);
 });
+
+test('POST /users returns 400 when name is missing', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ email: 'nobody@example.com' });
+  assert.equal(res.status, 400);
+  assert.equal(res.body.error, 'name and email are required');
+});
+
+test('POST /users returns 400 when email is missing', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ name: 'Someone' });
+  assert.equal(res.status, 400);
+  assert.equal(res.body.error, 'name and email are required');
+});
+
+test('PUT /users/:id returns 400 when neither name nor email is provided', async () => {
+  const res = await request(app).put('/users/1').send({});
+  assert.equal(res.status, 400);
+  assert.equal(res.body.error, 'name or email is required');
+});
+
+test('DELETE /users/:id removes a user and returns 204', async () => {
+  const res = await request(app).delete('/users/1');
+  assert.equal(res.status, 204);
+  const getRes = await request(app).get('/users/1');
+  assert.equal(getRes.status, 404);
+});
+
+test('DELETE /users/:id returns 404 for a missing user', async () => {
+  const res = await request(app).delete('/users/999');
+  assert.equal(res.status, 404);
+  assert.equal(res.body.error, 'User not found');
+});
