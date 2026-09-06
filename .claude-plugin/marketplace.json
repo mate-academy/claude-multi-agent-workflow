@@ -1,0 +1,14 @@
+{
+  "name": "volodymyr-plugins",
+  "owner": {
+    "name": "Lysenko Volodymyr",
+    "email": "mr.volodumyr@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Reviews an Express API against its own conventions, then backfills the tests the review calls for."
+    }
+  ]
+}

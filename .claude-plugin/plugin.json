@@ -1,0 +1,10 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "A multi-agent quality sweep for the course Express API: convention review, test backfill, and lint-on-edit.",
+  "author": {
+    "name": "Lysenko Volodymyr",
+    "email": "mr.volodumyr@gmail.com"
+  },
+  "keywords": ["code-quality", "express", "review", "testing", "multi-agent"]
+}
