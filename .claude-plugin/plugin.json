@@ -1,0 +1,9 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Multi-agent code review and test-writing workflow for Express APIs: a read-only reviewer and a test-writer run as one orchestrated command, backed by a lint hook and a test-pattern skill.",
+  "author": {
+    "name": "ktroch"
+  },
+  "keywords": ["code-review", "testing", "workflow", "express"]
+}
