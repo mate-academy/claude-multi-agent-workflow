@@ -1,0 +1,5 @@
+{
+  "name": "ship-check",
+  "version": "0.1.0",
+  "description": "A code-quality workflow for course-api: reviews a change for bugs and gaps, closes any missing test coverage, and keeps route conventions consistent — orchestrated behind one /ship-check command."
+}
