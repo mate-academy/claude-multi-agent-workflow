@@ -1,0 +1,14 @@
+{
+  "name": "course-api-marketplace",
+  "description": "Personal marketplace for plugins built against the course-api practice repo.",
+  "owner": {
+    "name": "Maryna"
+  },
+  "plugins": [
+    {
+      "name": "course-quality-guard",
+      "source": "./",
+      "description": "Defense-in-depth code quality for course-api: convention auditing, guarded auto-fix, endpoint scaffolding, and a commit-time test gate."
+    }
+  ]
+}
