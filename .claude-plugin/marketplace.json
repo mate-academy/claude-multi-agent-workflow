@@ -1,0 +1,10 @@
+{
+  "name": "code-quality-marketplace",
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Two-stage code quality workflow (parallel review, then fix) with a matching skill and lint hook."
+    }
+  ]
+}
