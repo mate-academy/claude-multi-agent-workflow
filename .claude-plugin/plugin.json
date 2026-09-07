@@ -1,0 +1,8 @@
+{
+    "name": "code-quality",
+    "version": "0.1.0",
+    "description": "Review, TDD, and lint workflow: a read-only diff reviewer, a test-first feature builder, an orchestrated /ship command, a lint-on-edit hook, and a pre-commit quality-gate skill.",
+    "author": {
+        "name": "G Holden"
+    }
+}
