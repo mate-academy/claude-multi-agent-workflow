@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "Maryna"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Defense-in-depth code quality for course-api: convention auditing, guarded auto-fix, endpoint scaffolding, and a commit-time test gate."
+    }
+  ]
+}
