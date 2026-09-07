@@ -12,6 +12,8 @@
 
 ## Install
 
+There are two different ways to run this plugin, for two different purposes: `/plugin marketplace add` + `/plugin install` is the real marketplace install flow a user runs from a fresh Claude session, while `claude --plugin-dir .` is a local-development shortcut for iterating on the plugin itself — use the one that matches what you're doing.
+
 From a fresh session, in the repo you want to use it in:
 
 ```
@@ -26,7 +28,7 @@ claude plugin marketplace add .
 claude plugin install code-quality@code-quality-marketplace
 ```
 
-To pick up edits while developing the plugin itself, run `claude --plugin-dir .` from the repo root instead of installing, and use `/reload-plugins` after changes.
+To pick up edits while developing the plugin itself (Task 5's local test loop), run `claude --plugin-dir .` from the repo root instead of installing, and use `/reload-plugins` after changes.
 
 ## Scoping decision: why the two agents have different tools and models
 
