@@ -30,7 +30,7 @@ To pick up edits while developing the plugin itself, run `claude --plugin-dir .`
 
 ## Scoping decision: why the two agents have different tools and models
 
-`code-diff-reviewer` gets `Read, Grep, Glob, Bash` and the **Sonnet** model. It's deliberately read-only — a reviewer that can edit the thing it's reviewing isn't a trustworthy check, so it has no `Edit`/`Write` access at all. Finding a security or correctness issue in a diff also doesn't need the heaviest available reasoning, so Sonnet is enough and keeps repeated review calls cheap enough to run inside a workflow.
+`code-diff-reviewer` gets `Read, Grep, Glob` and the **Sonnet** model. It's deliberately read-only — a reviewer that can edit the thing it's reviewing isn't a trustworthy check, so it has no `Edit`/`Write` access at all. Finding a security or correctness issue in a diff also doesn't need the heaviest available reasoning, so Sonnet is enough and keeps repeated review calls cheap enough to run inside a workflow.
 
 `tdd-feature-builder` gets `Read, Grep, Glob, Edit, Write, Bash` and the **Opus** model. It has to do the opposite job — actually write test files and implementation code — so it needs edit access. Implementing a feature correctly from a natural-language description (and inferring the right conventions from the existing codebase rather than guessing) is a harder reasoning task than spotting a bug in an existing diff, which is why it gets the stronger model.
 
