@@ -1,0 +1,14 @@
+{
+  "name": "code-quality-marketplace",
+  "description": "Marketplace for the code-quality plugin: review, TDD, and lint workflow tools.",
+  "owner": {
+    "name": "G Holden"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review, TDD, and lint workflow: a read-only diff reviewer, a test-first feature builder, an orchestrated /ship command, a lint-on-edit hook, and a pre-commit quality-gate skill."
+    }
+  ]
+}
