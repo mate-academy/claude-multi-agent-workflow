@@ -1,0 +1,9 @@
+{
+  "name": "course-quality-guard",
+  "description": "Defense-in-depth code quality for course-api: convention auditing, guarded auto-fix, endpoint scaffolding, and a commit-time test gate.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Maryna"
+  }
+}
+
