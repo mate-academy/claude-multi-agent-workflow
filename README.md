@@ -7,7 +7,7 @@ A Claude Code plugin that gives an Express-style codebase defense-in-depth quali
 Local, from this repo:
 
 ```
-claude --plugin-dir .
+claude --plugin-dir ./
 /reload-plugins   # after any edit to the plugin
 ```
 
