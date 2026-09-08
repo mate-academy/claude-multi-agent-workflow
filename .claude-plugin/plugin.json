@@ -1,0 +1,9 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Multi-agent code-quality workflow for Express APIs: review route/store conventions and backfill test coverage.",
+  "author": {
+    "name": "Anna Ryndina",
+    "email": "anya.matveeva12@gmail.com"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "description": "Marketplace for the code-quality plugin, a multi-agent code review and test-writing workflow for course-api.",
+  "owner": {
+    "name": "Anna Ryndina",
+    "email": "anya.matveeva12@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Reviews course-api route/store changes for convention violations and backfills test coverage."
+    }
+  ]
+}
