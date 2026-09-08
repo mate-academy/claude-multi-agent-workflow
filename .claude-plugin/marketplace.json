@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "inikiforov"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review + test-writing subagents orchestrated by /qa, plus a commit-message skill and an auto-lint hook."
+    }
+  ]
+}
