@@ -1,0 +1,10 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "A code-quality workflow for Express APIs: parallel read-only reviewers, a test-writing agent, route conventions as a skill, and a lint-on-edit hook.",
+  "author": {
+    "name": "MishaLehotskyi"
+  },
+  "homepage": "https://github.com/MishaLehotskyi/claude-multi-agent-workflow",
+  "keywords": ["code-quality", "express", "review", "tests", "multi-agent"]
+}

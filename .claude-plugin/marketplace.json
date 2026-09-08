@@ -1,0 +1,13 @@
+{
+  "name": "misha-plugins",
+  "owner": {
+    "name": "MishaLehotskyi"
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Review, document-check, and test an Express API in one orchestrated pass."
+    }
+  ]
+}
