@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Code quality plugin: review + tests + a formatting hook for the course-api project.",
+  "author": {
+    "name": "inikiforov"
+  }
+}

@@ -92,3 +92,32 @@ The check confirms everything that can be read from your files:
 - a skill at `skills/<name>/SKILL.md` and a hook at `hooks/hooks.json`, with no hardcoded absolute paths (use `${CLAUDE_PLUGIN_ROOT}`);
 - `marketplace.json` is valid and lists your plugin under the same `name` as `plugin.json`;
 - `README.md` and a real `NOTES.md` are present.
+
+---
+
+## Plugin: code-quality
+
+A Claude Code plugin bundling code review, test generation, and a formatting hook, built and tested against the Express API in `course-api/`.
+
+### Layout
+
+```
+.claude-plugin/
+  plugin.json        # manifest only — name + version live here
+  marketplace.json    # lists this plugin so it installs by name
+agents/                # scoped subagents (Task 2)
+commands/              # workflow command orchestrating the subagents (Task 3)
+skills/                # a skill fitting the plugin's theme (Task 4)
+hooks/                 # hooks.json + any bundled scripts (Task 4)
+NOTES.md               # install steps + design decisions (Task 7)
+```
+
+Only `plugin.json` (and `marketplace.json`) live inside `.claude-plugin/` — every component folder sits at the repo root so Claude Code discovers it correctly.
+
+### Install / run locally
+
+```
+claude --plugin-dir .
+```
+
+Then use `/reload-plugins` after editing any component.
