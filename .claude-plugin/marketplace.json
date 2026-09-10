@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "Efraim Taranto"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-workflow",
+      "source": "./",
+      "description": "Reviews Express route/store code for bugs and convention drift, then writes tests to cover what it finds."
+    }
+  ]
+}

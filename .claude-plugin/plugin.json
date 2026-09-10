@@ -1,0 +1,8 @@
+{
+  "name": "code-quality-workflow",
+  "version": "0.1.0",
+  "description": "Reviews Express route/store code for bugs and convention drift, then writes tests to cover what it finds — two scoped subagents run as one workflow.",
+  "author": {
+    "name": "Efraim Taranto"
+  }
+}
