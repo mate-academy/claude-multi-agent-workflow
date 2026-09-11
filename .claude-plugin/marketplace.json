@@ -1,0 +1,18 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "owner": {
+    "name": "Andres Ruiz Acevedo"
+  },
+  "metadata": {
+    "description": "Claude Code plugins for code quality workflows on Node/Express projects."
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Lint fixes and review in parallel, then tests for the review's gaps, then a final gate, plus Express API conventions and lint and test-writer guard hooks.",
+      "category": "development",
+      "keywords": ["code-quality", "review", "lint", "testing", "express"]
+    }
+  ]
+}

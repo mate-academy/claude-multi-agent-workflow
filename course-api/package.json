@@ -17,5 +17,8 @@
     "eslint": "^9.13.0",
     "@eslint/js": "^9.13.0",
     "supertest": "^7.0.0"
+  },
+  "overrides": {
+    "qs": "^6.16.0"
   }
 }

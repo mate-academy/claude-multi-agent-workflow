@@ -1,0 +1,10 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Code quality workflow for Node/Express projects: scoped review agents, multi-agent commands, skills, and a quality-gate hook.",
+  "author": {
+    "name": "Andres Ruiz Acevedo"
+  },
+  "license": "MIT",
+  "keywords": ["code-quality", "review", "lint", "testing", "express"]
+}
