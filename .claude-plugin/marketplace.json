@@ -1,0 +1,13 @@
+{
+  "name": "my-marketplace",
+  "owner": {
+    "name": "Roman Sokolov"
+  },
+  "plugins": [
+    {
+      "name": "finish-it",
+      "source": "./",
+      "description": "Аудит коду та автоматична перевірка тестів перед пушем."
+    }    
+  ]
+}
