@@ -1,0 +1,11 @@
+{
+  "name": "flazizi-marketplace",
+  "owner": { "name": "flazizi" },
+  "plugins": [
+    {
+      "name": "course-api-tools",
+      "source": "./",
+      "description": "Review and fix helpers for the course-api Express project, encoding its route, validation, and error-response conventions."
+    }
+  ]
+}

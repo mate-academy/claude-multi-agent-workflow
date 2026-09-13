@@ -1,0 +1,6 @@
+{
+  "name": "course-api-tools",
+  "description": "Review and fix helpers for the course-api Express project, encoding its route, validation, and error-response conventions.",
+  "version": "0.1.0",
+  "author": { "name": "flazizi" }
+}
