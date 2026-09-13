@@ -1,3 +1,29 @@
+## course-api-tools
+
+A Claude Code plugin that bundles a review-and-fix workflow for the `course-api` Express project, encoding its route, validation, and error-response conventions from `course-api/CLAUDE.md` so they can be checked and enforced automatically.
+
+**What's in it:**
+- `agents/api-reviewer.md` — read-only subagent (`Read, Grep, Glob`) that audits `routes/` and `db/store.js` against the project's conventions and returns a findings list. Never edits anything.
+- `agents/api-fixer.md` — write-capable subagent (`Read, Edit, Write, Grep, Glob, Bash`) that takes a findings list and applies minimal, targeted fixes, then runs tests and lint.
+- `commands/review-and-fix.md` — the `/review-and-fix [path]` workflow command. It runs two `api-reviewer` audits (one on `routes/`, one on `db/store.js`) in parallel, then — once both finish — merges the findings and hands them to `api-fixer` in a dependent step.
+- `skills/api-conventions/SKILL.md` — a skill capturing the project's routing/validation/error-shape conventions, loaded whenever routes or the store are touched.
+- `hooks/hooks.json` — a `PostToolUse` hook that runs `npm run lint` inside `course-api/` after every `Edit`/`Write`, using `${CLAUDE_PLUGIN_ROOT}` so it resolves correctly wherever the plugin is installed.
+
+**Install it:**
+```
+/plugin marketplace add flazizi/claude-multi-agent-workflow
+/plugin install course-api-tools@flazizi-marketplace
+```
+
+**Try it against the bundled test project** (`cd course-api && npm install`, then from a Claude Code session in that directory):
+```
+/review-and-fix
+```
+
+See `NOTES.md` for the scoping and orchestration decisions behind this plugin.
+
+---
+
 ## Project — Ship your workflow as a plugin
  
 Across the course you've built scoped subagents, orchestrated them into workflows, written skills, commands, and hooks, and learned how a plugin packages all of it. Now you'll put it together into one real, shareable thing: a plugin that carries a multi-agent workflow, tested against a live codebase and published so anyone can install it with a single command.

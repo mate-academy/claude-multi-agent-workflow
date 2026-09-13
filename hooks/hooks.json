@@ -1,0 +1,18 @@
+{
+  "description": "Lints course-api after Claude edits or writes any file",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"${CLAUDE_PLUGIN_ROOT}/course-api\" && npm run lint",
+            "timeout": 30,
+            "statusMessage": "Linting course-api..."
+          }
+        ]
+      }
+    ]
+  }
+}
