@@ -1,0 +1,14 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "description": "Marketplace for the code-quality plugin built in this repo.",
+  "owner": {
+    "name": "Oleksii Drenov"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Scoped review/fix subagents, an orchestrated audit command, a conventions skill, and a lint-on-save hook."
+    }
+  ]
+}
