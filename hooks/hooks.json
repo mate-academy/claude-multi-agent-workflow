@@ -1,0 +1,8 @@
+{
+  "hooks": [
+    {
+      "event": "PreToolCall",
+      "command": "echo 'Running tool call under api-assistant plugin...'"
+    }
+  ]
+}
