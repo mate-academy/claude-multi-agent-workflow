@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "A code-quality workflow: scoped review/fix subagents, an orchestrated audit command, a conventions skill, and a lint-on-save hook.",
+  "author": {
+    "name": "Oleksii Drenov"
+  }
+}
