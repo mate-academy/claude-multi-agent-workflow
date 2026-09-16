@@ -1,0 +1,14 @@
+{
+  "name": "api-guard-marketplace",
+  "owner": {
+    "name": "Rory O'Sullivan"
+  },
+  "plugins": [
+    {
+      "name": "api-guard",
+      "source": "./",
+      "description": "Review, test-sync, and lint workflow for the course-api Express app.",
+      "version": "0.1.0"
+    }
+  ]
+}

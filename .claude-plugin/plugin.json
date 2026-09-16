@@ -1,0 +1,8 @@
+{
+  "name": "api-guard",
+  "version": "0.1.0",
+  "description": "Review, test-sync, and lint workflow for the course-api Express app.",
+  "author": {
+    "name": "Rory O'Sullivan"
+  }
+}
