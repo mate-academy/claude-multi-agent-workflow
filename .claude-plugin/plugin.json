@@ -1,0 +1,18 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "Code-quality workflow for Express APIs: parallel convention review, dependent test authoring, and an automatic lint hook.",
+  "author": {
+    "name": "Ruslan"
+  },
+  "homepage": "https://github.com/makar111111/claude-multi-agent-workflow",
+  "repository": "https://github.com/makar111111/claude-multi-agent-workflow",
+  "license": "MIT",
+  "keywords": [
+    "code-quality",
+    "express",
+    "review",
+    "testing",
+    "multi-agent"
+  ]
+}
