@@ -1,0 +1,5 @@
+{
+  "enabledPlugins": {
+    "api-guard@api-guard-marketplace": true
+  }
+}
