@@ -1,0 +1,9 @@
+# Нормалізуємо переноси рядків до LF у репозиторії.
+# Перевіряч (.github/scripts/validate-plugin.js) парсить YAML-frontmatter
+# регекспом /^---\n/, який не збігається з windows-овим "---\r\n".
+* text=auto eol=lf
+
+*.md text eol=lf
+*.json text eol=lf
+*.js text eol=lf
+*.yml text eol=lf
