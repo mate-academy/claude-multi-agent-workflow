@@ -1,0 +1,13 @@
+{
+  "name": "kfhawas-marketplace",
+  "owner": {
+    "name": "Khaled Hawas"
+  },
+  "plugins": [
+    {
+      "name": "quality-guard",
+      "source": "./",
+      "description": "Parallel code-review + fix/test workflow for Express APIs, with a lint hook and a review-checklist skill."
+    }
+  ]
+}
