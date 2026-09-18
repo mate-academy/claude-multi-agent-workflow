@@ -1,0 +1,13 @@
+{
+  "name": "productivity-marketplace",
+  "owner": {
+    "name": "Balazs Radvanyi"
+  },
+  "plugins": [
+    {
+      "name": "productivity",
+      "source": "./",
+      "description": "A multi-agent productivity workflow: scoped subagents, an orchestration command, a skill, and a hook."
+    }
+  ]
+}

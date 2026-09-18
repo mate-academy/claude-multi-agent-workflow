@@ -1,0 +1,8 @@
+{
+  "name": "productivity",
+  "version": "0.1.0",
+  "description": "A multi-agent productivity workflow: scoped subagents, an orchestration command, a skill, and a hook.",
+  "author": {
+    "name": "Balazs Radvanyi"
+  }
+}
