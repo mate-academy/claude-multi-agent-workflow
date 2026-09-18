@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-kit-marketplace",
+  "owner": {
+    "name": "iirovpulkkinen-del"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-kit",
+      "source": "./",
+      "description": "Reviews Express routes for convention compliance and scaffolds new ones that already match the project's patterns."
+    }
+  ]
+}

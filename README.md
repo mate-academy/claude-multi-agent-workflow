@@ -1,3 +1,33 @@
+# code-quality-kit
+
+A Claude Code plugin that bundles a two-agent code-quality workflow for Express APIs: one read-only reviewer and one agent that scaffolds new routes, orchestrated by a single command, backed by a shared conventions skill and a lint-on-edit hook.
+
+## Install
+
+```
+/plugin marketplace add iirovpulkkinen-del/claude-multi-agent-workflow
+/plugin install code-quality-kit@code-quality-kit-marketplace
+```
+
+Or, while developing locally from a checkout of this repo:
+
+```
+claude --plugin-dir .
+```
+
+## What's inside
+
+- `agents/api-reviewer.md` — read-only subagent that checks a route file against this project's conventions (input validation, status codes, error shape). Tools: `Read, Grep, Glob`.
+- `agents/route-scaffolder.md` — subagent that generates a new route file matching the existing pattern and mounts it in `server.js`. Tools: `Read, Write, Edit, Bash`.
+- `commands/quality-check.md` — the `/quality-check` workflow: reviews existing routes in parallel, then (if a new resource is requested) scaffolds it and re-reviews the result.
+- `skills/api-conventions/SKILL.md` — reference for this project's Express conventions, loaded whenever a route is being read or written.
+- `hooks/hooks.json` — runs the project's linter after every file edit or write.
+- `course-api/` — the small Express API this plugin is built and tested against.
+
+See `NOTES.md` for the scoping and orchestration decisions behind this setup.
+
+---
+
 ## Project — Ship your workflow as a plugin
  
 Across the course you've built scoped subagents, orchestrated them into workflows, written skills, commands, and hooks, and learned how a plugin packages all of it. Now you'll put it together into one real, shareable thing: a plugin that carries a multi-agent workflow, tested against a live codebase and published so anyone can install it with a single command.

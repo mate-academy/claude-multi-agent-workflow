@@ -1,0 +1,8 @@
+{
+  "name": "code-quality-kit",
+  "version": "0.1.0",
+  "description": "A code-quality workflow for Express APIs: reviews routes for convention compliance and scaffolds new ones that already match the project's patterns.",
+  "author": {
+    "name": "iirovpulkkinen-del"
+  }
+}
