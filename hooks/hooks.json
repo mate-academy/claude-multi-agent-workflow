@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit",
+        "command": "npm test --prefix ${CLAUDE_PLUGIN_ROOT}/course-api"
+      }
+    ]
+  }
+}
