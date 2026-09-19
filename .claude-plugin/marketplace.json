@@ -1,0 +1,13 @@
+{
+  "name": "course-tools",
+
+  "owner": { "name": "dissolveyo" },
+
+  "plugins": [
+    {
+      "name": "course-plugin",
+      "source": "./",
+      "description": "Commands and agents for working with course-api app."
+    }
+  ]
+}
