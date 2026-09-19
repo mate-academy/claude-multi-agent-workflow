@@ -1,0 +1,7 @@
+{
+"name": "claude-multi-agent-workflow",
+"owner": {"name":"Josef Berman"},
+"plugins":[
+{"name": "kodree", "source": "./", "description": "Review, test, and ship workflow plugin"}
+]
+}
