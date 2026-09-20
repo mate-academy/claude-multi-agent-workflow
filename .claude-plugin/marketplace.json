@@ -1,0 +1,13 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "owner": {
+    "email": "ivchenkomykhailo@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Reviews Express route changes for convention violations, syncs docs/api.md, and lints on every edit."
+    }
+  ]
+}
