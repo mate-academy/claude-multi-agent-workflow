@@ -1,0 +1,5 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Reviews Express route changes against this repo's conventions, keeps docs/api.md in sync, and lints edits as they happen."
+}
