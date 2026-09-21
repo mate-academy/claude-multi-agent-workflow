@@ -1,0 +1,13 @@
+{
+  "name": "quality-kit",
+  "owner": {
+    "name": "Andrii Hnatiuk"
+  },
+  "plugins": [
+    {
+      "name": "quality-kit",
+      "source": "./",
+      "description": "Commands and agents for reviewing, auditing, and fixing code quality issues."
+    }
+  ]
+}

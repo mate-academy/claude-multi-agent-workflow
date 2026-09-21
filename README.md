@@ -92,3 +92,26 @@ The check confirms everything that can be read from your files:
 - a skill at `skills/<name>/SKILL.md` and a hook at `hooks/hooks.json`, with no hardcoded absolute paths (use `${CLAUDE_PLUGIN_ROOT}`);
 - `marketplace.json` is valid and lists your plugin under the same `name` as `plugin.json`;
 - `README.md` and a real `NOTES.md` are present.
+
+## quality-kit
+
+A Claude Code plugin for reviewing code quality, auditing tests, and applying verified fixes.
+
+### Components
+
+- `code-reviewer` — read-only code review agent
+- `test-auditor` — read-only test audit agent
+- `code-fixer` — write-capable agent for verified fixes
+- `/quality-kit:quality` — runs the review agents in parallel, then passes their findings to `code-fixer`
+- `code-quality` skill — guidance for code quality reviews
+- PostToolUse hook — runs the API test suite after edits
+
+### Local testing
+
+Run the plugin with:
+
+`claude --plugin-dir .`
+
+Then use:
+
+`/quality-kit:quality`
