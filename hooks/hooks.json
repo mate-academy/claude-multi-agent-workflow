@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"${CLAUDE_PLUGIN_ROOT}/course-api\" && npm run lint",
+            "if": "Edit(course-api/**) || Write(course-api/**)",
+            "timeout": 60,
+            "statusMessage": "Linting course-api after edit/write"
+          }
+        ]
+      }
+    ]
+  }
+}

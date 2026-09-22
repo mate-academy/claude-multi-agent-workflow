@@ -1,0 +1,7 @@
+{
+  "name": "MarQaSpace",
+  "owner": { "name": "LZs" },
+  "plugins": [
+    { "name": "ship-kit", "source": "./", "description": "Commands and agents for code review and summarization" }
+  ]
+}
