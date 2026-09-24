@@ -1,0 +1,9 @@
+{
+  "name": "test-sweet-plugin-marketplace",
+  "plugins": [
+    {
+      "name": "test-sweet-plugin",
+      "source": "./"
+    }
+  ]
+}
