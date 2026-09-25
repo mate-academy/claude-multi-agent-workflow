@@ -13,9 +13,17 @@ test('GET /users returns the seeded list', async () => {
   assert.equal(res.body.length, 2);
 });
 
+test('GET /users/:id returns the user when found', async () => {
+  const res = await request(app).get('/users/1');
+  assert.equal(res.status, 200);
+  assert.equal(res.body.id, 1);
+  assert.equal(res.body.name, 'Ada Lovelace');
+});
+
 test('GET /users/:id returns 404 for a missing user', async () => {
   const res = await request(app).get('/users/999');
   assert.equal(res.status, 404);
+  assert.ok(res.body.error);
 });
 
 test('POST /users creates a user', async () => {
@@ -27,13 +35,42 @@ test('POST /users creates a user', async () => {
   assert.ok(res.body.id);
 });
 
-test('PUT /users/:id updates an existing user', async () => {
+test('POST /users returns 400 when name is missing', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ email: 'noname@example.com' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('POST /users returns 400 when email is missing', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ name: 'No Email' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('PUT /users/:id updates an existing user name', async () => {
   const res = await request(app).put('/users/1').send({ name: 'Ada L.' });
   assert.equal(res.status, 200);
   assert.equal(res.body.name, 'Ada L.');
 });
 
+test('PUT /users/:id updates an existing user email', async () => {
+  const res = await request(app).put('/users/1').send({ email: 'new@example.com' });
+  assert.equal(res.status, 200);
+  assert.equal(res.body.email, 'new@example.com');
+});
+
+test('PUT /users/:id returns 400 when no fields are provided', async () => {
+  const res = await request(app).put('/users/1').send({});
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
 test('PUT /users/:id returns 404 for a missing user', async () => {
   const res = await request(app).put('/users/999').send({ name: 'Nobody' });
   assert.equal(res.status, 404);
+  assert.ok(res.body.error);
 });

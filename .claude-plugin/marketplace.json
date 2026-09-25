@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Code review, test generation, and formatting for every save."
+    }
+  ]
+}

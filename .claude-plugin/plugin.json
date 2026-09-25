@@ -1,0 +1,6 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Code review, test generation, and formatting for every save.",
+  "author": "gsaik"
+}
