@@ -1,5 +1,19 @@
 ## Project — Ship your workflow as a plugin
- 
+
+### This repo is the `code-quality` plugin
+
+This repo doubles as the plugin itself and the marketplace that offers it. It bundles a review/fix workflow for the Express API in `course-api/`:
+
+- `agents/code-reviewer.md` — read-only subagent that reviews routes and data access for correctness bugs and convention violations.
+- `agents/code-fixer.md` — subagent that patches issues and re-runs the test/lint suite to confirm the fix.
+- `commands/ship-check.md` — the `/ship-check` workflow: reviews and tests run in parallel, then a dependent fix pass only if needed.
+- `skills/api-conventions/SKILL.md` — the validation/status-code/error-shape rules the subagents check against.
+- `hooks/hooks.json` — lints any `.js` file touched by an `Edit`/`Write` and surfaces warnings.
+
+Install it with `/plugin marketplace add <this-repo>` then `/plugin install code-quality@code-quality-marketplace`, or load it locally with `claude --plugin-dir .`. See `NOTES.md` for install details and design decisions.
+
+---
+
 Across the course you've built scoped subagents, orchestrated them into workflows, written skills, commands, and hooks, and learned how a plugin packages all of it. Now you'll put it together into one real, shareable thing: a plugin that carries a multi-agent workflow, tested against a live codebase and published so anyone can install it with a single command.
  
 Lean on Claude as you go: ask it to scaffold files, look up current syntax, and review your structure. That's how you'd really build one.

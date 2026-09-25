@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "James Jensen"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review, fix, and gate code quality on an Express API with a reviewer/fixer subagent workflow, an API-conventions skill, and a lint-on-save hook."
+    }
+  ]
+}

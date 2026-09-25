@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Review, fix, and gate code quality on an Express API: a read-only reviewer, a fixer that patches issues, a ship-check workflow, an API-conventions skill, and a lint-on-save hook.",
+  "author": {
+    "name": "James Jensen"
+  }
+}
