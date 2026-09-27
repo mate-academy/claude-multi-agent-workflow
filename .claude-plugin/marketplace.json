@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-kit",
+  "owner": {
+    "name": "mykytivmaks"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-kit",
+      "source": "./",
+      "description": "Skills, subagents, and hooks for automated code quality review and linting."
+    }
+  ]
+}
