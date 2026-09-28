@@ -1,0 +1,11 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "Code-quality workflow for Express APIs: parallel review and coverage scouting, then targeted test writing, plus a conventions skill and a lint-on-edit hook.",
+  "author": {
+    "name": "Nintendiuk"
+  },
+  "repository": "https://github.com/Nintendiuk/claude-multi-agent-workflow",
+  "license": "MIT",
+  "keywords": ["code-quality", "review", "testing", "express", "eslint"]
+}

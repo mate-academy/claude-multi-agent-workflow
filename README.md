@@ -1,3 +1,47 @@
+# api-quality — a Claude Code plugin
+
+A code-quality workflow for Express APIs, packaged as a Claude Code plugin. One command reviews the API and maps its test coverage **in parallel**, then hands both results to a test-writing agent that fills the gaps and runs the suite.
+
+## Install
+
+```
+/plugin marketplace add Nintendiuk/claude-multi-agent-workflow
+/plugin install api-quality@nintendiuk-plugins
+```
+
+Local development: `claude --plugin-dir .` from this repo's root (use `/reload-plugins` after edits).
+
+## Usage
+
+```
+cd course-api && npm install   # once
+/api-quality:quality-check course-api
+```
+
+## What's inside
+
+```
+.claude-plugin/
+  plugin.json                 # manifest (name: api-quality)
+  marketplace.json            # marketplace catalog (nintendiuk-plugins)
+agents/
+  api-reviewer.md             # read-only reviewer        (Read, Grep, Glob · sonnet)
+  coverage-scout.md           # read-only coverage map    (Read, Grep, Glob · haiku)
+  test-writer.md              # writes + runs tests       (Read, Grep, Glob, Write, Edit, Bash · sonnet)
+commands/
+  quality-check.md            # workflow: reviewer ‖ scout → test-writer → verify
+skills/
+  express-api-conventions/SKILL.md
+hooks/
+  hooks.json                  # PostToolUse: lint edited .js files with the project's ESLint
+  scripts/lint-on-edit.js
+course-api/                   # the Express API the plugin is tested against
+```
+
+Design decisions (tool/model scoping, parallel vs. sequential steps) are in [NOTES.md](NOTES.md).
+
+---
+
 ## Project — Ship your workflow as a plugin
  
 Across the course you've built scoped subagents, orchestrated them into workflows, written skills, commands, and hooks, and learned how a plugin packages all of it. Now you'll put it together into one real, shareable thing: a plugin that carries a multi-agent workflow, tested against a live codebase and published so anyone can install it with a single command.

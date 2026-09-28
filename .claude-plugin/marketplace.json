@@ -1,0 +1,17 @@
+{
+  "name": "nintendiuk-plugins",
+  "owner": {
+    "name": "Nintendiuk"
+  },
+  "metadata": {
+    "description": "Code-quality plugins for Claude Code: multi-agent review and test workflows for Express APIs.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Review an Express API, find untested behaviour, and write the missing tests in one command."
+    }
+  ]
+}
