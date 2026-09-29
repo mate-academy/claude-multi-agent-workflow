@@ -1,0 +1,11 @@
+{
+  "name": "shipmate-marketplace",
+  "owner": "anomajaya",
+  "plugins": [
+    {
+      "name": "shipmate",
+      "source": "./",
+      "description": "Pre-PR code-quality workflow: parallel route/test review, then fills in missing test coverage, plus a route-pattern skill and a failing-tests commit guard."
+    }
+  ]
+}
