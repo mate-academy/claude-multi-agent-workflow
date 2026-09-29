@@ -1,0 +1,5 @@
+{
+  "name": "shipmate",
+  "version": "0.1.0",
+  "description": "A pre-PR code-quality workflow: reviews changed routes and tests in parallel, then fills in missing test coverage, backed by a route-pattern skill and a commit guard."
+}
