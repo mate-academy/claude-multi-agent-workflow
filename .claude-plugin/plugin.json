@@ -1,0 +1,6 @@
+{
+  "name": "shipcheck",
+  "version": "0.1.0",
+  "description": "Pre-merge quality gate for course-api: reviews route/store code and keeps its tests in sync.",
+  "author": { "name": "Jan Wirsdorf" }
+}

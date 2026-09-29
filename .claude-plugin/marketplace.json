@@ -1,0 +1,11 @@
+{
+  "name": "shipcheck-marketplace",
+  "owner": { "name": "Jan Wirsdorf" },
+  "plugins": [
+    {
+      "name": "shipcheck",
+      "source": "./",
+      "description": "Pre-merge quality gate: reviews course-api code and keeps its tests in sync."
+    }
+  ]
+}
