@@ -1,0 +1,11 @@
+{
+  "hooks": [
+    {
+      "name": "pre-release-check",
+      "event": "before-command",
+      "command": "release",
+      "description": "Validate release readiness before running the release workflow",
+      "script": "${CLAUDE_PLUGIN_ROOT}/hooks/pre-release-check.sh"
+    }
+  ]
+}

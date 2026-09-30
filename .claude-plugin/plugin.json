@@ -1,0 +1,5 @@
+{
+  "name": "release",
+  "version": "0.1.0",
+  "description": "Multi-agent workflow for managing releases with changelog, versioning, and pre-release checks"
+}

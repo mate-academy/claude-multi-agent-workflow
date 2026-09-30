@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "release",
+      "source": "./",
+      "description": "Multi-agent workflow for managing releases with changelog analysis and semantic version bumping"
+    }
+  ]
+}
