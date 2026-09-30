@@ -1,0 +1,11 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": { "name": "Sango-dev" },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Parallel code review + test writing workflow with a lint-on-edit hook."
+    }
+  ]
+}

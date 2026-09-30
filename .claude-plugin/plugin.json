@@ -1,0 +1,6 @@
+{
+  "name": "code-quality",
+  "version": "1.0.0",
+  "description": "Code quality workflow: a read-only reviewer, a test-writing agent, a /quality-check command, an API conventions skill and a lint-on-edit hook.",
+  "author": { "name": "Sango-dev" }
+}
