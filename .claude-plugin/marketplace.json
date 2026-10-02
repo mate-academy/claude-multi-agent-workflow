@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "Philippe-gt"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Audit qualité de code : revue en lecture seule, diagnostic tests/lint et corrections par sous-agents."
+    }
+  ]
+}
