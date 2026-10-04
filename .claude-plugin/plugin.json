@@ -1,0 +1,8 @@
+{
+  "name": "code-quality-workflow",
+  "version": "0.1.0",
+  "description": "A multi-agent code quality workflow for reviewing, improving, and validating code.",
+  "author": {
+    "name": "Indira Buana"
+  }
+}
