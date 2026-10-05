@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "Iryna Knyzh"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Multi-agent code review, test and lint workflow for Express APIs."
+    }
+  ]
+}

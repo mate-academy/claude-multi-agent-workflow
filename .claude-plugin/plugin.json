@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Multi-agent code quality workflow: parallel review, test and lint checks, then test-writing and fixes.",
+  "author": {
+    "name": "Iryna Knyzh"
+  }
+}
