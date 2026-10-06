@@ -1,0 +1,16 @@
+{
+  "name": "brokkoliii-plugins",
+  "owner": {
+    "name": "Brokkoliii"
+  },
+  "metadata": {
+    "description": "Claude Code plugins by Brokkoliii."
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Multi-agent quality pass for Express APIs: parallel review and coverage scouting, then test writing, plus a lint-on-edit hook."
+    }
+  ]
+}

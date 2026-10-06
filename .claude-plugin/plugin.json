@@ -1,0 +1,8 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "Multi-agent code-quality pass for Express APIs: parallel review and coverage scouting, then test writing, plus a lint-on-edit hook.",
+  "author": {
+    "name": "Brokkoliii"
+  }
+}
