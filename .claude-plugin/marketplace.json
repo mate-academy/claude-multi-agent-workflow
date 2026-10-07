@@ -1,0 +1,11 @@
+{
+  "name": "api-quality-marketplace",
+  "description": "Marketplace for the API Quality Kit Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "api-quality-kit",
+      "description": "Multi-agent Express API quality workflow with review, testing, skills, and automated validation.",
+      "source": "./"
+    }
+  ]
+}
