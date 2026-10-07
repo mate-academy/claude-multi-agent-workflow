@@ -1,0 +1,8 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "Scoped API review and test workflow.",
+  "author": {
+    "name": "Wall-E1982"
+  }
+}
