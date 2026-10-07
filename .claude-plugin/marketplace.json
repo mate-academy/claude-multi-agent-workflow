@@ -1,0 +1,14 @@
+{
+  "name": "walle-api-tools",
+  "description": "Course API quality tools.",
+  "owner": {
+    "name": "Wall-E1982"
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Review Express routes and improve API test coverage."
+    }
+  ]
+}

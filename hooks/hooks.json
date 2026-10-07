@@ -1,0 +1,17 @@
+{
+  "description": "Lint project code after edits; does not run during read-only analysis.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm --prefix \"$CLAUDE_PROJECT_DIR/course-api\" run lint",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
