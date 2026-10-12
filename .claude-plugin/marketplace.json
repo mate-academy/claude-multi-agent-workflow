@@ -1,0 +1,13 @@
+{
+  "name": "stas-marketplace",
+  "owner": {
+    "name": "Stanislav Tsapenko"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review an Express API, write the missing tests, and lint every edit."
+    }
+  ]
+}

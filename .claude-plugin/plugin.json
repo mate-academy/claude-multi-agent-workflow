@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Review an Express API, write the missing tests, and lint every edit.",
+  "author": {
+    "name": "Stanislav Tsapenko"
+  }
+}
