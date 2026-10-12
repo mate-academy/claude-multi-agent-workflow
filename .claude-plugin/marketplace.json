@@ -1,0 +1,16 @@
+{
+  "name": "localization-marketplace",
+  "metadata": {
+    "description": "Localization and content-localization plugins for Claude Code."
+  },
+  "owner": {
+    "name": "javelinnathan"
+  },
+  "plugins": [
+    {
+      "name": "localization-toolkit",
+      "source": "./",
+      "description": "Localize copy into multiple languages in parallel, then run regional SEO checks, using a translator and an SEO analyzer subagent."
+    }
+  ]
+}

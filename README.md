@@ -1,3 +1,90 @@
+# localization-toolkit
+
+A Claude Code plugin that localizes content for multiple markets in one command: it translates copy for each target locale in parallel, audits the results for regional SEO, then applies the fixes.
+
+## Why use it
+
+- **Culturally adapted, not word-for-word.** Idioms, tone, register, and formats are adapted per locale, and approved terms come from a translation memory and lexicon.
+- **SEO-ready output.** Keyword density, title/meta length, and search intent are checked per target market, with CJK length rules handled separately.
+- **Safe by design.** The auditing agent is read-only, and a hook catches broken placeholders (`{name}`, `%d`) before they ship.
+- **One trigger.** A single command runs the whole flow.
+
+## Installation
+
+```
+/plugin marketplace add javelinnathan/claude-multi-agent-workflow
+/plugin install localization-toolkit@localization-marketplace
+/reload-plugins
+```
+
+For local development, run `claude --plugin-dir .` from the repo root and use `/reload-plugins` after edits.
+
+## Usage: the workflow command
+
+```
+/localization-toolkit:localize-content <source-file> <locale> [<locale> ...]
+```
+
+Example:
+
+```
+/localization-toolkit:localize-content copy.md es-MX ja-JP
+```
+
+| Step | What runs | Ordering |
+|---|---|---|
+| 1. Translate | One `content-translator` per locale, launched together | Parallel |
+| 2. SEO analysis | One `seo-locale-analyzer` per locale on its translated file | Waits for step 1 |
+| 3. Apply fixes | `content-translator` applies the analyzer's keyword and metadata fixes | Waits for step 2 |
+
+Output files are written next to the source as `copy.es-MX.md`, `copy.ja-JP.md`, and so on. The source file is never modified. Locale codes are BCP 47 tags.
+
+## Subagents and how they are scoped
+
+| | `content-translator` | `seo-locale-analyzer` |
+|---|---|---|
+| Purpose | Translates copy and adapts idioms, tone, and cultural nuance | Audits keyword density, title/meta length, and search intent for the target regional search engine |
+| Tools | `Read, Grep, Glob, Write, Edit` | `Read, Grep, Glob` (read-only) |
+| Model | `sonnet` (adaptation needs judgment) | `haiku` (mostly counting and pattern matching) |
+| Data it uses | `data/translation-memory.json` (reuse approved translations) and `data/lexicon.json` (approved terms, do-not-translate list) | Grep regexes for metadata extraction and hygiene checks; density computed from Grep counts |
+| Returns | Output file paths, adaptations with reasons, memory/lexicon hits, new term candidates, review flags | Per-locale summary, keyword table, metadata lengths, intent check, prioritized fixes |
+
+The analyzer cannot edit files, so an audit can never rewrite the copy it is judging. All edits go through the translator, the only agent with write access. You can also call either agent directly, for example "use the seo-locale-analyzer to check keywords and meta tags in the de-DE version".
+
+## Skill: `locale-style-guide`
+
+Per-locale conventions for es-MX, fr-FR, de-DE, and ja-JP: formal vs. informal address, date/number/currency formats, punctuation, and title/meta length guidance. Claude loads it automatically when translating, reviewing, or SEO-checking for a target locale. It also restates the rules to never translate brand terms and to keep placeholders identical. To add a locale, add a row to `skills/locale-style-guide/SKILL.md`.
+
+## Hook: placeholder check
+
+A `PostToolUse` hook (`hooks/hooks.json`) runs `${CLAUDE_PLUGIN_ROOT}/scripts/check-placeholders.js` after every `Write` or `Edit`.
+
+- It applies only to files named `name.<locale>.ext` (for example `copy.es-MX.md`).
+- It compares their placeholders (`{name}`, `{{count}}`, `%s`, `%d`) with the source file `name.ext`.
+- On a mismatch it reports the missing and unexpected placeholders back to Claude so it can fix the file. All other files are ignored.
+
+## Layout
+
+```
+.claude-plugin/
+  plugin.json          # manifest
+  marketplace.json     # marketplace catalog
+agents/                # content-translator, seo-locale-analyzer
+commands/              # localize-content workflow
+skills/                # locale-style-guide/SKILL.md
+hooks/                 # hooks.json
+scripts/               # check-placeholders.js
+data/                  # translation memory and lexicon (seed data)
+course-api/            # Express API used as a test target
+NOTES.md               # scoping and orchestration decisions
+```
+
+See `NOTES.md` for the reasoning behind the scoping and orchestration choices.
+
+---
+
+# Course instructions (original project brief)
+
 ## Project — Ship your workflow as a plugin
  
 Across the course you've built scoped subagents, orchestrated them into workflows, written skills, commands, and hooks, and learned how a plugin packages all of it. Now you'll put it together into one real, shareable thing: a plugin that carries a multi-agent workflow, tested against a live codebase and published so anyone can install it with a single command.

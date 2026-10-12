@@ -1,0 +1,15 @@
+{
+  "_comment": "Seed localization memory. Keys are source (en-US) segments; values are approved translations per locale.",
+  "Get started for free": {
+    "es-MX": "Comienza gratis",
+    "fr-FR": "Commencez gratuitement",
+    "de-DE": "Jetzt kostenlos starten",
+    "ja-JP": "無料で始める"
+  },
+  "Sign in to your account": {
+    "es-MX": "Inicia sesión en tu cuenta",
+    "fr-FR": "Connectez-vous à votre compte",
+    "de-DE": "Melden Sie sich bei Ihrem Konto an",
+    "ja-JP": "アカウントにログイン"
+  }
+}

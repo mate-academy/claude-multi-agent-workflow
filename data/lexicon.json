@@ -1,0 +1,8 @@
+{
+  "_comment": "Seed translation lexicon. doNotTranslate terms stay as-is; terms map source term to approved locale term.",
+  "doNotTranslate": ["Acme", "AcmeCloud", "API"],
+  "terms": {
+    "dashboard": { "es-MX": "panel de control", "fr-FR": "tableau de bord", "de-DE": "Dashboard", "ja-JP": "ダッシュボード" },
+    "workspace": { "es-MX": "espacio de trabajo", "fr-FR": "espace de travail", "de-DE": "Arbeitsbereich", "ja-JP": "ワークスペース" }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "localization-toolkit",
+  "version": "0.1.0",
+  "description": "Localization & content localization workflow: a culturally-aware translator subagent and a regional SEO analyzer subagent.",
+  "author": {
+    "name": "javelinnathan"
+  },
+  "keywords": ["localization", "translation", "i18n", "seo", "subagents"]
+}
