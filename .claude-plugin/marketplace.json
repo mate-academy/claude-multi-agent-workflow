@@ -1,0 +1,11 @@
+{
+  "name": "api-quality-marketplace",
+  "owner": { "name": "Joakim Nordin" },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Review an Express API and fill test gaps with a two-agent workflow, plus a conventions skill and a lint-on-edit hook."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "Multi-agent code-quality workflow for Express APIs: a read-only reviewer, a test writer, a one-word workflow command, a conventions skill and a lint-on-edit hook.",
+  "author": { "name": "Joakim Nordin" },
+  "keywords": ["code-quality", "review", "tests", "express"]
+}
