@@ -1,0 +1,11 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": { "name": "Wongytron" },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Multi-agent code-quality workflow: parallel review and checks, then targeted test writing."
+    }
+  ]
+}
