@@ -1,0 +1,7 @@
+{
+  "name": "code-quality-kit",
+  "version": "0.1.0",
+  "description": "Review + test workflow for Express APIs: a read-only reviewer and a test-writer, orchestrated by one command, backed by a conventions skill and a post-edit lint hook.",
+  "author": { "name": "sameerabusara", "email": "sam.x1996@gmail.com" },
+  "license": "MIT"
+}

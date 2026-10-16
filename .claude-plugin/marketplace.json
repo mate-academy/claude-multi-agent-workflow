@@ -1,0 +1,12 @@
+{
+  "name": "claude-multi-agent-workflow",
+  "owner": { "name": "sameerabusara", "email": "sam.x1996@gmail.com" },
+  "metadata": { "description": "Marketplace for the code-quality-kit plugin" },
+  "plugins": [
+    {
+      "name": "code-quality-kit",
+      "source": "./",
+      "description": "Review + test workflow for Express APIs, tested against course-api."
+    }
+  ]
+}
