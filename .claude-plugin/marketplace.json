@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "aneudy0318-cyber"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-pipeline",
+      "source": "./",
+      "description": "Multi-agent code quality workflow: parallel review and test analysis, then fixes and formatting."
+    }
+  ]
+}
