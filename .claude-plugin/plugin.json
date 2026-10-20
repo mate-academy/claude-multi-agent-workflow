@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Review, check, and format code with a multi-agent workflow.",
+  "author": {
+    "name": "Dörner Péter"
+  }
+}
