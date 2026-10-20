@@ -1,0 +1,8 @@
+{
+  "name": "api-quality",
+  "version": "1.0.0",
+  "description": "Code-quality workflow for Express APIs: parallel review and docs check, then tests written for the gaps, with lint on every edit.",
+  "author": { "name": "Leoshiva" },
+  "license": "MIT",
+  "keywords": ["express", "code-review", "testing", "subagents"]
+}

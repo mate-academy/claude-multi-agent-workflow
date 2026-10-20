@@ -1,0 +1,12 @@
+{
+  "name": "leoshiva-plugins",
+  "owner": { "name": "Leoshiva" },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Parallel review + docs check, then tests for the gaps, for Express APIs.",
+      "version": "1.0.0"
+    }
+  ]
+}
