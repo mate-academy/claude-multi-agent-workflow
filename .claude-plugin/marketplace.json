@@ -1,0 +1,16 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "romanblyashuk94"
+  },
+  "metadata": {
+    "description": "Marketplace for the code-quality Claude Code plugin"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review + test-writing workflow for Express APIs, with a style hook and conventions skill"
+    }
+  ]
+}

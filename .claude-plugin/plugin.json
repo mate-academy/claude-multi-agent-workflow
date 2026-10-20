@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "1.0.0",
+  "description": "Multi-agent code quality workflow: review, tests, and style checks for Express APIs",
+  "author": {
+    "name": "romanblyashuk94"
+  }
+}
