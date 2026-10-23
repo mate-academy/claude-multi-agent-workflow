@@ -1,0 +1,12 @@
+{
+  "name": "api-quality-marketplace",
+  "owner": { "name": "Alex Acosta" },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Parallel review + test-gap analysis, then test writing, for Express APIs, with a lint-on-edit hook.",
+      "version": "0.1.0"
+    }
+  ]
+}

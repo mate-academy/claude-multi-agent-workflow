@@ -1,0 +1,6 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "Multi-agent code-quality workflow for Express APIs: parallel review and test-gap analysis, then test writing, plus a lint-on-edit hook.",
+  "author": { "name": "Alex Acosta" }
+}
