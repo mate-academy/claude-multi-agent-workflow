@@ -37,3 +37,124 @@ test('PUT /users/:id returns 404 for a missing user', async () => {
   const res = await request(app).put('/users/999').send({ name: 'Nobody' });
   assert.equal(res.status, 404);
 });
+
+test('GET /users/:id with non-numeric id returns 400', async () => {
+  const res = await request(app).get('/users/abc');
+  assert.equal(res.status, 400);
+});
+
+test('POST /users with missing name returns 400', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ email: 'a@b.com' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('POST /users with missing email returns 400', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ name: 'Alice' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('POST /users with whitespace-only name returns 400', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ name: '   ', email: 'a@b.com' });
+  assert.equal(res.status, 400);
+});
+
+test('POST /users with non-JSON body returns 400', async () => {
+  const res = await request(app)
+    .post('/users')
+    .set('Content-Type', 'text/plain')
+    .send('plain text');
+  assert.equal(res.status, 400);
+});
+
+test('PUT /users/:id with non-numeric id returns 400', async () => {
+  const res = await request(app)
+    .put('/users/abc')
+    .send({ name: 'Updated' });
+  assert.equal(res.status, 400);
+});
+
+test('PUT /users/:id with empty-string name returns 400', async () => {
+  const res = await request(app)
+    .put('/users/1')
+    .send({ name: '' });
+  assert.equal(res.status, 400);
+});
+
+test('POST /users with non-string name returns 400', { todo: 'bug: TypeError: name.trim is not a function' }, async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ name: 1, email: 'a@b.com' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('POST /users with whitespace-only email returns 400', async () => {
+  const res = await request(app)
+    .post('/users')
+    .send({ name: 'Alice', email: '   ' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('PUT /users/:id with non-string name returns 400', { todo: 'bug: TypeError: name.trim is not a function' }, async () => {
+  const res = await request(app)
+    .put('/users/1')
+    .send({ name: 99 });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('PUT /users/:id with whitespace-only email returns 400', async () => {
+  const res = await request(app)
+    .put('/users/1')
+    .send({ email: '   ' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('PUT /users/:id with empty body returns 400', async () => {
+  const res = await request(app)
+    .put('/users/1')
+    .send({});
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('PUT /users/:id with only email updates only email', async () => {
+  const res = await request(app)
+    .put('/users/1')
+    .send({ email: 'new@example.com' });
+  assert.equal(res.status, 200);
+  assert.equal(res.body.email, 'new@example.com');
+  assert.equal(res.body.name, 'Ada Lovelace');
+});
+
+test('GET /users/:id with valid existing id returns user', async () => {
+  const res = await request(app).get('/users/1');
+  assert.equal(res.status, 200);
+  assert.equal(res.body.id, 1);
+  assert.equal(res.body.name, 'Ada Lovelace');
+  assert.equal(res.body.email, 'ada@example.com');
+});
+
+test('GET /users/:id when user does not exist returns 404 with error object', async () => {
+  const res = await request(app).get('/users/999');
+  assert.equal(res.status, 404);
+  assert.ok(res.body.error);
+  assert.equal(typeof res.body.error, 'string');
+});
+
+test('GET /users returns array of users', async () => {
+  const res = await request(app).get('/users');
+  assert.equal(res.status, 200);
+  assert.ok(Array.isArray(res.body));
+  assert.ok(res.body.length >= 0);
+});
