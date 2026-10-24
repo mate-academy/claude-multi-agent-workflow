@@ -1,0 +1,17 @@
+{
+  "name": "lemonch1ks-plugins",
+  "owner": {
+    "name": "Oleksandr Dvirko"
+  },
+  "metadata": {
+    "description": "Claude Code plugins for code quality on Node/Express projects."
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Review an Express API, find untested behaviour, and write the missing tests in one command.",
+      "version": "0.1.0"
+    }
+  ]
+}
