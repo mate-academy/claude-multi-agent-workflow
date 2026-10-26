@@ -1,0 +1,12 @@
+{
+  "name": "vecherok-tools",
+  "owner": { "name": "Vecherok" },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Review an Express API, find untested paths, and write the missing tests in one command.",
+      "version": "0.1.0"
+    }
+  ]
+}

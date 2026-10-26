@@ -1,0 +1,7 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "Code-quality workflow for Express APIs: parallel review and coverage scan, then targeted tests, with lint-on-edit.",
+  "author": { "name": "Vecherok" },
+  "keywords": ["code-quality", "review", "testing", "express", "subagents"]
+}
