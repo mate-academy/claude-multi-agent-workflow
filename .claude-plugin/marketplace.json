@@ -1,0 +1,14 @@
+{
+  "name": "juancarlos-plugins",
+  "owner": {
+    "name": "Juan Carlos Castillo Salazar"
+  },
+  "plugins": [
+    {
+      "name": "quality-crew",
+      "source": "./",
+      "description": "Review, test and guard an Express API with a small multi-agent workflow.",
+      "version": "0.1.0"
+    }
+  ]
+}

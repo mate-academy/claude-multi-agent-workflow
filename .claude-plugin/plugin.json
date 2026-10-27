@@ -1,0 +1,9 @@
+{
+  "name": "quality-crew",
+  "version": "0.1.0",
+  "description": "Code-quality crew for Express APIs: a read-only reviewer, a test writer, a /quality-check workflow, an API-conventions skill and a guard hook.",
+  "author": {
+    "name": "Juan Carlos Castillo Salazar"
+  },
+  "license": "MIT"
+}
