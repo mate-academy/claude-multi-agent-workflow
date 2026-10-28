@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "linmaweb"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-workflow",
+      "source": "./",
+      "description": "Reviews course-api/ in parallel and applies fixes, backed by a review checklist skill and a lint hook."
+    }
+  ]
+}
