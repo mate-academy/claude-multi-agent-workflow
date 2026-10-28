@@ -1,0 +1,12 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": { "name": "Yurii" },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review an Express API, fill test gaps, and lint on every edit with a two-agent workflow.",
+      "version": "0.1.0"
+    }
+  ]
+}

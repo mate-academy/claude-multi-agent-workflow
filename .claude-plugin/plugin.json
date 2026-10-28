@@ -1,0 +1,6 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Multi-agent code quality workflow: read-only reviewer, test writer, conventions skill, and lint-on-edit hook.",
+  "author": { "name": "Yurii" }
+}
