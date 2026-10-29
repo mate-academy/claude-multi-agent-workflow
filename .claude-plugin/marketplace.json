@@ -1,0 +1,14 @@
+{
+  "name": "khorkovenko-plugins",
+  "owner": {
+    "name": "khorkovenko"
+  },
+  "plugins": [
+    {
+      "name": "quality-flow",
+      "source": "./",
+      "description": "Review code, find test gaps in parallel, then write the missing tests — one command.",
+      "version": "1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "quality-flow",
+  "version": "1.0.0",
+  "description": "Code-quality workflow: parallel review and test-gap analysis, then targeted tests, with lint-on-edit.",
+  "author": {
+    "name": "khorkovenko"
+  },
+  "repository": "https://github.com/khorkovenko/claude-multi-agent-workflow",
+  "license": "MIT",
+  "keywords": ["code-quality", "review", "testing", "subagents", "workflow"]
+}

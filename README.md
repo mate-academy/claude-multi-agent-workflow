@@ -1,3 +1,39 @@
+# quality-flow — a Claude Code plugin
+
+Code-quality workflow for Express/Node projects: review the code and find test gaps **in parallel**, then write the missing tests and run them.
+
+## Install
+
+```
+/plugin marketplace add khorkovenko/claude-multi-agent-workflow
+/plugin install quality-flow@khorkovenko-plugins
+```
+
+Local development: `claude --plugin-dir .` from the repo root.
+
+## Use
+
+```
+/quality-flow:quality-check course-api
+```
+
+## What's inside
+
+| Component | Path | Purpose |
+|---|---|---|
+| Manifest | `.claude-plugin/plugin.json` | Plugin name and version |
+| Marketplace | `.claude-plugin/marketplace.json` | Lets the repo be added as a marketplace |
+| Subagent | `agents/code-reviewer.md` | Read-only reviewer (Read/Grep/Glob, sonnet) |
+| Subagent | `agents/test-gap-finder.md` | Read-only route→test coverage mapper (Read/Grep/Glob, haiku) |
+| Subagent | `agents/test-writer.md` | Writes and runs tests (Read/Grep/Glob/Write/Edit/Bash, sonnet) |
+| Command | `commands/quality-check.md` | The workflow: parallel review + gap-finding → test writing → summary |
+| Skill | `skills/express-api-conventions/SKILL.md` | Route, status-code, error-shape and test conventions |
+| Hook | `hooks/hooks.json` + `scripts/lint-on-edit.js` | Runs the project's ESLint after every JS edit |
+
+Design notes: see [NOTES.md](NOTES.md).
+
+---
+
 ## Project — Ship your workflow as a plugin
  
 Across the course you've built scoped subagents, orchestrated them into workflows, written skills, commands, and hooks, and learned how a plugin packages all of it. Now you'll put it together into one real, shareable thing: a plugin that carries a multi-agent workflow, tested against a live codebase and published so anyone can install it with a single command.
