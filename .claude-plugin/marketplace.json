@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "rezaparamarta"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-workflow",
+      "source": "./",
+      "description": "Parallel API review and test writing, followed by a combined lint/test quality report."
+    }
+  ]
+}

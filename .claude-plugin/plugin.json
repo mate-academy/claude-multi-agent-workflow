@@ -1,0 +1,9 @@
+{
+  "name": "code-quality-workflow",
+  "version": "0.1.0",
+  "description": "Multi-agent code quality workflow: a read-only API reviewer and a test writer run in parallel, then lint and tests are combined into one report.",
+  "author": {
+    "name": "rezaparamarta"
+  },
+  "keywords": ["code-quality", "review", "testing", "subagents"]
+}
