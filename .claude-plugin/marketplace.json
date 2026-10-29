@@ -1,0 +1,11 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": { "name": "Hot00Tea" },
+  "plugins": [
+    {
+      "name": "code-quality-kit",
+      "source": "./",
+      "description": "Parallel code review and test-gap analysis, followed by automatic test writing, with a lint-on-edit hook."
+    }
+  ]
+}
