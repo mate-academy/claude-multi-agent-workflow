@@ -17,6 +17,8 @@ For local development use `claude --plugin-dir .` from the repo root and `/reloa
 
 `test-writer` is the opposite. It needs `Write, Edit` to create tests and `Bash` to run `npm test`, and nothing else is granted to anyone, so only this agent can change files, and its prompt confines it to `course-api/tests/`. It runs on `haiku` because writing supertest cases that copy an existing test file is pattern work, where a cheaper and faster model is enough. The result is checked by actually running the tests, which catches mistakes.
 
+One practical consequence: subagents launched in the background cannot ask for permission interactively, so `test-writer`'s file writes can be blocked ("no verdict") in auto mode. The fix is to pre-approve exactly its scope in your own `.claude/settings.local.json`: `Write(course-api/tests/**)` and `Edit(course-api/tests/**)`. That file is git-ignored, so the plugin never ships a permission grant on your behalf.
+
 ## Orchestration decision: what runs in parallel and what in sequence
 Step 1 runs `api-reviewer` and `test-writer` in parallel. Neither needs the other's output: the reviewer reads `routes/` and `db/`, and the writer reads the same files and writes only under `tests/`. Running them together roughly halves the wall-clock time and keeps the two jobs from influencing each other.
 
