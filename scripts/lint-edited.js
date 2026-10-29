@@ -25,13 +25,22 @@ process.stdin.on('end', () => {
   }
 
   // Walk up from the edited file to the folder that holds the ESLint config.
+  // Flat config (ESLint 9+) is preferred; legacy .eslintrc.* files are also found.
+  const FLAT = ['eslint.config.js'];
+  const LEGACY = ['.eslintrc.js', '.eslintrc.json'];
+  const has = (d, names) => names.some((n) => fs.existsSync(path.join(d, n)));
+
   let dir = path.dirname(path.resolve(file));
-  while (!fs.existsSync(path.join(dir, 'eslint.config.js'))) {
+  while (!has(dir, FLAT.concat(LEGACY))) {
     const parent = path.dirname(dir);
     if (parent === dir) return process.exit(0);
     dir = parent;
   }
-  if (path.basename(file) === 'eslint.config.js') return process.exit(0);
+  if (FLAT.concat(LEGACY).includes(path.basename(file))) return process.exit(0);
+
+  // ESLint 9 ignores .eslintrc.* unless told to; only force legacy mode when
+  // that is the only config in the folder.
+  const env = has(dir, FLAT) ? process.env : { ...process.env, ESLINT_USE_FLAT_CONFIG: 'false' };
 
   const bin = path.join(
     dir,
@@ -43,6 +52,7 @@ process.stdin.on('end', () => {
 
   const result = spawnSync(bin, [path.relative(dir, path.resolve(file))], {
     cwd: dir,
+    env,
     encoding: 'utf8',
   });
   if (result.status === 0) return process.exit(0);
