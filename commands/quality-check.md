@@ -7,11 +7,11 @@ Run a code quality pass on the API in `$ARGUMENTS` (if that is empty, use `cours
 
 ## Step 1 — Review and baseline, all at the same time (parallel)
 
-These three jobs do not depend on each other, so start all of them in the same turn so they run simultaneously:
+These three jobs do not depend on each other, so make all three calls together in one single turn (do not do one and wait before starting the next), so they run simultaneously:
 
 - Launch the `api-reviewer` subagent on the TARGET's `routes/` folder.
 - Launch a second `api-reviewer` subagent on the TARGET's `db/` folder and `server.js`.
-- While they run, yourself run `npm test` and `npm run lint` inside the TARGET (run `npm install` first if `node_modules` is missing) and write down the baseline: how many tests pass or fail and how many lint problems exist.
+- Yourself, in that same turn, run one shell command inside the TARGET that installs dependencies only if `node_modules` is missing and then runs `npm test` and `npm run lint`. Write down the baseline: how many tests pass or fail and how many lint problems exist.
 
 Wait until all three have finished before moving on.
 
