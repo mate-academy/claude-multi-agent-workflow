@@ -1,0 +1,13 @@
+{
+  "name": "api-quality-marketplace",
+  "owner": {
+    "name": "JP"
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Multi-agent code quality workflow for Express APIs: parallel review, test writing and a lint-on-edit hook."
+    }
+  ]
+}
