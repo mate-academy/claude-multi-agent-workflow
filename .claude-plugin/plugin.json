@@ -1,0 +1,10 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "Multi-agent code quality workflow for Express APIs: a read-only reviewer, a test writer, a /quality-check command, a conventions skill and a lint-on-edit hook.",
+  "author": {
+    "name": "JP"
+  },
+  "repository": "https://github.com/juanpame65-sudo/claude-multi-agent-workflow",
+  "keywords": ["code-quality", "review", "tests", "subagents", "express"]
+}
