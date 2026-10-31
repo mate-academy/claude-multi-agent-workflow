@@ -92,3 +92,67 @@ The check confirms everything that can be read from your files:
 - a skill at `skills/<name>/SKILL.md` and a hook at `hooks/hooks.json`, with no hardcoded absolute paths (use `${CLAUDE_PLUGIN_ROOT}`);
 - `marketplace.json` is valid and lists your plugin under the same `name` as `plugin.json`;
 - `README.md` and a real `NOTES.md` are present.
+
+---
+
+# Our plugin: code-quality-workflow
+
+This repository is the finished submission for the project above. It is a Claude Code plugin that bundles a multi-agent code quality workflow, and it is also the marketplace that offers the plugin. See `NOTES.md` for the design decisions behind it.
+
+## Components
+
+| Component | File | What it does |
+|---|---|---|
+| Subagent | `agents/code-reviewer.md` | Read-only reviewer (`Read`, `Grep`, `Glob`; model `haiku`). Reports findings with severity, file and line, and a recommended fix. |
+| Subagent | `agents/test-fixer.md` | Runs tests, finds root causes and fixes them (`Read`, `Grep`, `Glob`, `Edit`, `Write`, `Bash`; model `sonnet`). |
+| Command | `commands/codequality.md` | Runs the workflow. Stage 1 runs the review and a diagnose-only test run in parallel. Stage 2 applies fixes sequentially, then verifies. |
+| Skill | `skills/code-quality/SKILL.md` | A checklist and report format for reviewing code quality. |
+| Hook | `hooks/hooks.json` | A `PostToolUse` hook on `Edit\|Write` that runs `scripts/check-edited-file.js` (via `${CLAUDE_PLUGIN_ROOT}`) to syntax-check the edited file. |
+
+## Directory structure
+
+```
+.claude-plugin/
+  plugin.json          # plugin manifest (name, version)
+  marketplace.json     # marketplace catalog listing the plugin
+agents/
+  code-reviewer.md
+  test-fixer.md
+commands/
+  codequality.md
+skills/
+  code-quality/
+    SKILL.md
+hooks/
+  hooks.json
+scripts/
+  check-edited-file.js # used by the hook
+course-api/            # Express API the plugin is tested against
+.github/               # Validate plugin check (provided)
+NOTES.md               # install, scoping and orchestration decisions
+```
+
+## Marketplace
+
+- Marketplace name: `code-quality-marketplace`
+- Plugin: `code-quality-workflow` (`source: "./"`)
+- Repository: `pever8/claude-multi-agent-workflow`
+
+## Installation
+
+Inside Claude Code:
+
+```
+/plugin marketplace add pever8/claude-multi-agent-workflow
+/plugin install code-quality-workflow@code-quality-marketplace
+```
+
+To try it without installing, run `claude --plugin-dir .` from the repo root. Run `cd course-api && npm install` once first so the sample API is ready.
+
+## Running the workflow
+
+```
+/code-quality-workflow:codequality [path]
+```
+
+`[path]` is an optional path or area to focus on. With no path, the workflow reviews `course-api/`. The command never commits, so you review the changes it makes.

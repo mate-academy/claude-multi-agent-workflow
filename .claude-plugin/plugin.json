@@ -1,0 +1,8 @@
+{
+  "name": "code-quality-workflow",
+  "version": "0.1.0",
+  "description": "A code quality plugin: scoped review and fix subagents, a multi-agent workflow command, a skill, and a hook.",
+  "author": {
+    "name": "Peeyush"
+  }
+}
