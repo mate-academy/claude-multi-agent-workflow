@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "Peeyush"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-workflow",
+      "source": "./",
+      "description": "A code quality plugin: scoped review and fix subagents, a multi-agent workflow command, a skill, and a hook."
+    }
+  ]
+}
