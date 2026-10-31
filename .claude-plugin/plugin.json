@@ -1,0 +1,8 @@
+{
+  "name": "quality-gate",
+  "version": "0.1.0",
+  "description": "A code-quality workflow for Node/Express APIs: parallel review and test-gap analysis, then a test writer that fills the gaps, plus a lint-on-edit hook.",
+  "author": { "name": "Volodymyr Isaiev" },
+  "repository": "https://github.com/GoVolodya/claude-multi-agent-workflow",
+  "keywords": ["code-quality", "review", "testing", "eslint", "express"]
+}

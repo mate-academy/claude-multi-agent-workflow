@@ -1,0 +1,16 @@
+{
+  "name": "govolodya-plugins",
+  "owner": { "name": "Volodymyr Isaiev" },
+  "metadata": {
+    "description": "Claude Code plugins by GoVolodya."
+  },
+  "plugins": [
+    {
+      "name": "quality-gate",
+      "source": "./",
+      "description": "Parallel code review and test-gap analysis, then automatic test writing, for Node/Express APIs.",
+      "version": "0.1.0",
+      "category": "code-quality"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "description": "quality-gate: lint every JavaScript file Claude edits, using the project's own ESLint.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/lint-edited-file.cjs\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
