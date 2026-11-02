@@ -1,0 +1,13 @@
+{
+  "name": "course-quality-marketplace",
+  "owner": {
+    "name": "Diaz Aryagung"
+  },
+  "plugins": [
+    {
+      "name": "course-quality",
+      "source": "./",
+      "description": "Review Express routes, run tests and lint, and add tests for High and Medium findings."
+    }
+  ]
+}
