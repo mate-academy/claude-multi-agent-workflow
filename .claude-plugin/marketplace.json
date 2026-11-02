@@ -1,0 +1,11 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": { "name": "Arsen" },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review, test-gap analysis and test writing as one multi-agent workflow command."
+    }
+  ]
+}
