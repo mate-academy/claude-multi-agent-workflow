@@ -1,0 +1,6 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "A code-quality workflow for the course API: review route handlers against the project conventions, then add regression tests for whatever the review turns up.",
+  "author": "cecilia-mendozatabares"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "cecilia-plugins",
+  "owner": {
+    "name": "cecilia-mendozatabares"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review the course API's routes against the project conventions, then add regression tests for what the review finds."
+    }
+  ]
+}
