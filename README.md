@@ -92,3 +92,63 @@ The check confirms everything that can be read from your files:
 - a skill at `skills/<name>/SKILL.md` and a hook at `hooks/hooks.json`, with no hardcoded absolute paths (use `${CLAUDE_PLUGIN_ROOT}`);
 - `marketplace.json` is valid and lists your plugin under the same `name` as `plugin.json`;
 - `README.md` and a real `NOTES.md` are present.
+
+---
+
+## Multi-Agent QA Plugin
+
+### Overview
+
+`multi-agent-qa` is a Claude Code plugin that helps review code quality, identify issues, and fix failing tests using a multi-agent workflow.
+
+### Components
+
+- **Code Reviewer:** A read-only subagent that reviews code and reports potential issues.
+- **Test Fixer:** A subagent that investigates and fixes test failures.
+- **Quality Check Command:** `/multi-agent-qa:quality-check` coordinates the QA workflow.
+- **QA Guidelines Skill:** Provides reusable code-quality guidance.
+- **PostToolUse Hook:** Runs a bundled QA check script after configured tool actions.
+
+### Installation
+
+In a fresh Claude Code session, add the GitHub marketplace:
+
+```text
+/plugin marketplace add ybushnag/claude-multi-agent-workflow
+```
+
+Then install the plugin:
+
+```text
+/plugin install multi-agent-qa@ybushnag-agent-tools
+```
+
+### Usage
+
+Open a project in Claude Code and run:
+
+```text
+/multi-agent-qa:quality-check
+```
+
+The workflow reviews the code, investigates test results, and coordinates fixes based on the findings.
+
+### Local Development
+
+From the repository root, load the plugin locally:
+
+```powershell
+claude --plugin-dir .
+```
+
+The sample Express API is available in `course-api/` for testing.
+
+### Verification
+
+During local development:
+
+- 38 API tests passed.
+- ESLint passed.
+- Plugin structure validation passed.
+
+Marketplace installation from a fresh session is pending final verification.

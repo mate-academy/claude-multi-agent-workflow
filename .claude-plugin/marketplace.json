@@ -1,0 +1,13 @@
+{
+  "name": "ybushnag-agent-tools",
+  "owner": {
+    "name": "Yasser Bushnag"
+  },
+  "plugins": [
+    {
+      "name": "multi-agent-qa",
+      "source": "./",
+      "description": "Multi-agent code review, testing, and quality workflow."
+    }
+  ]
+}

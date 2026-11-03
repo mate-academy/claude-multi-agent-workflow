@@ -1,0 +1,8 @@
+{
+  "name": "multi-agent-qa",
+  "version": "0.1.0",
+  "description": "Multi-agent code quality workflow for reviewing, testing, and improving code.",
+  "author": {
+    "name": "Yasser Bushnag"
+  }
+}
