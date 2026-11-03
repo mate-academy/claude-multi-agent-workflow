@@ -8,6 +8,15 @@ app.use(express.json());
 app.use('/health', healthRouter);
 app.use('/users', usersRouter);
 
+// Handles malformed JSON bodies (body-parser sets err.type = 'entity.parse.failed').
+// Any other error is passed on unchanged to Express's default handler.
+app.use((err, req, res, next) => {
+  if (err && err.type === 'entity.parse.failed') {
+    return res.status(400).json({ error: 'Malformed JSON' });
+  }
+  return next(err);
+});
+
 const PORT = process.env.PORT || 3000;
 
 // Only start listening when run directly (e.g. `npm run dev`), so the tests

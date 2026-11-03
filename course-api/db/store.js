@@ -21,6 +21,14 @@ function getUser(id) {
   return users.find((user) => user.id === id);
 }
 
+// True if a user other than exceptId already has this email (case-insensitive).
+function emailTaken(email, exceptId) {
+  const wanted = email.toLowerCase();
+  return users.some(
+    (user) => user.id !== exceptId && user.email.toLowerCase() === wanted
+  );
+}
+
 function createUser({ name, email }) {
   const user = { id: nextId, name, email };
   nextId += 1;
@@ -41,4 +49,4 @@ function reset() {
   seed();
 }
 
-module.exports = { listUsers, getUser, createUser, updateUser, reset };
+module.exports = { listUsers, getUser, emailTaken, createUser, updateUser, reset };
