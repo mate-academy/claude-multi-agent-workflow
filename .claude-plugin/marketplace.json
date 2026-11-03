@@ -1,0 +1,11 @@
+{
+  "name": "kostya-skyba-plugins",
+  "owner": { "name": "Kostya Skyba" },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Parallel route + docs review for Express APIs, then a test-writer that covers the gaps."
+    }
+  ]
+}

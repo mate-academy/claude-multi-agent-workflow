@@ -1,0 +1,6 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "Code-quality workflow for Express APIs: parallel route and docs review, then tests for the gaps found.",
+  "author": { "name": "Kostya Skyba" }
+}
