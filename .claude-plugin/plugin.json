@@ -1,0 +1,6 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Multi-agent code quality workflow: a read-only reviewer and a test writer, orchestrated by /code-quality:quality.",
+  "author": { "name": "prokhorenko1" }
+}
