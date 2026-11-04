@@ -1,0 +1,11 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": { "name": "prokhorenko1" },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review and test-writing subagents plus a one-command quality workflow."
+    }
+  ]
+}
