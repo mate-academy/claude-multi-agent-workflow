@@ -1,0 +1,15 @@
+{
+  "name": "kodree-tutorial-plugins",
+  "owner": {
+    "name": "Rafael Braga"
+  },
+  "metadata": {
+    "description": "Marketplace for the code-quality plugin: PR reviewer and test runner agents, git-commit skill and formatting hook."
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./"
+    }
+  ]
+}
