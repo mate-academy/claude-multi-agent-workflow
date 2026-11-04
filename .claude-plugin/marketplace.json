@@ -1,0 +1,13 @@
+{
+  "name": "alex-plugins",
+  "owner": {
+    "name": "Alexandru Tulbure"
+  },
+  "plugins": [
+    {
+      "name": "qa-crew",
+      "source": "./",
+      "description": "A small QA team for course-api: a read-only reviewer and a test writer, run together by one command."
+    }
+  ]
+}
