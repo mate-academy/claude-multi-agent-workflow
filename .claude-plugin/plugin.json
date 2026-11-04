@@ -1,0 +1,5 @@
+{
+  "name": "qa-crew",
+  "version": "0.1.0",
+  "description": "A small QA team for the course API: a read-only reviewer and a test writer, run together by one command."
+}
