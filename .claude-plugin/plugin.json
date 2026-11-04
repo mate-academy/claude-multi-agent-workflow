@@ -1,0 +1,6 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Review, test, and syntax-check workflow for Express APIs",
+  "author": { "name": "Chris Barber" }
+}
