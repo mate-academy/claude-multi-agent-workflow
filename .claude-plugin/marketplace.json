@@ -1,0 +1,12 @@
+{
+  "name": "code-quality-marketplace",
+  "description": "Marketplace for the code-quality plugin.",
+  "owner": { "name": "Oleh" },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Code review and test workflow for Express APIs."
+    }
+  ]
+}
