@@ -1,0 +1,11 @@
+{
+  "name": "MSC-quality-tools",
+  "owner": { "name": "MeMyselfI" },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Parallel code review, auto-written tests, and a syntax-check hook for Express APIs"
+    }
+  ]
+}
