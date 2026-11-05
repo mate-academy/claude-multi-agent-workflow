@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "akennich"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Multi-agent code-quality workflow: parallel review and test writing, then lint and test verification."
+    }
+  ]
+}
