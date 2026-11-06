@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "A multi-agent code quality workflow: a read-only reviewer and a test writer, run together by one command.",
+  "author": {
+    "name": "Mauricio Oporto"
+  }
+}

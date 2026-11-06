@@ -1,0 +1,16 @@
+{
+  "name": "oporto-plugins",
+  "owner": {
+    "name": "Mauricio Oporto"
+  },
+  "metadata": {
+    "description": "Claude Code plugins by Mauricio Oporto."
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review, lint and test a codebase with two scoped subagents run as one workflow."
+    }
+  ]
+}
