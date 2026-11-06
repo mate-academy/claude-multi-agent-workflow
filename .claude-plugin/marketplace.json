@@ -1,0 +1,13 @@
+{
+  "name": "anna-marketplace",
+  "owner": {
+    "name": "Anna-0805"
+  },
+  "plugins": [
+    {
+      "name": "qa-workflow-kit",
+      "source": "./",
+      "description": "A comprehensive multi-agent workflow for automated code reviews and test generation."
+    }
+  ]
+}

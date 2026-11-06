@@ -1,0 +1,5 @@
+{
+  "pre-commit": {
+    "command": "node --test ${CLAUDE_PLUGIN_ROOT}/course-api/"
+  }
+}

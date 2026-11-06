@@ -1,0 +1,5 @@
+{
+  "name": "qa-workflow-kit",
+  "version": "0.1.0",
+  "description": "A comprehensive multi-agent workflow for automated code reviews and test generation."
+}

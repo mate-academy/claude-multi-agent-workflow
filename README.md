@@ -77,7 +77,7 @@ Add a `NOTES.md` to the repo covering:
  
 ### How to submit
  
-Build your plugin in this repo, commit, and open the pull request against the main repository, not your fork,. Make sure `plugin.json`, `marketplace.json`, all your component folders, the `README.md`, and `NOTES.md` are committed, and that the repo installs as a marketplace from a clean checkout.
+Build your plugin in this repo, commit, and push — pushing is submitting, there's no form to fill in. Make sure `plugin.json`, `marketplace.json`, all your component folders, the `README.md`, and `NOTES.md` are committed, and that the repo installs as a marketplace from a clean checkout.
  
 ---
  
