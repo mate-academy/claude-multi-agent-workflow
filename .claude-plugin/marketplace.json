@@ -1,0 +1,13 @@
+{
+  "name": "api-quality-marketplace",
+  "owner": {
+    "name": "muron1011-code"
+  },
+  "plugins": [
+    {
+      "name": "api-quality-workflow",
+      "source": "./",
+      "description": "Multi-agent workflow for reviewing and testing Express APIs."
+    }
+  ]
+}

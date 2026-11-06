@@ -1,0 +1,5 @@
+{
+  "name": "api-quality-workflow",
+  "version": "1.0.0",
+  "description": "Multi-agent workflow for reviewing and testing Express APIs"
+}
