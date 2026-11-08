@@ -1,0 +1,14 @@
+{
+  "name": "api-quality-marketplace",
+  "description": "Plugin marketplace for the api-quality plugin.",
+  "owner": {
+    "name": "s-leoni"
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Review and fix code quality issues in an Express API."
+    }
+  ]
+}
