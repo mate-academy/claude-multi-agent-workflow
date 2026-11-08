@@ -1,4 +1,9 @@
 {
+  "name": "api-quality-marketplace",
+  "description": "Plugin marketplace for the api-quality plugin.",
+  "owner": {
+    "name": "s-leoni"
+  },
   "plugins": [
     {
       "name": "api-quality",
