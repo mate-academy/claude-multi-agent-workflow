@@ -1,0 +1,6 @@
+{
+  "name": "quality-kit",
+  "version": "0.1.0",
+  "description": "Code-quality workflow: a read-only reviewer and a test-writing subagent orchestrated by one command, plus a conventions skill and a post-edit hook.",
+  "author": { "name": "Edwin Cartagena" }
+}

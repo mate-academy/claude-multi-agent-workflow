@@ -1,0 +1,11 @@
+{
+  "name": "quality-kit-marketplace",
+  "owner": { "name": "Edwin Cartagena" },
+  "plugins": [
+    {
+      "name": "quality-kit",
+      "source": "./",
+      "description": "Multi-agent code-quality workflow: parallel review, then test writing, then verification."
+    }
+  ]
+}
