@@ -1,0 +1,14 @@
+
+{
+  "name": "api-quality",
+  "owner": {
+    "name": "YOUR_NAME"
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Multi-agent Express API code review and testing plugin"
+    }
+  ]
+}
