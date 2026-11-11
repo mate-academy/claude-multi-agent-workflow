@@ -1,0 +1,6 @@
+{
+  "name": "code-quality",
+  "version": "0.1.0",
+  "description": "Revisão de código, testes e formatação automática para a course-api",
+  "author": { "name": "Marcelo C. Carvalho" }
+}

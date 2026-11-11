@@ -1,0 +1,11 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": { "name": "Marcelo C. Carvalho" },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Revisão, testes e formatação automática para a course-api"
+    }
+  ]
+}
