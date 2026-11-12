@@ -1,0 +1,11 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": { "name": "jpzetina14-cyber" },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Parallel code review and test-gap analysis followed by test writing, plus a lint hook."
+    }
+  ]
+}

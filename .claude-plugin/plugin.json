@@ -1,0 +1,6 @@
+{
+  "name": "code-quality",
+  "version": "1.0.0",
+  "description": "Multi-agent code quality workflow: parallel review + test-gap analysis, then test writing, with a lint hook.",
+  "author": { "name": "jpzetina14-cyber" }
+}
