@@ -1,0 +1,8 @@
+{
+  "name": "qa-kit",
+  "version": "1.0.0",
+  "description": "Code quality kit: parallel read-only reviewers, a fix-proposal agent, a severity rubric skill, and a lint-on-edit hook.",
+  "author": {
+    "name": "Toni"
+  }
+}

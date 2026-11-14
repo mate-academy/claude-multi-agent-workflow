@@ -1,0 +1,17 @@
+{
+  "description": "qa-kit: lint JavaScript files with the project's ESLint after every edit",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/lint-on-edit.js\"",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
