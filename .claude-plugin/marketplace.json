@@ -1,0 +1,12 @@
+{
+  "name": "qa-tools",
+  "owner": { "name": "Toni" },
+  "description": "Quality assurance plugins for Claude Code.",
+  "plugins": [
+    {
+      "name": "qa-kit",
+      "source": "./",
+      "description": "Review code with parallel subagents, propose fixes, and lint every edit."
+    }
+  ]
+}
