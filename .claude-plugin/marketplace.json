@@ -1,0 +1,17 @@
+{
+  "name": "aj-quality-tools",
+  "owner": {
+    "name": "AJ Howard"
+  },
+  "metadata": {
+    "description": "AJ's Claude Code plugins for code quality: review, test-gap mapping, test writing, and lint-on-edit."
+  },
+  "plugins": [
+    {
+      "name": "code-quality-crew",
+      "source": "./",
+      "description": "Review code, map test gaps in parallel, then write the missing tests, with a lint-on-edit hook.",
+      "version": "0.1.0"
+    }
+  ]
+}

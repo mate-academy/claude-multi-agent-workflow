@@ -1,0 +1,11 @@
+{
+  "name": "code-quality-crew",
+  "version": "0.1.0",
+  "description": "A code-quality workflow: parallel review and coverage mapping, then targeted test writing, plus an API test-conventions skill and a lint-on-edit hook.",
+  "author": {
+    "name": "AJ Howard"
+  },
+  "repository": "https://github.com/ajhoward96-ops/claude-multi-agent-workflow",
+  "license": "MIT",
+  "keywords": ["code-quality", "review", "testing", "eslint", "subagents"]
+}
