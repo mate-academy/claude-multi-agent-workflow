@@ -1,0 +1,13 @@
+{
+  "name": "qa-kit-marketplace",
+  "owner": {
+    "name": "abdomostafa"
+  },
+  "plugins": [
+    {
+      "name": "qa-kit",
+      "source": "./",
+      "description": "Review a branch, fill test gaps, draft the PR description, and catch hard-coded secrets before you ship."
+    }
+  ]
+}
