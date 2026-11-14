@@ -1,6 +1,6 @@
 ---
 name: code-fixer
-description: Use after a code review has produced a list of findings, to turn them into concrete, ready-to-apply fix proposals — e.g. "propose fixes for these review findings", or as the final step of /qa-kit:review-and-fix. Writes a proposals file; does not modify source code.
+description: Use after a code review has produced a list of findings, to turn them into concrete, ready-to-apply fix proposals — e.g. "propose fixes for these review findings", or as the final step of /qa-kit:audit. Writes a proposals file; does not modify source code.
 tools: Read, Write
 model: sonnet
 ---

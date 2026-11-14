@@ -1,6 +1,6 @@
 ---
 name: code-reviewer
-description: Use when code needs a review for bugs, unclear names, or missing error handling before anything is changed — e.g. "review the routes", "check this folder for bugs", or as the review step of /qa-kit:review-and-fix. Read-only; never edits files.
+description: Use when code needs a review for bugs, unclear names, or missing error handling before anything is changed — e.g. "review the routes", "check this folder for bugs", or as the review step of /qa-kit:audit. Read-only; never edits files.
 tools: Read, Grep, Glob
 model: sonnet
 ---

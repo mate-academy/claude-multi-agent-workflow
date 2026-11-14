@@ -21,7 +21,7 @@ claude --plugin-dir .
 
 | Component | Name | What it does |
 |---|---|---|
-| Command | `/qa-kit:review-and-fix [path]` | Runs the full workflow (below) on a path; defaults to `course-api`. |
+| Command | `/qa-kit:audit [path]` | Runs the full workflow (below) on a path; defaults to `course-api`. |
 | Agent | `code-reviewer` | Read-only (`Read, Grep, Glob`). Reports bugs, missing error handling and unclear names, grouped High / Medium / Low with `file:line`. |
 | Agent | `code-fixer` | `Read, Write` only. Confirms each finding and writes diff-style proposals to `REVIEW-FIXES.md`. Never edits source files. |
 | Skill | `review-checklist` | Shared severity rubric and Express checklist used by the reviewers. |
@@ -47,7 +47,7 @@ prepare (load rubric, split files)
 ```
 cd course-api && npm install && cd ..
 claude --plugin-dir .
-> /qa-kit:review-and-fix course-api
+> /qa-kit:audit course-api
 ```
 
 The proposals land in `course-api/REVIEW-FIXES.md`. No source files are changed.
@@ -59,7 +59,7 @@ The proposals land in `course-api/REVIEW-FIXES.md`. No source files are changed.
   plugin.json          # name + version
   marketplace.json     # the qa-tools marketplace
 agents/                # code-reviewer.md, code-fixer.md
-commands/              # review-and-fix.md
+commands/              # audit.md
 skills/review-checklist/SKILL.md
 hooks/hooks.json       # uses ${CLAUDE_PLUGIN_ROOT}/scripts/lint-on-edit.js
 scripts/lint-on-edit.js

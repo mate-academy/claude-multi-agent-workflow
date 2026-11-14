@@ -4,7 +4,7 @@
 
 `qa-kit` is a code-quality plugin for Claude Code. It bundles:
 
-- **`/qa-kit:review-and-fix [path]`** — a workflow command. Two `code-reviewer` subagents review different halves of the code in parallel; their findings are merged; then a `code-fixer` subagent turns them into concrete fix proposals in `REVIEW-FIXES.md`.
+- **`/qa-kit:audit [path]`** — a workflow command. Two `code-reviewer` subagents review different halves of the code in parallel; their findings are merged; then a `code-fixer` subagent turns them into concrete fix proposals in `REVIEW-FIXES.md`.
 - **`code-reviewer`** (agent) — read-only reviewer that reports bugs, missing error handling, and unclear names, grouped by severity.
 - **`code-fixer`** (agent) — confirms each finding against the code and writes a diff-style proposal for it.
 - **`review-checklist`** (skill) — the shared severity rubric and Express checklist, so both reviewers grade findings the same way.
@@ -22,7 +22,7 @@ From a Claude Code session:
 Then, from a project (for example `course-api/` in this repo, after `npm install`):
 
 ```
-/qa-kit:review-and-fix course-api
+/qa-kit:audit course-api
 ```
 
 To try it locally without installing, run `claude --plugin-dir .` from the repo root, and `/reload-plugins` after edits.

@@ -3,7 +3,7 @@ description: Review code with two parallel reviewers, then propose fixes for eve
 argument-hint: "[path to review, default: course-api]"
 ---
 
-Run the qa-kit review-and-fix workflow on: $ARGUMENTS
+Run the qa-kit audit workflow on: $ARGUMENTS
 If no path was given, use `course-api`.
 
 ## Step 1 — Prepare (sequential)
