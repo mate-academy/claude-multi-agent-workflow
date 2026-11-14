@@ -21,4 +21,4 @@ Use exactly these sections, in this order:
 - Keep it short enough to read in under a minute.
 - Never claim tests pass unless you ran them in this session.
 - Don't pad with generic phrases like "various improvements" or "minor fixes".
-- If `/qa-kit:ship-check` was run, reuse its report rather than re-reviewing.
+- If `/qa-kit:ship` was run, reuse its report rather than re-reviewing.

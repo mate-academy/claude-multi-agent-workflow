@@ -4,8 +4,8 @@
 
 `qa-kit` is a Claude Code plugin for wrapping up a branch before a pull request. It adds:
 
-- `/qa-kit:ship-check`: the one-word workflow. It reviews the branch, fills test gaps, writes regression tests for real bugs, and returns a PR-ready report with a verdict.
-- `/qa-kit:summarize-changes`: a per-file, one-line summary of the branch.
+- `/qa-kit:ship`: the one-word workflow. It reviews the branch, fills test gaps, writes regression tests for real bugs, and returns a PR-ready report with a verdict.
+- `/qa-kit:summarize`: a per-file, one-line summary of the branch.
 - `qa-kit:code-reviewer` and `qa-kit:test-writer`: the two subagents the workflow drives.
 - `qa-kit:pr-description`: a skill that drafts a PR description when you ask for one.
 - A `PostToolUse` hook that scans every file Claude writes or edits for hard-coded secrets and tells Claude to remove them.
@@ -26,12 +26,12 @@ To try local edits without installing, run `claude --plugin-dir .` from the repo
 Why:
 
 - **Its job is to report, not fix.** If the reviewer could edit, it would quietly "fix" what it found, and the report would stop describing what the author actually wrote. Keeping it read-only means a review can never change the code under review.
-- **It gets the diff handed to it.** Because it can't run git, `ship-check` captures `git diff` and pastes it into the reviewer's prompt. That keeps the reviewer's tools to pure read-and-search, at the cost of the command doing a little more work.
+- **It gets the diff handed to it.** Because it can't run git, `ship` captures `git diff` and pastes it into the reviewer's prompt. That keeps the reviewer's tools to pure read-and-search, at the cost of the command doing a little more work.
 - **The writer is the only agent that can write, and it is boxed in by instructions.** `test-writer` gets `Write`, `Edit` and `Bash` because it has to create test files and run them. Its prompt limits it to test files and tells it to report suspected bugs instead of fixing them. This is a prompt-level limit, not a tool-level one, so it is weaker than the reviewer's guarantee.
 
 Both agents use `sonnet`. Spotting bugs needs real judgment, and writing correct tests is moderately hard, so the cheapest model seemed too risky for either. I did not add a cheaper `haiku` agent because no job in the plugin is mechanical enough to need one.
 
-## Parallel versus sequential steps in `ship-check`
+## Parallel versus sequential steps in `ship`
 
 | Step | Mode | Why |
 |------|------|-----|
