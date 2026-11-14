@@ -1,0 +1,6 @@
+{
+  "name": "qa-kit",
+  "version": "0.1.0",
+  "description": "Wrap up a branch: review changes, fill test gaps, draft the PR description, and catch hard-coded secrets.",
+  "license": "MIT"
+}
