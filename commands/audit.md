@@ -14,7 +14,7 @@ If no path was given, use `course-api`.
    If a group would be empty, split the file list in half instead.
 
 ## Step 2 — Review (parallel)
-In a **single message**, launch two `code-reviewer` subagents at the same time — one for Group A, one for Group B. Give each:
+In a **single message**, launch two `qa-kit:code-reviewer` subagents at the same time — one for Group A, one for Group B. Give each:
 - its exact file list,
 - the severity rubric from the skill,
 - the instruction to return findings in its standard High / Medium / Low format.
@@ -27,7 +27,7 @@ Combine both reports into one list grouped by High / Medium / Low. Remove duplic
 If there are no findings at all, stop here and tell the user the code is clean.
 
 ## Step 4 — Propose fixes (depends on Step 3)
-Launch one `code-fixer` subagent with the merged findings and the target path. It writes `REVIEW-FIXES.md` at the root of the target path.
+Launch one `qa-kit:code-fixer` subagent with the merged findings and the target path. It writes `REVIEW-FIXES.md` at the root of the target path.
 
 ## Step 5 — Report
 Tell the user:

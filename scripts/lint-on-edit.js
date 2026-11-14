@@ -44,10 +44,11 @@ process.stdin.on('end', () => {
   });
 
   if (result.status === 1) {
+    // Set the exit code rather than calling process.exit(2), so Node exits only
+    // after stderr is flushed (a hook's stderr is a pipe and may be written asynchronously).
+    process.exitCode = 2;
     process.stderr.write(
       `qa-kit lint-on-edit: ESLint found errors in ${filePath}. Fix them:\n${result.stdout}${result.stderr}`
     );
-    process.exit(2);
   }
-  process.exit(0);
 });
