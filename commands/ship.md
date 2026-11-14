@@ -5,7 +5,7 @@ argument-hint: [optional base branch, default main]
 Run a pre-PR check on the current branch. The base branch is `$ARGUMENTS` if given, otherwise `main`.
 
 ## Step 0: Scope the work
-Run `git diff --name-only <base>...HEAD` and `git status --short`. Make one list of the changed source files (ignore lockfiles, generated files and existing tests). If the list is empty, say there is nothing to check and stop. Also run `git diff <base>...HEAD` and keep the output. Pass the exact file list to every subagent below so none of them wanders, and paste the diff into the `code-reviewer` prompt (it is read-only and cannot run git).
+Find everything that differs from the base, including work that is not committed yet. Let `<mb>` be the output of `git merge-base <base> HEAD`. Run `git diff --name-only <mb>` (committed, staged and unstaged changes to tracked files) and `git ls-files --others --exclude-standard` (new untracked files), and merge both into one list. Deleted files can be dropped. Make one list of the changed source files (ignore lockfiles, generated files and existing tests). If the list is empty, say there is nothing to check and stop. Also run `git diff <mb>` and keep the output (untracked files have no diff; the reviewer must `Read` them whole). Pass the exact file list to every subagent below so none of them wanders, and paste the diff into the `code-reviewer` prompt (it is read-only and cannot run git).
 
 ## Step 1: Review and test gaps, in parallel
 These two jobs do not depend on each other, so start both in the same turn and let them run at the same time:

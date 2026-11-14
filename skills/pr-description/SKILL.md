@@ -21,4 +21,4 @@ Use exactly these sections, in this order:
 - Keep it short enough to read in under a minute.
 - Never claim tests pass unless you ran them in this session.
 - Don't pad with generic phrases like "various improvements" or "minor fixes".
-- If `/qa-kit:ship` was run, reuse its report rather than re-reviewing.
+- If `/qa-kit:ship` or `/qa-kit:summarize` already ran earlier in this conversation, build from its output instead of re-reviewing: take **What changed** from its per-file list, put its High/Medium risks and any failing or missing tests under **Risks / notes**, and copy the commands it ran into **How to test**. If its verdict was not "Ready to open the PR", say so to the user before drafting.
