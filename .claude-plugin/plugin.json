@@ -1,0 +1,9 @@
+{
+  "name": "qa-checklist",
+  "version": "1.0.0",
+  "description": "QA workflow: analyzes the changes on a task branch, finds testing risks and builds a test checklist (functional, non-functional, regression, negative cases, autotest coverage).",
+  "author": {
+    "name": "Ira"
+  },
+  "keywords": ["qa", "testing", "checklist", "code-analysis", "risks"]
+}

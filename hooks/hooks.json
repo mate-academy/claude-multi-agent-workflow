@@ -1,0 +1,17 @@
+{
+  "description": "QA guard: Claude may write only QA reports (qa-checklists/), never code; no commits/push/merge/rebase/reset on main",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/qa-guard.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
