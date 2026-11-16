@@ -1,0 +1,17 @@
+{
+  "name": "qa-tools",
+  "owner": {
+    "name": "Ira"
+  },
+  "metadata": {
+    "description": "QA plugins for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "qa-checklist",
+      "source": "./",
+      "description": "Analyzes the changes on a task branch, finds testing risks and builds a QA checklist with negative cases and autotest coverage.",
+      "version": "1.0.0"
+    }
+  ]
+}
