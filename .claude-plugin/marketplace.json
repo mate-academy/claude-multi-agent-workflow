@@ -1,0 +1,16 @@
+{
+  "name": "christopherjuhl-plugins",
+  "owner": {
+    "name": "christopherjuhl"
+  },
+  "metadata": {
+    "description": "Claude Code plugins built during the Claude Code course."
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Code-quality workflow for Express APIs: parallel review and test-gap analysis, then targeted test writing, with lint-on-edit."
+    }
+  ]
+}

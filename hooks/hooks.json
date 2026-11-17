@@ -1,0 +1,17 @@
+{
+  "description": "api-quality: lint every edited JavaScript file with the project's own ESLint setup",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/lint-edited-file.sh\"",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
