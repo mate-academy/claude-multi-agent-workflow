@@ -1,0 +1,17 @@
+{
+  "name": "milan-plugins",
+  "owner": {
+    "name": "Milan Barton"
+  },
+  "metadata": {
+    "description": "Personal Claude Code plugins."
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Review an Express API, find untested behaviour, and write the missing tests in one command.",
+      "version": "0.1.0"
+    }
+  ]
+}

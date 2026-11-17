@@ -1,0 +1,10 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "Code-quality workflow for Express APIs: parallel review + test-gap scan, then a test-writer that closes the gaps, with an auto-lint hook and an API conventions skill.",
+  "author": {
+    "name": "Milan Barton"
+  },
+  "license": "MIT",
+  "keywords": ["code-quality", "review", "testing", "express", "subagents", "workflow"]
+}

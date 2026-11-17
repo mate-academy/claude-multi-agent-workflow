@@ -1,0 +1,17 @@
+{
+  "description": "api-quality: lint every JavaScript file Claude writes or edits, and feed ESLint errors straight back to Claude.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/lint-on-edit.js\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
