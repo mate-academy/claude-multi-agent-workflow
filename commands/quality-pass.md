@@ -13,17 +13,17 @@ Run a quality pass on this Express API using the `api-quality` subagents. Follow
 
 ## Step 2: Review and map gaps (PARALLEL)
 These two jobs are independent: one judges whether the code is correct, the other maps which code paths have tests. Launch both subagents **in the same message** so they run at the same time:
-- `reviewer`: pass it the scope files, plus the diff if there is one.
-- `test-gap-finder`: pass it the same route files.
+- `api-quality:reviewer`: pass it the scope files, plus the diff if there is one.
+- `api-quality:test-gap-finder`: pass it the same route files.
 
 Wait for both to finish before continuing.
 
 ## Step 3: Write the missing tests (DEPENDS ON STEP 2)
-Launch `test-writer` with **both** results: the gap table from `test-gap-finder` and the findings from `reviewer`. It needs the gaps to know what to test, and the findings so it records known bugs as `test.todo` instead of locking them in with passing tests. If the gap table has no gaps, skip this step and say so.
+Launch `api-quality:test-writer` with **both** results: the gap table from `api-quality:test-gap-finder` and the findings from `api-quality:reviewer`. It needs the gaps to know what to test, and the findings so it records known bugs as `test.todo` instead of locking them in with passing tests. If the gap table has no gaps, skip this step and say so.
 
 ## Step 4: Verify (DEPENDS ON STEP 3)
 Run `npm test` and `npm run lint` yourself; the test-writer can't run commands.
-- If a *new* test fails because the test itself is wrong, launch `test-writer` once more with the failure output to fix it. Do this at most once.
+- If a *new* test fails because the test itself is wrong, launch `api-quality:test-writer` once more with the failure output to fix it. Do this at most once.
 - If a new test fails because the app is wrong, leave the app alone. Report it as a bug.
 
 ## Step 5: Report
