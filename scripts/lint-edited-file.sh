@@ -23,6 +23,14 @@ file_path=$(node -e '
     }
   });
 ' 2>/dev/null) || exit 0
+[ -n "$file_path" ] || exit 0
+
+# A relative file_path is relative to the hook's working directory. Make it
+# absolute now, because we cd into the ESLint root before running ESLint.
+case "$file_path" in
+  /*) ;;
+  *) file_path="$(pwd)/$file_path" ;;
+esac
 
 case "$file_path" in
   *.js|*.cjs|*.mjs) ;;
