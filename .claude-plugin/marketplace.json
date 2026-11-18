@@ -1,0 +1,13 @@
+{
+  "name": "multi-agent-workflow-marketplace",
+  "owner": {
+    "name": "GregDeMare"
+  },
+  "plugins": [
+    {
+      "name": "multi-agent-workflow",
+      "source": "./",
+      "description": "Parallel API review and test-writing subagents, with a one-command workflow, a conventions skill, and a lint hook."
+    }
+  ]
+}

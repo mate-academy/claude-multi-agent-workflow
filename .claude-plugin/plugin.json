@@ -1,0 +1,5 @@
+{
+  "name": "multi-agent-workflow",
+  "version": "0.1.0",
+  "description": "Scoped subagents and a multi-agent workflow command for reviewing and testing an Express API."
+}
