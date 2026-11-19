@@ -1,0 +1,5 @@
+{
+  "name": "build-workflow",
+  "version": "1.0.0",
+  "description": "Scout and research in parallel, then implement: subagents, a /build command, an impact-check skill and a protected-files guard."
+}
