@@ -17,7 +17,7 @@ Scout the code and research the docs in parallel, then implement the change. Inc
 
 1. Put the plugin folder in your repo (or anywhere you keep plugins) with this layout:
 
-   build-workflow/
+   .
    ├── .claude-plugin/plugin.json
    ├── agents/            (codebase-scout.md, docs-researcher.md, implementer.md)
    ├── commands/build.md
@@ -31,7 +31,7 @@ Scout the code and research the docs in parallel, then implement the change. Inc
 
 3. Make sure `jq` or `python3` is on the PATH. The script needs one of them to read the hook payload.
 4. Install the plugin in Claude Code. Either:
-    - test it locally: `claude --plugin-dir ./build-workflow`
+    - test it locally: `claude --plugin-dir .`
     - or add the folder to a marketplace and run `/plugin install build-workflow@<marketplace>`
 5. Restart Claude Code (or reload plugins) so agents, the command, the skill and the hook are picked up.
 6. Check it works:
