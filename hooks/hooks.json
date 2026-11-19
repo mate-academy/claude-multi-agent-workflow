@@ -1,0 +1,17 @@
+{
+  "description": "Blocks Write/Edit on secrets, lockfiles and .git internals for every agent in the build workflow.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|NotebookEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/guard-protected-files.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

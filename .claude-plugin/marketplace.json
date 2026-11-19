@@ -1,0 +1,7 @@
+{
+  "name": "my-tools",
+  "owner": { "name": "Ibrahim" },
+  "plugins": [
+    { "name": "build-workflow", "source": "./", "description": "Commands and agents for quality review and summarizing." }
+  ]
+}
