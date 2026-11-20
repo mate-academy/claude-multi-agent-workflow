@@ -1,0 +1,17 @@
+{
+  "name": "quality-flow",
+  "version": "0.1.0",
+  "description": "Code-quality workflow for Express APIs: parallel review + coverage scan, then a test-writer that closes the gaps, plus a syntax-check hook.",
+  "author": {
+    "name": "Gerald20001"
+  },
+  "keywords": [
+    "code-quality",
+    "review",
+    "tests",
+    "subagents",
+    "workflow"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/2005igor2023-crypto/claude-multi-agent-workflow"
+}

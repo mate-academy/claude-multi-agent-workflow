@@ -1,0 +1,17 @@
+{
+  "name": "quality-flow-marketplace",
+  "owner": {
+    "name": "Gerald20001"
+  },
+  "plugins": [
+    {
+      "name": "quality-flow",
+      "source": "./",
+      "description": "Review + coverage scan in parallel, then auto-written tests for the gaps.",
+      "version": "0.1.0"
+    }
+  ],
+  "metadata": {
+    "description": "Marketplace for the quality-flow code-quality plugin."
+  }
+}
