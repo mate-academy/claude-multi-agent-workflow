@@ -1,0 +1,13 @@
+{
+  "name": "code-quality-marketplace",
+  "owner": {
+    "name": "Denya Basarab"
+  },
+  "plugins": [
+    {
+      "name": "code-quality-kit",
+      "source": "./",
+      "description": "Audit a codebase for code quality problems with a read-only reviewer, then fix them with a fixer agent."
+    }
+  ]
+}
