@@ -1,0 +1,8 @@
+# Plugin Markdown must keep LF line endings: the frontmatter check in
+# .github/scripts/validate-plugin.js matches ^---\n, which fails on CRLF.
+# Narrow rule on purpose: only the plugin's own Markdown files.
+README.md text eol=lf
+NOTES.md text eol=lf
+agents/*.md text eol=lf
+commands/*.md text eol=lf
+skills/**/*.md text eol=lf

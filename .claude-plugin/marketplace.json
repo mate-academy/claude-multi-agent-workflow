@@ -1,0 +1,15 @@
+{
+  "name": "api-quality-marketplace",
+  "description": "Marketplace for api-quality-kit, a multi-agent API quality workflow for the course-api Express project.",
+  "owner": {
+    "name": "api-quality-kit contributors"
+  },
+  "plugins": [
+    {
+      "name": "api-quality-kit",
+      "source": "./",
+      "description": "Multi-agent API quality workflow (reviewer + test writer, parallel analysis, dependent test writing) with an application-code guard hook.",
+      "version": "0.1.0"
+    }
+  ]
+}

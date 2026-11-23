@@ -1,0 +1,5 @@
+{
+  "name": "api-quality-kit",
+  "version": "0.1.0",
+  "description": "Multi-agent API quality workflow: a read-only reviewer and a test writer run in parallel on course-api, then tests are added and checked. A hook blocks Write/Edit to application code."
+}

@@ -1,0 +1,17 @@
+{
+  "description": "api-quality-kit guard: blocks Write and Edit calls that target course-api application code (routes/, db/, server.js). Tests and other files pass through.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/guard-app-code.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
