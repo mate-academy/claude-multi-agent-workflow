@@ -1,0 +1,13 @@
+{
+  "name": "api-quality-kit-marketplace",
+  "owner": {
+    "name": "mandziakl-cell"
+  },
+  "plugins": [
+    {
+      "name": "api-quality-kit",
+      "source": "./",
+      "description": "A code-quality workflow for Express APIs: two read-only reviewers in parallel, then a test writer, then tests and lint."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "api-quality-kit",
+  "version": "0.1.0",
+  "description": "A code-quality workflow for Express APIs: two read-only reviewers run in parallel, then a test writer closes the gaps they find.",
+  "author": {
+    "name": "mandziakl-cell"
+  }
+}

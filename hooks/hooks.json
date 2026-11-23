@@ -1,0 +1,17 @@
+{
+  "description": "Lint a JavaScript file with the project's own ESLint right after Claude writes or edits it.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/lint-js.js\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
