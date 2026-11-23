@@ -14,18 +14,23 @@ A Claude Code plugin that runs a multi-agent quality workflow on the Express API
 
 ## Install
 
-From a Claude Code session in a repository that contains this plugin's marketplace:
+Before the plugin is merged into `main`, install it from the branch. Run this in a Claude Code session:
+
+```
+/plugin marketplace add ekorik-tech/claude-multi-agent-workflow#feat/api-quality-plugin
+/plugin install api-quality-kit@api-quality-marketplace
+```
+
+This branch install was checked with version `0.1.0` at commit `813e04b`.
+
+After the merge, `main` will contain the plugin, and the install without the branch suffix will work:
 
 ```
 /plugin marketplace add ekorik-tech/claude-multi-agent-workflow
 /plugin install api-quality-kit@api-quality-marketplace
 ```
 
-To install a branch before it is merged, add the branch as a ref:
-
-```
-/plugin marketplace add ekorik-tech/claude-multi-agent-workflow#feat/api-quality-plugin
-```
+Until the merge, the form without `#feat/api-quality-plugin` does not install this plugin, because `main` does not contain it.
 
 ## Use
 
