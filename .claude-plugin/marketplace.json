@@ -1,0 +1,14 @@
+{
+  "name": "code-quality",
+  "owner": {
+    "name": "Vladyslav",
+    "email": "vlad.lozynsky.test@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Reviews code with a read-only reviewer agent, then fixes confirmed issues with an editor agent."
+    }
+  ]
+}
