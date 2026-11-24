@@ -4,3 +4,6 @@ node_modules/
 
 # Personal, machine-local Claude settings (committed plugin files stay tracked)
 .claude/settings.local.json
+
+# Temporary checksum snapshot written by /code-quality:audit
+CHECKSUMS.sha256

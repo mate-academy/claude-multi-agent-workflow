@@ -1,5 +1,6 @@
 // In-memory data store. Every route reads and writes through these helpers,
 // so swapping in a real database later only touches this one file.
+// Helpers return copies, so callers can't mutate the stored records directly.
 
 let users = [];
 let nextId = 1;
@@ -14,26 +15,31 @@ function seed() {
 seed();
 
 function listUsers() {
-  return users;
+  return users.map((user) => ({ ...user }));
+}
+
+function findUser(id) {
+  return users.find((user) => user.id === id);
 }
 
 function getUser(id) {
-  return users.find((user) => user.id === id);
+  const user = findUser(id);
+  return user && { ...user };
 }
 
 function createUser({ name, email }) {
   const user = { id: nextId, name, email };
   nextId += 1;
   users.push(user);
-  return user;
+  return { ...user };
 }
 
 function updateUser(id, fields) {
-  const user = getUser(id);
+  const user = findUser(id);
   if (!user) return undefined;
   if (fields.name !== undefined) user.name = fields.name;
   if (fields.email !== undefined) user.email = fields.email;
-  return user;
+  return { ...user };
 }
 
 // Reset to the seed data. Used by the tests so each one starts clean.

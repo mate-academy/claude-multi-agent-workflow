@@ -1,0 +1,17 @@
+{
+  "description": "Lint JavaScript files with the project's own ESLint after every write or edit.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/lint-on-edit.js\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

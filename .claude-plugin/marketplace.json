@@ -1,0 +1,17 @@
+{
+  "name": "biganashvili-plugins",
+  "owner": {
+    "name": "Sergi Biganashvili"
+  },
+  "metadata": {
+    "description": "Claude Code plugins by Sergi Biganashvili."
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Multi-agent code quality workflow: parallel review and checksum snapshot, targeted fixes, verified changes, and a lint hook on every edit.",
+      "version": "0.1.0"
+    }
+  ]
+}
