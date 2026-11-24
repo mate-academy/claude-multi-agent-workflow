@@ -1,0 +1,1 @@
+{ "name": "api-quality-kit", "version": "1.0.0", "description": "Review and test the Express course API with two scoped agents, a workflow command, a skill and a syntax-check hook" }

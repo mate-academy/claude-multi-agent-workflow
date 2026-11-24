@@ -1,0 +1,11 @@
+{
+  "name": "api-quality-marketplace",
+  "owner": { "name": "Vlad" },
+  "plugins": [
+    {
+      "name": "api-quality-kit",
+      "source": "./",
+      "description": "Review and test the Express course API with two scoped agents and a workflow command"
+    }
+  ]
+}
