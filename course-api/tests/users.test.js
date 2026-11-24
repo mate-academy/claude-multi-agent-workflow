@@ -37,3 +37,22 @@ test('PUT /users/:id returns 404 for a missing user', async () => {
   const res = await request(app).put('/users/999').send({ name: 'Nobody' });
   assert.equal(res.status, 404);
 });
+
+// Added by the quality-gate test-writer run (UNTESTED items from route-reviewer).
+test('GET /users/:id returns an existing user', async () => {
+  const res = await request(app).get('/users/1');
+  assert.equal(res.status, 200);
+  assert.equal(res.body.name, 'Ada Lovelace');
+});
+
+test('POST /users without email returns 400', async () => {
+  const res = await request(app).post('/users').send({ name: 'No Email' });
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});
+
+test('PUT /users/:id with neither name nor email returns 400', async () => {
+  const res = await request(app).put('/users/1').send({});
+  assert.equal(res.status, 400);
+  assert.ok(res.body.error);
+});

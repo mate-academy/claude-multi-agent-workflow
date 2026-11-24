@@ -1,0 +1,8 @@
+{
+  "name": "quality-gate",
+  "version": "0.1.0",
+  "description": "Pre-PR quality pass for Express APIs: parallel read-only review and docs check, then a test-writer that closes the gaps, plus an API-conventions skill and a lint-on-edit hook.",
+  "author": { "name": "airnovaeurope" },
+  "license": "MIT",
+  "keywords": ["code-quality", "review", "tests", "express"]
+}
