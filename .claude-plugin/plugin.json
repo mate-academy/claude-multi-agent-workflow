@@ -1,0 +1,5 @@
+{
+  "name": "api-quality",
+  "version": "0.1.0",
+  "description": "Code quality workflow for an Express API: review, test-gap search, test writing, and an ESLint hook."
+}

@@ -1,0 +1,13 @@
+{
+  "name": "ten4i-plugins",
+  "owner": {
+    "name": "ten4i"
+  },
+  "plugins": [
+    {
+      "name": "api-quality",
+      "source": "./",
+      "description": "Reviews an Express API, finds test gaps in parallel, then writes and runs the missing tests."
+    }
+  ]
+}
