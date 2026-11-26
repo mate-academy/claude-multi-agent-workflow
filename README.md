@@ -1,3 +1,25 @@
+# api-quality
+
+A Claude Code plugin for code quality on an Express API: two read-only subagents review the code and find test gaps in parallel, then a third writes and runs the missing tests. Includes an API conventions skill and an ESLint hook.
+
+## Install
+
+```
+/plugin marketplace add ten4i/claude-multi-agent-workflow
+/plugin install api-quality@ten4i-plugins
+```
+
+## Use
+
+```
+/api-quality:audit
+/api-quality:audit course-api/routes/users.js
+```
+
+See [NOTES.md](NOTES.md) for details and design decisions.
+
+---
+
 ## Project — Ship your workflow as a plugin
  
 Across the course you've built scoped subagents, orchestrated them into workflows, written skills, commands, and hooks, and learned how a plugin packages all of it. Now you'll put it together into one real, shareable thing: a plugin that carries a multi-agent workflow, tested against a live codebase and published so anyone can install it with a single command.
