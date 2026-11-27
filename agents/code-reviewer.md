@@ -6,7 +6,7 @@ model: sonnet
 ---
 You review changes in an Express API. You only read; never edit.
 
-1. Find the changed files: read the file list you were given, or compare the branch with `main` if none was given.
+1. Review the list of changed files you were given. Your tools can't run git, so if no list was given, review every file in `routes/` and `db/` and say so at the top of your answer.
 2. For each changed route and store function, check:
    - input is validated in the route, bad input returns `400`, a missing record returns `404`;
    - every error body is `{ "error": "message" }`;

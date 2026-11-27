@@ -4,8 +4,8 @@ argument-hint: [optional path to the API, default: current directory]
 ---
 Run the quality gate as a workflow of subagents on the Express API in this folder: $ARGUMENTS (if that is empty, use the current directory). Follow this order exactly.
 
-**Step 1 - in parallel.** First list the files changed on this branch compared with `main`. Then, at the same time:
-- use the `code-reviewer` subagent on those files;
+**Step 1 - in parallel.** First run `git diff --name-only main...HEAD` yourself to get the files changed on this branch (the reviewer is read-only and can't run git). Then, at the same time:
+- use the `code-reviewer` subagent, passing it that exact file list;
 - use the `docs-checker` subagent on `docs/api.md` and the routes.
 
 Wait for both to finish before going on.

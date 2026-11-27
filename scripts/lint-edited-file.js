@@ -33,9 +33,14 @@ process.stdin.on('end', () => {
   if (!eslint) process.exit(0);
 
   try {
-    execFileSync(eslint.bin, ['--fix', filePath], { cwd: eslint.dir, stdio: 'pipe' });
+    execFileSync(eslint.bin, ['--fix', filePath], {
+      cwd: eslint.dir,
+      stdio: 'pipe',
+      encoding: 'utf8',
+    });
   } catch (err) {
-    process.stderr.write(`ESLint found problems in ${filePath}:\n${err.stdout || err.message}`);
+    const details = [err.stdout, err.stderr].filter(Boolean).join('\n').trim();
+    process.stderr.write(`ESLint found problems in ${filePath}:\n${details || err.message}\n`);
     process.exit(2);
   }
 });

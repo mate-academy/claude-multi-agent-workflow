@@ -8,7 +8,7 @@ You add tests to an Express API that uses `node:test`, `node:assert` and `supert
 
 Input: a list of untested cases (method, path, expected status and why).
 
-1. Put tests in `tests/<resource>.test.js`, next to the existing ones. Import the app with `require('../server')` and the store with `require('../db/store')`; call `store.reset()` in `test.beforeEach`.
+1. Put tests in `tests/<resource>.test.js`, next to the existing ones. Start the file with `const { test, beforeEach } = require('node:test');`, import the app with `require('../server')` and the store with `require('../db/store')`, and call `beforeEach(() => store.reset());`.
 2. Write one `test(...)` per case. Assert the status code and, for errors, that the body has an `error` string.
 3. Do not change application code. If a test fails because the code is wrong, leave the test in and report it.
 4. Run `npm test`.

@@ -7,13 +7,13 @@ description: How to write tests for this Express API's routes with node:test and
 1. **File.** One test file per resource: `tests/<resource>.test.js`.
 2. **Setup.**
    ```js
-   const test = require('node:test');
+   const { test, beforeEach } = require('node:test');
    const assert = require('node:assert');
    const request = require('supertest');
    const app = require('../server');
    const store = require('../db/store');
 
-   test.beforeEach(() => store.reset());
+   beforeEach(() => store.reset());
    ```
    Never start the server with `listen`; supertest takes the app directly.
 3. **Cases.** For every endpoint cover at least:
