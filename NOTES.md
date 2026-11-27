@@ -8,7 +8,7 @@ The plugin reviews changed files for bugs, code smells, and complexity, then fix
 |---|---|---|
 | `review-code` subagent | `agents/review-code.md` | Reviews changed files in any language and returns recommendations ordered by severity |
 | `resolve-issues` subagent | `agents/resolve-issues.md` | Fixes the review findings, runs checks, and reports the status of each finding |
-| `review-and-resolve` command | `commands/review-and-resolve.md` | Runs the two subagents as one workflow |
+| `review` command | `commands/review.md` | Runs the two subagents as one workflow |
 | `pre-commit-check` skill | `skills/pre-commit-check/SKILL.md` | Runs tests and linting, looks for leftovers and secrets, and says whether changes are ready to commit |
 | Syntax check hook | `hooks/hooks.json`, `scripts/check-syntax.js` | Checks the syntax of each file after Claude edits or writes it |
 
@@ -32,7 +32,7 @@ claude --plugin-dir .
 Then run the workflow, optionally limited to certain files or folders:
 
 ```
-/code-review:review-and-resolve course-api
+/code-review:review course-api
 ```
 
 The command covers files changed since the branch left the default branch (the remote copy when there is one), including uncommitted, new, and deleted files. Without a path, that includes any changed plugin files too. It does not commit or push, so review the fixes before committing. Use `/reload-plugins` to pick up edits to the plugin.
@@ -82,7 +82,7 @@ To avoid blocking valid code, the hook does not report an error in a `.js` file 
 - Added the `review-code` subagent.
 - Stated in `review-code` that it covers any language, including TypeScript, shell scripts, and CI configuration, and made the file path in its output example language-neutral.
 - Added the `resolve-issues` subagent.
-- Added the `review-and-resolve` command.
+- Added the `review` command.
 - Added these notes.
 - Added the `pre-commit-check` skill.
 - Added the syntax check hook, and tested its script with valid and broken sample files.

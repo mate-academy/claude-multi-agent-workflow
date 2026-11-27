@@ -46,4 +46,4 @@ Then list:
 - each check, with the command and its result (Passed, Failed, or Not run)
 - each problem, with `path/to/file:line` and what to change
 
-If the fixes need code review, suggest running `/code-review:review-and-resolve`.
+If the fixes need code review, suggest running `/code-review:review`.
