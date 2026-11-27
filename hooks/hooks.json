@@ -1,0 +1,17 @@
+{
+  "description": "Checks the syntax of each file after Claude edits or writes it",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/check-syntax.js\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
