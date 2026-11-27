@@ -1,0 +1,8 @@
+{
+  "name": "code-quality",
+  "version": "1.0.0",
+  "description": "Review code, find untested endpoints, and write missing tests for an Express API.",
+  "author": {
+    "name": "Bohdan Otkovych"
+  }
+}
