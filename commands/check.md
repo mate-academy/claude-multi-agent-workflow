@@ -1,6 +1,6 @@
 ---
 description: Run the quality gate on this branch - parallel review and docs check, then tests for anything untested
-argument-hint: [optional path to the API, default: current directory]
+argument-hint: "[path to the API, default: current directory]"
 ---
 Run the quality gate as a workflow of subagents on the Express API in this folder: $ARGUMENTS (if that is empty, use the current directory). Follow this order exactly.
 
