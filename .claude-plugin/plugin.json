@@ -1,0 +1,6 @@
+{
+  "name": "quality-gate",
+  "version": "0.1.1",
+  "description": "Review, docs check and missing tests for an Express API branch, run as one multi-agent workflow before a PR.",
+  "author": { "name": "Sabarish Rugmani" }
+}
