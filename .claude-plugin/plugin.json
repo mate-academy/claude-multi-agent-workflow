@@ -1,0 +1,6 @@
+{
+    "name": "code-review",
+    "version": "0.1.0",
+    "description": "A code review plugin that reviews changed files, identifies issues, and fixes them",
+    "license": "MIT"
+}

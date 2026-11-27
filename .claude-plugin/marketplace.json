@@ -1,0 +1,13 @@
+{
+    "name": "multi-agent-workflow",
+    "owner": {
+        "name": "fadyboy"
+    },
+    "plugins": [
+        {
+            "name": "code-review",
+            "source": "./",
+            "description": "A code review plugin that reviews changed files, identifies issues, and fixes them"
+        }
+    ]
+}
