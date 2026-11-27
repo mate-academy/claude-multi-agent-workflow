@@ -1,0 +1,13 @@
+{
+  "name": "bohdan-plugins",
+  "owner": {
+    "name": "Bohdan Otkovych"
+  },
+  "plugins": [
+    {
+      "name": "code-quality",
+      "source": "./",
+      "description": "Review code, find untested endpoints, and write missing tests."
+    }
+  ]
+}
