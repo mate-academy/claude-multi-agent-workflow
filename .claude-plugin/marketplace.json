@@ -1,0 +1,11 @@
+{
+  "name": "sabarish-tools",
+  "owner": { "name": "Sabarish Rugmani" },
+  "plugins": [
+    {
+      "name": "quality-gate",
+      "source": "./",
+      "description": "Pre-PR quality workflow: parallel code review and docs check, then tests for what's missing."
+    }
+  ]
+}
